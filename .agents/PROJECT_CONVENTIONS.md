@@ -134,6 +134,9 @@ export class Example {
 - Add accessible names to icon-only controls.
 - Decorative imagery should not be announced. Content imagery requires concise,
   meaningful alternative text.
+- Gallery thumbnails are image-only buttons. Their alternative text supplies
+  the accessible name, and the image modal must close through its visible close
+  control, backdrop interaction, and the Escape key.
 - Do not hard-code final contact details, prices, or policies without confirming
   them with the owner. Current values are presentation placeholders.
 
@@ -163,13 +166,16 @@ export class Example {
 
 - Global colour, type, container, shadow, and spacing values are CSS custom
   properties in `src/styles.scss`.
-- Consume tokens such as `var(--rose-700)`; do not scatter near-duplicate colour
+- Consume tokens such as `var(--rose-600)`; do not scatter near-duplicate colour
   literals through component styles.
-- Pink and warm white are the primary palette. Gold is a restrained accent for
-  small lines, stars, borders, and selected details, not large backgrounds or
-  body text.
-- Inter is the body and interface font. Playfair Display is the readable accent
-  font for headings and brand moments.
+- The pink system is deliberately limited to `--rose-300` for soft surfaces and
+  `--rose-600` for strong accents. White is the main background. Do not add more
+  rose shades; use transparency or `color-mix()` with white when a softer
+  surface is needed.
+- Gold is a restrained accent for small lines, borders, and selected details,
+  not large backgrounds or body text.
+- Inter is the body and interface font. Manrope is the readable display font for
+  headings and brand moments.
 - Keep body copy at a comfortable line height of roughly `1.6` to `1.8`.
 - Use fluid typography with `clamp()` for large headings.
 - Component styles stay scoped in the component's SCSS file.

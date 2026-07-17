@@ -4,7 +4,7 @@
   min-height: min(760px, calc(100svh - var(--header-height)));
   align-items: center;
   overflow: hidden;
-  background: var(--rose-900);
+  background: var(--rose-600);
 }
 
 .hero-background {
@@ -20,7 +20,7 @@
   position: absolute;
   z-index: 1;
   inset: 0;
-  background: linear-gradient(90deg, rgba(78, 9, 34, 0.86) 0%, rgba(146, 27, 70, 0.66) 46%, rgba(228, 79, 136, 0.2) 100%);
+  background: linear-gradient(90deg, rgba(206, 50, 109, 0.92) 0%, rgba(206, 50, 109, 0.62) 46%, rgba(206, 50, 109, 0.18) 100%);
   content: '';
   pointer-events: none;
 }
@@ -29,7 +29,7 @@
   position: absolute;
   z-index: 1;
   inset: 0;
-  background: linear-gradient(180deg, transparent 65%, rgba(78, 9, 34, 0.24));
+  background: linear-gradient(180deg, transparent 65%, rgba(206, 50, 109, 0.3));
   content: '';
   pointer-events: none;
 }
@@ -42,7 +42,7 @@
 }
 
 .hero .eyebrow {
-  color: var(--rose-100);
+  color: var(--white);
 }
 
 .hero .eyebrow::before {
@@ -61,7 +61,7 @@
 
 .hero h1 em {
   display: block;
-  color: var(--rose-200);
+  color: var(--rose-300);
   font-style: normal;
 }
 
@@ -74,13 +74,13 @@
 }
 
 .hero-button {
-  color: var(--rose-900);
+  color: var(--rose-600);
   background: var(--white);
   box-shadow: var(--shadow-lg);
 }
 
 .hero-button:hover {
-  background: var(--rose-100);
+  background: color-mix(in srgb, var(--rose-300) 24%, var(--white));
 }
 
 .intro {
@@ -102,7 +102,7 @@
   align-items: center;
   gap: 8px;
   margin-top: 12px;
-  color: var(--rose-700);
+  color: var(--rose-600);
   font-weight: 700;
 }
 
@@ -116,7 +116,7 @@
 }
 
 .discover-section {
-  background: var(--rose-100);
+  background: color-mix(in srgb, var(--rose-300) 30%, var(--white));
 }
 
 .section-heading {
@@ -137,7 +137,7 @@
   align-items: flex-start;
   flex-direction: column;
   padding: 30px;
-  border: 1px solid rgba(179, 35, 89, 0.13);
+  border: 1px solid var(--border);
   border-radius: 24px;
   background: var(--white);
   box-shadow: var(--shadow-sm);
@@ -248,7 +248,7 @@
   }
 
   .hero::before {
-    background: linear-gradient(90deg, rgba(78, 9, 34, 0.82), rgba(146, 27, 70, 0.48));
+    background: linear-gradient(90deg, rgba(206, 50, 109, 0.9), rgba(206, 50, 109, 0.5));
   }
 
   .hero-background {

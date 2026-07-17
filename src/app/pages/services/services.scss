@@ -51,8 +51,8 @@
   height: 58px;
   place-items: center;
   border-radius: 50%;
-  color: var(--rose-700);
-  background: var(--rose-100);
+  color: var(--rose-600);
+  background: color-mix(in srgb, var(--rose-300) 30%, var(--white));
   font-size: 27px;
 }
 
@@ -106,7 +106,7 @@
 
 .service-row strong {
   flex: 0 0 auto;
-  color: var(--rose-700);
+  color: var(--rose-600);
 }
 
 .add-ons {
@@ -120,7 +120,7 @@
   min-height: 520px;
   overflow: hidden;
   border-radius: 220px 220px 30px 30px;
-  background: linear-gradient(155deg, var(--rose-200), var(--rose-600));
+  background: linear-gradient(155deg, var(--rose-300), var(--rose-600));
 }
 
 .notes-photo img {
@@ -143,7 +143,7 @@
   place-items: center;
   margin-bottom: 13px;
   border-radius: 50%;
-  color: var(--rose-700);
+  color: var(--rose-600);
   background: rgba(255, 255, 255, 0.65);
 }
 

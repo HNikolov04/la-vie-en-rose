@@ -29,7 +29,7 @@
 }
 
 .contact-details > a:hover {
-  background: var(--rose-50);
+  background: color-mix(in srgb, var(--rose-300) 20%, var(--white));
 }
 
 .contact-details > a > .material-symbols-rounded {
@@ -39,8 +39,8 @@
   height: 42px;
   place-items: center;
   border-radius: 50%;
-  color: var(--rose-700);
-  background: var(--rose-100);
+  color: var(--rose-600);
+  background: color-mix(in srgb, var(--rose-300) 32%, var(--white));
   font-size: 20px;
 }
 
@@ -65,9 +65,9 @@
 
 .hours-card {
   padding: clamp(28px, 4vw, 42px);
-  border: 1px solid rgba(179, 35, 89, 0.15);
+  border: 1px solid var(--border);
   border-radius: 26px;
-  background: var(--rose-100);
+  background: color-mix(in srgb, var(--rose-300) 30%, var(--white));
   box-shadow: var(--shadow-sm);
 }
 
@@ -94,7 +94,7 @@
   justify-content: space-between;
   gap: 18px;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(179, 35, 89, 0.14);
+  border-bottom: 1px solid var(--border);
 }
 
 .hours-list div:last-child {
@@ -107,19 +107,15 @@
 
 .hours-list strong {
   flex: 0 0 auto;
-  color: var(--rose-800);
+  color: var(--rose-600);
 }
 
 .map-section {
   padding: clamp(58px, 7vw, 92px) 0;
-  background: var(--rose-50);
+  background: color-mix(in srgb, var(--rose-300) 18%, var(--white));
 }
 
 .map-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 30px;
   margin-bottom: 34px;
 }
 
@@ -130,9 +126,9 @@
 .map-frame {
   height: clamp(380px, 52vw, 560px);
   overflow: hidden;
-  border: 1px solid rgba(179, 35, 89, 0.16);
+  border: 1px solid var(--border);
   border-radius: 26px;
-  background: var(--rose-200);
+  background: var(--rose-300);
   box-shadow: var(--shadow-sm);
 }
 
@@ -147,24 +143,12 @@
     grid-template-columns: 1fr;
   }
 
-  .map-heading {
-    display: grid;
-    align-items: start;
-  }
-
-  .map-heading .button {
-    width: fit-content;
-  }
 }
 
 @media (max-width: 520px) {
   .hours-list div {
     display: grid;
     gap: 4px;
-  }
-
-  .map-heading .button {
-    width: 100%;
   }
 
   .map-frame {

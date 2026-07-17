@@ -7,15 +7,17 @@ accounts, or other salon features later.
 
 ## Current pages
 
-- Home — brand introduction, featured services, gallery preview, and reviews
-- Services — grouped service menu and appointment guidance
-- Price List — transparent treatment pricing, durations, and extras
-- Gallery — responsive portfolio layout prepared for final photography
-- About — salon story, values, studio, and team
-- Contact — contact details, booking-request form, opening hours, and FAQs
+- Home — salon introduction and links to the main content
+- Price List — a clean, text-based treatment price list
+- Gallery — a responsive image grid with an accessible image modal
+- About — salon story, interior, and owner profile
+- Contact — contact details, opening hours, and embedded location map
 
 Every page uses the same responsive header, footer, typography, colour tokens,
 buttons, cards, and spacing system.
+
+The visual palette intentionally uses only rose-300 and rose-600 for pink,
+supported by white, readable neutral text, and restrained gold accents.
 
 ## Technology
 
@@ -26,7 +28,7 @@ buttons, cards, and spacing system.
 - Angular signals for the small amount of UI state
 - Strongly typed runtime translations in English and Bulgarian
 - Material Symbols Rounded for icons
-- Inter and Playfair Display for readable typography
+- Inter and Manrope for readable typography
 
 ## Requirements
 

@@ -23,6 +23,7 @@ const en = {
   'common.bookAppointment': 'Book an appointment',
   'common.learnMore': 'Learn more',
   'common.menu': 'Menu',
+  'common.close': 'Close',
   'common.language': 'Language',
   'common.switchToEnglish': 'Switch to English',
   'common.switchToBulgarian': 'Switch to Bulgarian',
@@ -66,7 +67,7 @@ const en = {
   'home.discover.title': 'Everything you need, in one place.',
   'home.discover.gallery.title': 'Gallery',
   'home.discover.gallery.copy':
-    'Browse colours, finishes, and detailed nail art created by Danaya Tasheva.',
+    'Browse colours, finishes, and detailed nail art from the salon.',
   'home.discover.prices.title': 'Price list',
   'home.discover.prices.copy':
     'See the current nail services with clear prices in Bulgarian lev and euro.',
@@ -181,7 +182,6 @@ const en = {
   'prices.price': 'Price',
   'prices.minutes': 'min',
   'prices.manicures': 'Nail services',
-  'prices.imageAlt': 'Official La Vie en Rose price list in Bulgarian lev and euro',
   'prices.gelBiab': 'Gel & BIAB',
   'prices.pedicures': 'Pedicures',
   'prices.extras': 'Nail art & extras',
@@ -199,25 +199,17 @@ const en = {
   'gallery.hero.eyebrow': 'Our work',
   'gallery.hero.title': 'Made to be looked at.',
   'gallery.hero.copy':
-    'A selection of colours, finishes, and detailed nail art created by Danaya Tasheva.',
+    'A selection of colours, finishes, and detailed nail art from the salon.',
   'gallery.toolbar.eyebrow': 'The nail edit',
   'gallery.toolbar.title': 'Recent favourites.',
   'gallery.toolbar.copy':
     'Clean lines, soft colour, and a touch of playfulness — always tailored to the person wearing them.',
-  'gallery.item.blush': 'Blush minimal',
-  'gallery.item.chrome': 'Rose chrome',
   'gallery.item.french': 'Soft french',
-  'gallery.item.details': 'Tiny details',
   'gallery.item.red': 'Cherry red',
-  'gallery.item.nude': 'Clean nude',
-  'gallery.item.aura': 'Pink aura',
-  'gallery.item.pearl': 'Pearl finish',
   'gallery.item.blackFrench': 'Pink and black French manicure',
   'gallery.item.autumn': 'Autumn nail art',
   'gallery.item.bow': 'Pink bow nail art',
   'gallery.item.threeDimensional': 'Pink 3D nail art',
-  'gallery.social.eyebrow': 'Follow along',
-  'gallery.social.title': 'More pink, in your feed.',
 
   'about.hero.eyebrow': 'Our story',
   'about.hero.title': 'Beauty, with a little more feeling.',
@@ -230,17 +222,6 @@ const en = {
     'La Vie en Rose is a nail salon in Mladost 2, Sofia, created by nail artist Danaya Tasheva.',
   'about.story.copyTwo':
     'Its distinctive pink interior reflects the salon motto: life in pink.',
-  'about.values.eyebrow': 'What matters here',
-  'about.values.title': 'Our kind of beautiful.',
-  'about.values.care.title': 'Care first',
-  'about.values.care.copy':
-    'Natural nail health and thoughtful technique guide every appointment.',
-  'about.values.personal.title': 'Made personal',
-  'about.values.personal.copy':
-    'Your shape, lifestyle, colour, and ideas are always part of the process.',
-  'about.values.energy.title': 'Good energy',
-  'about.values.energy.copy':
-    'A bright, welcoming salon where you can settle in and feel at ease.',
   'about.studio.eyebrow': 'Your space to pause',
   'about.studio.title': 'Step into the rose room.',
   'about.studio.copy':
@@ -291,7 +272,6 @@ const en = {
   'contact.map.title': 'Salon location',
   'contact.map.copy': 'Mladost 2, Sofia',
   'contact.map.alt': 'Map showing the location of La Vie en Rose in Mladost 2, Sofia',
-  'contact.map.open': 'Open in Google Maps',
   'contact.visit.eyebrow': 'Plan your visit',
   'contact.visit.title': 'Find your way to the pink door.',
   'contact.hours.weekdays': 'Monday – Friday',
@@ -338,6 +318,7 @@ const bg: Record<TranslationKey, string> = {
   'common.bookAppointment': 'Запази час',
   'common.learnMore': 'Научи повече',
   'common.menu': 'Меню',
+  'common.close': 'Затвори',
   'common.language': 'Език',
   'common.switchToEnglish': 'Превключи на английски',
   'common.switchToBulgarian': 'Превключи на български',
@@ -381,7 +362,7 @@ const bg: Record<TranslationKey, string> = {
   'home.discover.title': 'Всичко необходимо на едно място.',
   'home.discover.gallery.title': 'Галерия',
   'home.discover.gallery.copy':
-    'Разгледай цветове, завършеци и детайлни дизайни, създадени от Даная Ташева.',
+    'Разгледай цветове, завършеци и детайлни дизайни от салона.',
   'home.discover.prices.title': 'Ценоразпис',
   'home.discover.prices.copy':
     'Виж актуалните услуги с ясни цени в български лева и евро.',
@@ -497,7 +478,6 @@ const bg: Record<TranslationKey, string> = {
   'prices.price': 'Цена',
   'prices.minutes': 'мин',
   'prices.manicures': 'Услуги за нокти',
-  'prices.imageAlt': 'Официален ценоразпис на La Vie en Rose в лева и евро',
   'prices.gelBiab': 'Гел лак и BIAB',
   'prices.pedicures': 'Педикюр',
   'prices.extras': 'Дизайн и добавки',
@@ -515,25 +495,17 @@ const bg: Record<TranslationKey, string> = {
   'gallery.hero.eyebrow': 'Нашата работа',
   'gallery.hero.title': 'Създадено, за да бъде забелязано.',
   'gallery.hero.copy':
-    'Селекция от цветове, завършеци и детайлни дизайни, създадени от Даная Ташева.',
+    'Селекция от цветове, завършеци и детайлни дизайни от салона.',
   'gallery.toolbar.eyebrow': 'Селекция маникюри',
   'gallery.toolbar.title': 'Последни фаворити.',
   'gallery.toolbar.copy':
     'Чисти линии, нежни цветове и закачлив акцент — винаги съобразени с човека, който ги носи.',
-  'gallery.item.blush': 'Минимализъм в розово',
-  'gallery.item.chrome': 'Розов хром',
   'gallery.item.french': 'Нежен френски',
-  'gallery.item.details': 'Фини детайли',
   'gallery.item.red': 'Черешово червено',
-  'gallery.item.nude': 'Чист нюд',
-  'gallery.item.aura': 'Розова аура',
-  'gallery.item.pearl': 'Перлен завършек',
   'gallery.item.blackFrench': 'Розов и черен френски маникюр',
   'gallery.item.autumn': 'Есенен дизайн',
   'gallery.item.bow': 'Розов дизайн с панделка',
   'gallery.item.threeDimensional': 'Розов 3D дизайн',
-  'gallery.social.eyebrow': 'Последвай ни',
-  'gallery.social.title': 'Повече розово в твоята емисия.',
 
   'about.hero.eyebrow': 'Нашата история',
   'about.hero.title': 'Красота с малко повече усещане.',
@@ -546,17 +518,6 @@ const bg: Record<TranslationKey, string> = {
     'La Vie en Rose е салон за маникюр в ж.к. Младост 2, София, създаден от маникюриста Даная Ташева.',
   'about.story.copyTwo':
     'Отличителният розов интериор следва мотото на салона: life in pink.',
-  'about.values.eyebrow': 'Какво е важно за нас',
-  'about.values.title': 'Нашата представа за красота.',
-  'about.values.care.title': 'Първо грижата',
-  'about.values.care.copy':
-    'Здравето на естествените нокти и внимателната техника водят всяко посещение.',
-  'about.values.personal.title': 'Лично за теб',
-  'about.values.personal.copy':
-    'Формата, ежедневието, цветовете и идеите ти винаги са част от процеса.',
-  'about.values.energy.title': 'Добра енергия',
-  'about.values.energy.copy':
-    'Светъл и приветлив салон, в който можеш да се отпуснеш и да се чувстваш добре.',
   'about.studio.eyebrow': 'Твоето място за пауза',
   'about.studio.title': 'Влез в розовата стая.',
   'about.studio.copy':
@@ -607,7 +568,6 @@ const bg: Record<TranslationKey, string> = {
   'contact.map.title': 'Локация на салона',
   'contact.map.copy': 'Младост 2, София',
   'contact.map.alt': 'Карта с локацията на La Vie en Rose в Младост 2, София',
-  'contact.map.open': 'Отвори в Google Maps',
   'contact.visit.eyebrow': 'Планирай посещението си',
   'contact.visit.title': 'Намери пътя към розовата врата.',
   'contact.hours.weekdays': 'Понеделник – Петък',

@@ -22,25 +22,6 @@
       <h2 class="section-title">{{ i18n.t('about.story.title') }}</h2>
       <p>{{ i18n.t('about.story.copyOne') }}</p>
       <p>{{ i18n.t('about.story.copyTwo') }}</p>
-      <div class="signature">La Vie en Rose</div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--rose values-section">
-  <div class="container">
-    <div class="values-heading">
-      <span class="eyebrow">{{ i18n.t('about.values.eyebrow') }}</span>
-      <h2 class="section-title">{{ i18n.t('about.values.title') }}</h2>
-    </div>
-    <div class="values-grid">
-      @for (value of values; track value.titleKey) {
-        <article>
-          <span class="material-symbols-rounded">{{ value.icon }}</span>
-          <h3>{{ i18n.t(value.titleKey) }}</h3>
-          <p>{{ i18n.t(value.copyKey) }}</p>
-        </article>
-      }
     </div>
   </div>
 </section>

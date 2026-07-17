@@ -15,9 +15,8 @@
       <p class="section-copy">{{ i18n.t('prices.intro.copy') }}</p>
     </div>
 
-    <div class="price-layout">
-      <div class="price-grid">
-        @for (category of categories; track category.titleKey; let index = $index) {
+    <div class="price-grid">
+      @for (category of categories; track category.titleKey; let index = $index) {
         <article class="price-category">
           <header class="category-header">
             <div class="category-icon">
@@ -46,17 +45,7 @@
             }
           </div>
         </article>
-        }
-      </div>
-      <figure class="official-price-list">
-        <img
-          src="assets/images/prices/official-price-list.png"
-          [alt]="i18n.t('prices.imageAlt')"
-          width="941"
-          height="1672"
-          loading="lazy"
-        >
-      </figure>
+      }
     </div>
   </div>
 </section>
