@@ -12,19 +12,36 @@
         <span class="eyebrow">{{ i18n.t('gallery.toolbar.eyebrow') }}</span>
         <h2 class="section-title">{{ i18n.t('gallery.toolbar.title') }}</h2>
       </div>
-      <p class="section-copy">{{ i18n.t('gallery.toolbar.copy') }}</p>
     </div>
 
     <div class="gallery-grid">
-      @for (item of galleryItems; track item.labelKey; let index = $index) {
-        <article class="gallery-item {{ item.className }} item-{{ index + 1 }}">
+      @for (item of galleryItems; track item.src) {
+        <button class="gallery-item" type="button" (click)="openImage(item)">
           <img [src]="item.src" [alt]="i18n.t(item.labelKey)" loading="lazy">
-          <div class="gallery-caption">
-            <span>0{{ index + 1 }}</span>
-            <h3>{{ i18n.t(item.labelKey) }}</h3>
-          </div>
-        </article>
+        </button>
       }
     </div>
   </div>
 </section>
+
+@if (selectedImage(); as image) {
+  <div
+    class="gallery-modal"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="i18n.t(image.labelKey)"
+    (click)="closeImage()"
+  >
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button
+        class="modal-close"
+        type="button"
+        [attr.aria-label]="i18n.t('common.close')"
+        (click)="closeImage()"
+      >
+        <span class="material-symbols-rounded">close</span>
+      </button>
+      <img [src]="image.src" [alt]="i18n.t(image.labelKey)">
+    </div>
+  </div>
+}

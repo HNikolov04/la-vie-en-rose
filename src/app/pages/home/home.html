@@ -18,15 +18,50 @@
   </div>
 </section>
 
-<section class="section intro" id="welcome">
-  <div class="container intro-grid">
-    <div>
-      <span class="eyebrow">{{ i18n.t('home.intro.eyebrow') }}</span>
-      <h2 class="section-title">{{ i18n.t('home.intro.title') }}</h2>
+<section class="section page-preview gallery-preview" id="welcome">
+  <div class="container preview-grid">
+    <div class="preview-copy">
+      <span class="eyebrow">{{ i18n.t('home.preview.gallery.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('home.preview.gallery.title') }}</h2>
+      <p>{{ i18n.t('home.preview.gallery.copy') }}</p>
+      <a class="button button--primary" routerLink="/gallery">
+        {{ i18n.t('common.learnMore') }}
+        <span class="material-symbols-rounded">arrow_outward</span>
+      </a>
     </div>
-    <div class="intro-copy">
-      <p class="section-copy">{{ i18n.t('home.intro.copy') }}</p>
-      <a class="text-link" routerLink="/about">
+
+    <a
+      class="gallery-mosaic"
+      routerLink="/gallery"
+      [attr.aria-label]="i18n.t('home.preview.gallery.title')"
+    >
+      <img src="assets/images/services/pink-black-french-manicure.png" alt="" loading="lazy">
+      <img src="assets/images/services/pink-3d-nail-art.png" alt="" loading="lazy">
+      <img src="assets/images/services/red-floral-manicure.png" alt="" loading="lazy">
+    </a>
+  </div>
+</section>
+
+<section class="section page-preview prices-preview">
+  <div class="container preview-grid preview-grid--reverse">
+    <div class="price-teaser">
+      <div class="price-teaser-heading">
+        <span class="material-symbols-rounded">receipt_long</span>
+        <strong>{{ i18n.t('common.prices') }}</strong>
+      </div>
+      @for (item of pricePreviewItems; track item.nameKey) {
+        <div class="price-teaser-row">
+          <span>{{ i18n.t(item.nameKey) }}</span>
+          <strong>{{ item.price }}</strong>
+        </div>
+      }
+    </div>
+
+    <div class="preview-copy">
+      <span class="eyebrow">{{ i18n.t('home.preview.prices.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('home.preview.prices.title') }}</h2>
+      <p>{{ i18n.t('home.preview.prices.copy') }}</p>
+      <a class="button button--primary" routerLink="/prices">
         {{ i18n.t('common.learnMore') }}
         <span class="material-symbols-rounded">arrow_outward</span>
       </a>
@@ -34,52 +69,68 @@
   </div>
 </section>
 
-<section class="section discover-section">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">{{ i18n.t('home.discover.eyebrow') }}</span>
-      <h2 class="section-title">{{ i18n.t('home.discover.title') }}</h2>
+<section class="section page-preview about-preview">
+  <div class="container preview-grid">
+    <div class="preview-copy">
+      <span class="eyebrow">{{ i18n.t('home.preview.about.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('home.preview.about.title') }}</h2>
+      <p>{{ i18n.t('home.preview.about.copy') }}</p>
+      <a class="button button--primary" routerLink="/about">
+        {{ i18n.t('common.learnMore') }}
+        <span class="material-symbols-rounded">arrow_outward</span>
+      </a>
     </div>
 
-    <div class="discover-grid">
-      @for (card of discoverCards; track card.route; let index = $index) {
-        <article class="discover-card">
-          <span class="card-number">0{{ index + 1 }}</span>
-          <span class="material-symbols-rounded card-icon">{{ card.icon }}</span>
-          <h3>{{ i18n.t(card.titleKey) }}</h3>
-          <p>{{ i18n.t(card.copyKey) }}</p>
-          <a class="text-link" [routerLink]="card.route">
-            {{ i18n.t('common.learnMore') }}
-            <span class="material-symbols-rounded">arrow_outward</span>
-          </a>
-        </article>
-      }
-    </div>
+    <a
+      class="about-preview-image"
+      routerLink="/about"
+      [attr.aria-label]="i18n.t('home.preview.about.title')"
+    >
+      <img
+        src="assets/images/studio/salon-waiting-area.png"
+        alt=""
+        width="941"
+        height="1672"
+        loading="lazy"
+      >
+    </a>
   </div>
 </section>
 
-<section class="split-feature">
-  <div class="feature-art">
-    <img
-      src="assets/images/studio/salon-waiting-area.png"
-      [alt]="i18n.t('home.feature.image')"
-      width="941"
-      height="1672"
-      loading="lazy"
-    >
-  </div>
-  <div class="feature-copy">
-    <span class="eyebrow">{{ i18n.t('home.feature.eyebrow') }}</span>
-    <h2 class="section-title">{{ i18n.t('home.feature.title') }}</h2>
-    <p>{{ i18n.t('home.feature.copy') }}</p>
-    <ul>
-      <li><span class="material-symbols-rounded">check_circle</span>{{ i18n.t('home.feature.sanitised') }}</li>
-      <li><span class="material-symbols-rounded">check_circle</span>{{ i18n.t('home.feature.products') }}</li>
-      <li><span class="material-symbols-rounded">check_circle</span>{{ i18n.t('home.feature.consultation') }}</li>
-    </ul>
-    <a class="button button--primary" routerLink="/about">
-      {{ i18n.t('common.learnMore') }}
-      <span class="material-symbols-rounded">arrow_outward</span>
-    </a>
+<section class="section page-preview contact-preview">
+  <div class="container contact-preview-grid">
+    <div class="preview-copy">
+      <span class="eyebrow">{{ i18n.t('home.preview.contact.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('home.preview.contact.title') }}</h2>
+      <p>{{ i18n.t('home.preview.contact.copy') }}</p>
+      <a class="button contact-preview-button" routerLink="/contact">
+        {{ i18n.t('common.learnMore') }}
+        <span class="material-symbols-rounded">arrow_outward</span>
+      </a>
+    </div>
+
+    <div class="contact-teaser">
+      <div>
+        <span class="material-symbols-rounded">call</span>
+        <div>
+          <p>{{ i18n.t('contact.call') }}</p>
+          <strong>+359 988 381 177</strong>
+        </div>
+      </div>
+      <div>
+        <span class="material-symbols-rounded">location_on</span>
+        <div>
+          <p>{{ i18n.t('contact.visit') }}</p>
+          <strong>{{ i18n.t('footer.city') }}</strong>
+        </div>
+      </div>
+      <div>
+        <span class="material-symbols-rounded">schedule</span>
+        <div>
+          <p>{{ i18n.t('footer.hours') }}</p>
+          <strong>09:00 – 19:00</strong>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

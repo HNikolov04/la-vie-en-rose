@@ -14,41 +14,35 @@
       <p class="section-copy">{{ i18n.t('contact.booking.copy') }}</p>
 
       <div class="contact-details">
-        <a href="tel:+359988381177">
+        <div class="contact-detail">
           <span class="material-symbols-rounded">call</span>
           <div>
             <small>{{ i18n.t('contact.call') }}</small>
             <strong>+359 988 381 177</strong>
           </div>
-        </a>
-        <a
-          href="https://www.instagram.com/lavieenrose.nails_/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+        <div class="contact-detail">
           <span class="material-symbols-rounded">photo_camera</span>
           <div>
             <small>{{ i18n.t('contact.instagram') }}</small>
             <strong>&#64;lavieenrose.nails_</strong>
           </div>
-        </a>
-        <a
-          href="https://www.google.com/maps/search/?api=1&amp;query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%9C%D0%BB%D0%B0%D0%B4%D0%BE%D1%81%D1%82%202%2C%20%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9A%D0%B8%D0%BF%D1%80%D0%B8%D1%8F%D0%BD%2C%20%D0%B1%D0%BB.%20249"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+        <div class="contact-detail">
           <span class="material-symbols-rounded">location_on</span>
           <div>
             <small>{{ i18n.t('contact.visit') }}</small>
             <strong>{{ i18n.t('contact.address') }}</strong>
           </div>
-        </a>
+        </div>
       </div>
     </div>
 
     <aside class="hours-card">
-      <span class="material-symbols-rounded hours-icon">schedule</span>
-      <h3>{{ i18n.t('footer.hours') }}</h3>
+      <div class="hours-heading">
+        <span class="material-symbols-rounded hours-icon">schedule</span>
+        <h3>{{ i18n.t('footer.hours') }}</h3>
+      </div>
       <div class="hours-list">
         <div>
           <span>{{ i18n.t('contact.hours.weekdays') }}</span>
@@ -74,20 +68,11 @@
         <span class="eyebrow">{{ i18n.t('contact.map.title') }}</span>
         <h2 class="section-title">{{ i18n.t('contact.visit.title') }}</h2>
       </div>
-      <a
-        class="button button--secondary"
-        href="https://www.google.com/maps/search/?api=1&amp;query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%9C%D0%BB%D0%B0%D0%B4%D0%BE%D1%81%D1%82%202%2C%20%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9A%D0%B8%D0%BF%D1%80%D0%B8%D1%8F%D0%BD%2C%20%D0%B1%D0%BB.%20249"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {{ i18n.t('contact.map.open') }}
-        <span class="material-symbols-rounded">arrow_outward</span>
-      </a>
     </div>
 
     <div class="map-frame">
       <iframe
-        src="https://www.google.com/maps?q=%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%9C%D0%BB%D0%B0%D0%B4%D0%BE%D1%81%D1%82%202%2C%20%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%20%D0%9A%D0%B8%D0%BF%D1%80%D0%B8%D1%8F%D0%BD%2C%20%D0%B1%D0%BB.%20249&amp;output=embed"
+        [src]="mapUrl()"
         [title]="i18n.t('contact.map.alt')"
         loading="lazy"
         referrerpolicy="strict-origin-when-cross-origin"

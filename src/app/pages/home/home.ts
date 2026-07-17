@@ -4,11 +4,9 @@ import { RouterLink } from '@angular/router';
 import { I18nService } from '../../core/i18n/i18n.service';
 import { TranslationKey } from '../../core/i18n/translations';
 
-interface DiscoverCard {
-  icon: string;
-  titleKey: TranslationKey;
-  copyKey: TranslationKey;
-  route: string;
+interface PricePreviewItem {
+  nameKey: TranslationKey;
+  price: string;
 }
 
 @Component({
@@ -21,24 +19,9 @@ interface DiscoverCard {
 export class Home {
   protected readonly i18n = inject(I18nService);
 
-  protected readonly discoverCards: DiscoverCard[] = [
-    {
-      icon: 'photo_library',
-      titleKey: 'home.discover.gallery.title',
-      copyKey: 'home.discover.gallery.copy',
-      route: '/gallery'
-    },
-    {
-      icon: 'receipt_long',
-      titleKey: 'home.discover.prices.title',
-      copyKey: 'home.discover.prices.copy',
-      route: '/prices'
-    },
-    {
-      icon: 'favorite',
-      titleKey: 'home.discover.about.title',
-      copyKey: 'home.discover.about.copy',
-      route: '/about'
-    }
+  protected readonly pricePreviewItems: PricePreviewItem[] = [
+    { nameKey: 'services.gelManicure.name', price: '50 лв. / €25.50' },
+    { nameKey: 'services.french.name', price: '55 лв. / €28' },
+    { nameKey: 'services.biab.name', price: '60 лв. / €30.60' }
   ];
 }
