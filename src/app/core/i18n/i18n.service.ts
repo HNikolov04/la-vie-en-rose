@@ -6,7 +6,7 @@ import { Language, TRANSLATIONS, TranslationKey } from './translations';
 @Injectable({ providedIn: 'root' })
 export class I18nService {
   private readonly document = inject(DOCUMENT);
-  private readonly storageKey = 'la-vie-en-rose-language';
+  private readonly storageKey = 'la-vie-en-rose-language-v2';
   private readonly defaultLanguage: Language = 'bg';
 
   readonly language = signal<Language>(this.getInitialLanguage());
