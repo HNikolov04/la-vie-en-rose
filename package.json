@@ -1,6 +1,9 @@
 {
   "name": "la-vie-en-rose",
   "version": "0.1.0",
+  "description": "A responsive Angular website for the La Vie en Rose nail salon.",
+  "author": "Hristo Nikolov",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "ng": "ng",
