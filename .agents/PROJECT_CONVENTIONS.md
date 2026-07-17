@@ -137,7 +137,29 @@ export class Example {
 - Do not hard-code final contact details, prices, or policies without confirming
   them with the owner. Current values are presentation placeholders.
 
-## 8. SCSS and design system
+## 8. Internationalization
+
+- Every visitor-facing string must be available in English and Bulgarian.
+- Translation dictionaries live in `src/app/core/i18n/translations.ts`.
+- English is the source dictionary. The Bulgarian dictionary is typed against
+  every English key so a missing translation fails compilation.
+- Components inject `I18nService` and render copy with `i18n.t(key)`.
+- Do not add visitor-facing prose directly to page TypeScript or templates.
+  Proper names, phone numbers, email addresses, prices, and icon identifiers are
+  exempt when they do not change by language.
+- Data-driven page content stores `TranslationKey` values instead of translated
+  text.
+- Add a translated `titleKey` to every route. `I18nTitleStrategy` updates the
+  browser title when either the route or language changes.
+- The service keeps the HTML `lang` attribute and meta description synchronized
+  and persists the user's choice locally.
+- The current URL structure is language-neutral. Do not introduce `/en` or `/bg`
+  prefixes without an explicit SEO and routing decision.
+- Keep Bulgarian copy natural and concise rather than translating word for word.
+- After adding translations, switch languages on every changed page and check
+  that longer Bulgarian labels remain responsive.
+
+## 9. SCSS and design system
 
 - Global colour, type, container, shadow, and spacing values are CSS custom
   properties in `src/styles.scss`.
@@ -161,7 +183,7 @@ export class Example {
 - Preserve visible focus styles; never remove an outline without an accessible
   replacement.
 
-## 9. Assets
+## 10. Assets
 
 - Browser-served assets live under `public/assets` and use base-relative URLs,
   for example `assets/images/hero/home-manicure.webp`.
@@ -179,7 +201,7 @@ export class Example {
 - Do not place content images in `src`; Angular's public asset root is the single
   canonical location.
 
-## 10. Accessibility and responsive behavior
+## 11. Accessibility and responsive behavior
 
 - Target WCAG 2.2 AA color contrast for text and interactive elements.
 - All functionality must be reachable by keyboard.
@@ -190,7 +212,7 @@ export class Example {
 - Avoid horizontal page scrolling at every supported width.
 - Touch targets should be approximately 44 by 44 px or larger.
 
-## 11. Routing and scrolling
+## 12. Routing and scrolling
 
 - Define routes only in `src/app/app.routes.ts`.
 - Use lowercase URL paths with hyphens if more than one word is needed.
@@ -200,7 +222,7 @@ export class Example {
 - Unknown routes currently redirect to the home page. Add a dedicated not-found
   page if the site grows beyond the current marketing scope.
 
-## 12. Quality checks
+## 13. Quality checks
 
 Before handing off a change:
 
@@ -216,7 +238,7 @@ The production build must remain within the budgets declared in `angular.json`.
 Do not silence warnings by raising budgets without understanding the bundle
 increase.
 
-## 13. Version control
+## 14. Version control
 
 - Keep commits focused and describe the user-visible outcome.
 - Never commit `node_modules`, `dist`, `.angular`, editor caches, or local secrets.

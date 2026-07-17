@@ -1,0 +1,69 @@
+<section class="page-hero prices-hero">
+  <div class="container fade-up">
+    <span class="eyebrow">{{ i18n.t('prices.hero.eyebrow') }}</span>
+    <h1 class="display-title">{{ i18n.t('prices.hero.title') }}</h1>
+    <p>{{ i18n.t('prices.hero.copy') }}</p>
+  </div>
+</section>
+
+<section class="section prices-section">
+  <div class="container">
+    <div class="prices-intro">
+      <div>
+        <span class="eyebrow">{{ i18n.t('prices.intro.eyebrow') }}</span>
+        <h2 class="section-title">{{ i18n.t('prices.intro.title') }}</h2>
+      </div>
+      <p class="section-copy">{{ i18n.t('prices.intro.copy') }}</p>
+    </div>
+
+    <div class="price-grid">
+      @for (category of categories; track category.titleKey; let index = $index) {
+        <article class="price-category">
+          <header class="category-header">
+            <div class="category-icon">
+              <span class="material-symbols-rounded">{{ category.icon }}</span>
+            </div>
+            <div>
+              <small>0{{ index + 1 }}</small>
+              <h3>{{ i18n.t(category.titleKey) }}</h3>
+            </div>
+          </header>
+
+          <div class="table-header" aria-hidden="true">
+            <span></span>
+            <span>{{ i18n.t('prices.duration') }}</span>
+            <span>{{ i18n.t('prices.price') }}</span>
+          </div>
+
+          <div class="price-items">
+            @for (item of category.items; track item.nameKey) {
+              <div class="price-row">
+                <div class="item-copy">
+                  <h4>{{ i18n.t(item.nameKey) }}</h4>
+                  <p>{{ i18n.t(item.detailKey) }}</p>
+                </div>
+                <span class="duration">{{ item.duration }} {{ i18n.t('prices.minutes') }}</span>
+                <strong>{{ item.included ? i18n.t('prices.included') : item.price }}</strong>
+              </div>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section section--rose price-note-section">
+  <div class="container price-note">
+    <div class="note-mark"><span class="material-symbols-rounded">favorite</span></div>
+    <div>
+      <span class="eyebrow">{{ i18n.t('prices.note.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('prices.note.title') }}</h2>
+      <p class="section-copy">{{ i18n.t('prices.note.copy') }}</p>
+    </div>
+    <a class="button button--primary" routerLink="/contact" fragment="booking">
+      {{ i18n.t('prices.note.button') }}
+      <span class="material-symbols-rounded">arrow_forward</span>
+    </a>
+  </div>
+</section>

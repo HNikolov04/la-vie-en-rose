@@ -1,5 +1,20 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+
+import { I18nService } from '../../core/i18n/i18n.service';
+import { TranslationKey } from '../../core/i18n/translations';
+
+interface FeaturedService {
+  icon: string;
+  nameKey: TranslationKey;
+  descriptionKey: TranslationKey;
+  priceKey: TranslationKey;
+}
+
+interface Testimonial {
+  quoteKey: TranslationKey;
+  name: string;
+}
 
 @Component({
   selector: 'app-home',
@@ -9,38 +24,40 @@ import { RouterLink } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Home {
-  protected readonly services = [
+  protected readonly i18n = inject(I18nService);
+
+  protected readonly services: FeaturedService[] = [
     {
       icon: 'spa',
-      name: 'Signature Manicure',
-      description: 'Detailed nail and cuticle care, shaped and finished with your perfect colour.',
-      price: 'from €28'
+      nameKey: 'home.services.signature.name',
+      descriptionKey: 'home.services.signature.description',
+      priceKey: 'home.services.signature.price'
     },
     {
       icon: 'auto_awesome',
-      name: 'Gel Perfection',
-      description: 'Long-lasting colour with a glossy finish, designed around your everyday style.',
-      price: 'from €38'
+      nameKey: 'home.services.gel.name',
+      descriptionKey: 'home.services.gel.description',
+      priceKey: 'home.services.gel.price'
     },
     {
       icon: 'palette',
-      name: 'Nail Art',
-      description: 'Delicate details, playful accents, and custom art created one nail at a time.',
-      price: 'from €8'
+      nameKey: 'home.services.art.name',
+      descriptionKey: 'home.services.art.description',
+      priceKey: 'home.services.art.price'
     }
   ];
 
-  protected readonly testimonials = [
+  protected readonly testimonials: Testimonial[] = [
     {
-      quote: 'The prettiest studio and the most careful manicure I have ever had.',
+      quoteKey: 'home.testimonials.one',
       name: 'Mia K.'
     },
     {
-      quote: 'Every appointment feels calm, personal, and genuinely special.',
+      quoteKey: 'home.testimonials.two',
       name: 'Sophie A.'
     },
     {
-      quote: 'Beautiful work that lasts. I already look forward to my next visit.',
+      quoteKey: 'home.testimonials.three',
       name: 'Elena R.'
     }
   ];

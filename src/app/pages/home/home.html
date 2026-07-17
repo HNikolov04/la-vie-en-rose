@@ -4,18 +4,17 @@
 
   <div class="container hero-grid">
     <div class="hero-copy fade-up">
-      <span class="eyebrow">Modern nail care, beautifully done</span>
-      <h1>Life looks better <em>in pink.</em></h1>
-      <p>
-        A warm, modern nail studio for thoughtful care, effortless colour, and
-        the tiny details that make you feel entirely yourself.
-      </p>
+      <span class="eyebrow">{{ i18n.t('home.hero.eyebrow') }}</span>
+      <h1>{{ i18n.t('home.hero.title') }} <em>{{ i18n.t('home.hero.titleAccent') }}</em></h1>
+      <p>{{ i18n.t('home.hero.copy') }}</p>
       <div class="hero-actions">
         <a class="button button--primary" routerLink="/contact" fragment="booking">
-          Book your visit
+          {{ i18n.t('home.hero.book') }}
           <span class="material-symbols-rounded">arrow_forward</span>
         </a>
-        <a class="button button--secondary" routerLink="/services">Explore services</a>
+        <a class="button button--secondary" routerLink="/services">
+          {{ i18n.t('home.hero.explore') }}
+        </a>
       </div>
       <div class="hero-proof">
         <div class="avatar-stack" aria-hidden="true">
@@ -23,7 +22,7 @@
         </div>
         <div>
           <div class="stars">★★★★★</div>
-          <small>Loved by our regulars</small>
+          <small>{{ i18n.t('home.hero.loved') }}</small>
         </div>
       </div>
     </div>
@@ -32,22 +31,20 @@
       <div class="visual-card visual-card--main placeholder-art">
         <span class="image-note">
           <span class="material-symbols-rounded">add_photo_alternate</span>
-          Your hero image
+          {{ i18n.t('home.hero.image') }}
         </span>
       </div>
       <div class="visual-card visual-card--small">
         <span class="material-symbols-rounded">favorite</span>
-        <strong>Made for you</strong>
-        <small>Every colour. Every detail.</small>
+        <strong>{{ i18n.t('home.hero.cardTitle') }}</strong>
+        <small>{{ i18n.t('home.hero.cardCopy') }}</small>
       </div>
-      <div class="polish-orb">
-        <span>LR</span>
-      </div>
+      <div class="polish-orb"><span>LR</span></div>
     </div>
   </div>
 
   <a class="scroll-cue" href="#welcome">
-    <span>Scroll to discover</span>
+    <span>{{ i18n.t('home.hero.scroll') }}</span>
     <span class="material-symbols-rounded">south</span>
   </a>
 </section>
@@ -55,17 +52,13 @@
 <section class="section intro" id="welcome">
   <div class="container intro-grid">
     <div>
-      <span class="eyebrow">Welcome to La Vie en Rose</span>
-      <h2 class="section-title">A softer kind of self-care.</h2>
+      <span class="eyebrow">{{ i18n.t('home.intro.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('home.intro.title') }}</h2>
     </div>
     <div class="intro-copy">
-      <p class="section-copy">
-        We believe a nail appointment should be more than a quick stop. It is
-        time to slow down, choose something beautiful, and leave feeling a
-        little lighter.
-      </p>
+      <p class="section-copy">{{ i18n.t('home.intro.copy') }}</p>
       <a class="text-link" routerLink="/about">
-        Meet the studio
+        {{ i18n.t('home.intro.link') }}
         <span class="material-symbols-rounded">arrow_outward</span>
       </a>
     </div>
@@ -76,20 +69,22 @@
   <div class="container">
     <div class="section-heading">
       <div>
-        <span class="eyebrow">Our favourites</span>
-        <h2 class="section-title">Polished, from tip to toe.</h2>
+        <span class="eyebrow">{{ i18n.t('home.services.eyebrow') }}</span>
+        <h2 class="section-title">{{ i18n.t('home.services.title') }}</h2>
       </div>
-      <a class="button button--secondary" routerLink="/services">View all services</a>
+      <a class="button button--secondary" routerLink="/services">
+        {{ i18n.t('home.services.all') }}
+      </a>
     </div>
 
     <div class="service-grid">
-      @for (service of services; track service.name; let index = $index) {
+      @for (service of services; track service.nameKey; let index = $index) {
         <article class="service-card">
           <span class="service-number">0{{ index + 1 }}</span>
           <span class="material-symbols-rounded service-icon">{{ service.icon }}</span>
-          <h3>{{ service.name }}</h3>
-          <p>{{ service.description }}</p>
-          <strong>{{ service.price }}</strong>
+          <h3>{{ i18n.t(service.nameKey) }}</h3>
+          <p>{{ i18n.t(service.descriptionKey) }}</p>
+          <strong>{{ i18n.t(service.priceKey) }}</strong>
         </article>
       }
     </div>
@@ -100,23 +95,19 @@
   <div class="feature-art placeholder-art">
     <span class="image-note">
       <span class="material-symbols-rounded">add_photo_alternate</span>
-      Studio image
+      {{ i18n.t('home.feature.image') }}
     </span>
   </div>
   <div class="feature-copy">
-    <span class="eyebrow">The rose standard</span>
-    <h2 class="section-title">Care in every little detail.</h2>
-    <p>
-      Beautiful results begin with considered care. We use trusted products,
-      thoughtful techniques, and unhurried appointments to keep your natural
-      nails feeling as good as they look.
-    </p>
+    <span class="eyebrow">{{ i18n.t('home.feature.eyebrow') }}</span>
+    <h2 class="section-title">{{ i18n.t('home.feature.title') }}</h2>
+    <p>{{ i18n.t('home.feature.copy') }}</p>
     <ul>
-      <li><span class="material-symbols-rounded">check_circle</span> Carefully sanitised tools</li>
-      <li><span class="material-symbols-rounded">check_circle</span> Quality, nail-kind products</li>
-      <li><span class="material-symbols-rounded">check_circle</span> Personal colour consultation</li>
+      <li><span class="material-symbols-rounded">check_circle</span>{{ i18n.t('home.feature.sanitised') }}</li>
+      <li><span class="material-symbols-rounded">check_circle</span>{{ i18n.t('home.feature.products') }}</li>
+      <li><span class="material-symbols-rounded">check_circle</span>{{ i18n.t('home.feature.consultation') }}</li>
     </ul>
-    <a class="button button--primary" routerLink="/about">Our approach</a>
+    <a class="button button--primary" routerLink="/about">{{ i18n.t('home.feature.link') }}</a>
   </div>
 </section>
 
@@ -124,11 +115,11 @@
   <div class="container">
     <div class="gallery-heading">
       <div>
-        <span class="eyebrow">Fresh from the studio</span>
-        <h2 class="section-title">A little inspiration.</h2>
+        <span class="eyebrow">{{ i18n.t('home.gallery.eyebrow') }}</span>
+        <h2 class="section-title">{{ i18n.t('home.gallery.title') }}</h2>
       </div>
       <a class="text-link" routerLink="/gallery">
-        Explore the gallery
+        {{ i18n.t('home.gallery.link') }}
         <span class="material-symbols-rounded">arrow_outward</span>
       </a>
     </div>
@@ -145,14 +136,14 @@
 
 <section class="section testimonials">
   <div class="container">
-    <span class="eyebrow">Kind words</span>
-    <h2 class="section-title">From our lovely clients.</h2>
+    <span class="eyebrow">{{ i18n.t('home.testimonials.eyebrow') }}</span>
+    <h2 class="section-title">{{ i18n.t('home.testimonials.title') }}</h2>
 
     <div class="testimonial-grid">
       @for (testimonial of testimonials; track testimonial.name) {
         <blockquote>
           <div class="stars">★★★★★</div>
-          <p>“{{ testimonial.quote }}”</p>
+          <p>“{{ i18n.t(testimonial.quoteKey) }}”</p>
           <cite>{{ testimonial.name }}</cite>
         </blockquote>
       }

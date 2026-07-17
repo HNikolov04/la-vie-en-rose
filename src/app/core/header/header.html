@@ -1,33 +1,75 @@
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" routerLink="/" (click)="closeMenu()" aria-label="La Vie en Rose home">
+    <a
+      class="brand"
+      routerLink="/"
+      (click)="closeMenu()"
+      [attr.aria-label]="i18n.t('common.brandName') + ' ' + i18n.t('common.home')"
+    >
       <span class="brand-mark">LR</span>
       <span>
-        <strong>La Vie en Rose</strong>
-        <small>Nail studio</small>
+        <strong>{{ i18n.t('common.brandName') }}</strong>
+        <small>{{ i18n.t('common.nailStudio') }}</small>
       </span>
     </a>
 
     <button
       class="menu-toggle"
       type="button"
-      aria-label="Toggle navigation"
+      [attr.aria-label]="i18n.t('common.menu')"
       [attr.aria-expanded]="menuOpen()"
       (click)="toggleMenu()"
     >
       <span class="material-symbols-rounded">{{ menuOpen() ? 'close' : 'menu' }}</span>
     </button>
 
-    <nav class="navigation" [class.navigation--open]="menuOpen()" aria-label="Main navigation">
+    <nav
+      class="navigation"
+      [class.navigation--open]="menuOpen()"
+      [attr.aria-label]="i18n.t('common.brandName')"
+    >
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
-        Home
+        {{ i18n.t('common.home') }}
       </a>
-      <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services</a>
-      <a routerLink="/gallery" routerLinkActive="active" (click)="closeMenu()">Gallery</a>
-      <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
-      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+      <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">
+        {{ i18n.t('common.services') }}
+      </a>
+      <a routerLink="/prices" routerLinkActive="active" (click)="closeMenu()">
+        {{ i18n.t('common.prices') }}
+      </a>
+      <a routerLink="/gallery" routerLinkActive="active" (click)="closeMenu()">
+        {{ i18n.t('common.gallery') }}
+      </a>
+      <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">
+        {{ i18n.t('common.about') }}
+      </a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">
+        {{ i18n.t('common.contact') }}
+      </a>
+
+      <div class="language-switch" role="group" [attr.aria-label]="i18n.t('common.language')">
+        <button
+          type="button"
+          [class.active]="i18n.language() === 'bg'"
+          [attr.aria-pressed]="i18n.language() === 'bg'"
+          [attr.aria-label]="i18n.t('common.switchToBulgarian')"
+          (click)="i18n.setLanguage('bg')"
+        >
+          BG
+        </button>
+        <button
+          type="button"
+          [class.active]="i18n.language() === 'en'"
+          [attr.aria-pressed]="i18n.language() === 'en'"
+          [attr.aria-label]="i18n.t('common.switchToEnglish')"
+          (click)="i18n.setLanguage('en')"
+        >
+          EN
+        </button>
+      </div>
+
       <a class="book-link" routerLink="/contact" fragment="booking" (click)="closeMenu()">
-        Book now
+        {{ i18n.t('common.bookNow') }}
         <span class="material-symbols-rounded">arrow_outward</span>
       </a>
     </nav>

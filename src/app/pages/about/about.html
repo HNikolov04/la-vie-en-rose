@@ -1,11 +1,8 @@
 <section class="page-hero">
   <div class="container fade-up">
-    <span class="eyebrow">Our story</span>
-    <h1 class="display-title">Beauty, with a little more feeling.</h1>
-    <p>
-      La Vie en Rose was imagined as the kind of nail studio we always wanted
-      to visit: warm, thoughtful, beautiful, and never in a hurry.
-    </p>
+    <span class="eyebrow">{{ i18n.t('about.hero.eyebrow') }}</span>
+    <h1 class="display-title">{{ i18n.t('about.hero.title') }}</h1>
+    <p>{{ i18n.t('about.hero.copy') }}</p>
   </div>
 </section>
 
@@ -14,22 +11,14 @@
     <div class="story-art placeholder-art">
       <span class="image-note">
         <span class="material-symbols-rounded">add_photo_alternate</span>
-        Founder or studio image
+        {{ i18n.t('about.story.image') }}
       </span>
     </div>
     <div class="story-copy">
-      <span class="eyebrow">How it started</span>
-      <h2 class="section-title">A love letter to the little details.</h2>
-      <p>
-        We created La Vie en Rose around a simple idea: beauty appointments can
-        feel elevated without feeling formal. The studio pairs meticulous nail
-        care with a relaxed atmosphere, kind conversation, and design that
-        feels fresh rather than fleeting.
-      </p>
-      <p>
-        Every decision — from the colour wall to the appointment rhythm — is
-        made to help you slow down and enjoy the process.
-      </p>
+      <span class="eyebrow">{{ i18n.t('about.story.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('about.story.title') }}</h2>
+      <p>{{ i18n.t('about.story.copyOne') }}</p>
+      <p>{{ i18n.t('about.story.copyTwo') }}</p>
       <div class="signature">La Vie en Rose</div>
     </div>
   </div>
@@ -38,15 +27,15 @@
 <section class="section section--rose values-section">
   <div class="container">
     <div class="values-heading">
-      <span class="eyebrow">What matters here</span>
-      <h2 class="section-title">Our kind of beautiful.</h2>
+      <span class="eyebrow">{{ i18n.t('about.values.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('about.values.title') }}</h2>
     </div>
     <div class="values-grid">
-      @for (value of values; track value.title) {
+      @for (value of values; track value.titleKey) {
         <article>
           <span class="material-symbols-rounded">{{ value.icon }}</span>
-          <h3>{{ value.title }}</h3>
-          <p>{{ value.copy }}</p>
+          <h3>{{ i18n.t(value.titleKey) }}</h3>
+          <p>{{ i18n.t(value.copyKey) }}</p>
         </article>
       }
     </div>
@@ -55,18 +44,17 @@
 
 <section class="studio-section">
   <div class="studio-copy">
-    <span class="eyebrow">Your space to pause</span>
-    <h2 class="section-title">Step into the rose room.</h2>
-    <p>
-      Soft colour, comfortable details, and a warm welcome. Come for the nails;
-      stay for the feeling.
-    </p>
-    <a class="button button--primary" routerLink="/contact">Plan your visit</a>
+    <span class="eyebrow">{{ i18n.t('about.studio.eyebrow') }}</span>
+    <h2 class="section-title">{{ i18n.t('about.studio.title') }}</h2>
+    <p>{{ i18n.t('about.studio.copy') }}</p>
+    <a class="button button--primary" routerLink="/contact">
+      {{ i18n.t('about.studio.button') }}
+    </a>
   </div>
   <div class="studio-art placeholder-art">
     <span class="image-note">
       <span class="material-symbols-rounded">add_photo_alternate</span>
-      Interior image
+      {{ i18n.t('about.studio.image') }}
     </span>
   </div>
 </section>
@@ -74,22 +62,19 @@
 <section class="section team-section">
   <div class="container team-grid">
     <div>
-      <span class="eyebrow">Meet your artists</span>
-      <h2 class="section-title">Good hands. Great taste.</h2>
+      <span class="eyebrow">{{ i18n.t('about.team.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('about.team.title') }}</h2>
     </div>
-    <p class="section-copy">
-      Add your team portraits and short bios here when they are ready. The
-      structure can grow naturally as the studio and team expand.
-    </p>
+    <p class="section-copy">{{ i18n.t('about.team.copy') }}</p>
   </div>
   <div class="container team-placeholders">
-    @for (member of ['Founder & nail artist', 'Senior nail artist', 'Nail artist']; track member; let index = $index) {
+    @for (member of team; track member.roleKey; let index = $index) {
       <article>
         <div class="team-photo team-photo--{{ index + 1 }}">
           <span class="material-symbols-rounded">person</span>
         </div>
-        <h3>Team member</h3>
-        <p>{{ member }}</p>
+        <h3>{{ i18n.t('about.team.member') }}</h3>
+        <p>{{ i18n.t(member.roleKey) }}</p>
       </article>
     }
   </div>
