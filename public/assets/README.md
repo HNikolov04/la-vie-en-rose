@@ -10,12 +10,12 @@ assets/
 |-- brand/
 |   `-- logo-primary.png
 |-- images/
-|   |-- contact/
 |   |-- prices/
 |   |-- services/
 |   |-- studio/
 |   `-- team/
 `-- info/
+    |-- location-map-reference.png
     `-- salon-information.txt
 ```
 

@@ -9,9 +9,8 @@ export const routes: Routes = [
   },
   {
     path: 'services',
-    data: { titleKey: 'meta.services.title' },
-    loadComponent: () =>
-      import('./pages/services/services').then((component) => component.Services)
+    redirectTo: 'gallery',
+    pathMatch: 'full'
   },
   {
     path: 'prices',

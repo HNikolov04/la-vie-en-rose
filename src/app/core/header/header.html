@@ -38,9 +38,6 @@
         <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
           {{ i18n.t('common.home') }}
         </a>
-        <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">
-          {{ i18n.t('common.services') }}
-        </a>
         <a routerLink="/prices" routerLinkActive="active" (click)="closeMenu()">
           {{ i18n.t('common.prices') }}
         </a>
@@ -77,7 +74,7 @@
           </button>
         </div>
 
-        <a class="book-link" routerLink="/contact" fragment="booking" (click)="closeMenu()">
+        <a class="book-link" routerLink="/contact" fragment="contact-details" (click)="closeMenu()">
           {{ i18n.t('common.bookNow') }}
           <span class="material-symbols-rounded">arrow_outward</span>
         </a>

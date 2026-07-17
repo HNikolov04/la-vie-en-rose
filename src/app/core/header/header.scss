@@ -32,8 +32,7 @@
   height: 36px;
   overflow: hidden;
   border-radius: 50%;
-  background: var(--rose-950);
-  box-shadow: 0 0 0 2px var(--gold-300);
+  background: transparent;
 }
 
 .brand-mark img {
@@ -89,7 +88,7 @@
   left: 0;
   height: 2px;
   border-radius: 2px;
-  background: var(--gold-500);
+  background: var(--rose-500);
   content: '';
   transform: scaleX(0);
   transition: transform 180ms ease;

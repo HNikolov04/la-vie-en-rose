@@ -143,55 +143,14 @@
   font-size: 0.95rem;
 }
 
-.price-note {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: clamp(28px, 5vw, 65px);
-}
-
-.note-mark {
-  display: grid;
-  width: 88px;
-  height: 88px;
-  place-items: center;
-  border: 7px solid var(--gold-200);
-  border-radius: 50%;
-  color: var(--white);
-  background: var(--rose-700);
-  box-shadow: var(--shadow-sm);
-}
-
-.note-mark .material-symbols-rounded {
-  font-size: 30px;
-  font-variation-settings: 'FILL' 1;
-}
-
-.price-note .section-title {
-  max-width: 720px;
-}
-
-.price-note .section-copy {
-  margin-bottom: 0;
-}
-
-.price-note .button {
-  flex: 0 0 auto;
-}
-
 @media (max-width: 900px) {
   .prices-intro,
-  .price-note,
   .price-layout {
     grid-template-columns: 1fr;
   }
 
   .prices-intro {
     gap: 15px;
-  }
-
-  .price-note .button {
-    width: fit-content;
   }
 
   .official-price-list {
@@ -214,9 +173,5 @@
   .table-header,
   .price-row {
     grid-template-columns: minmax(0, 1fr) minmax(95px, auto);
-  }
-
-  .price-note .button {
-    width: 100%;
   }
 }

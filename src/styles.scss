@@ -16,9 +16,9 @@
   --gold-300: #dcc285;
   --gold-200: #ead9ad;
   --gold-100: #f8f1df;
-  --cream: #fffaf8;
-  --ink: #311722;
-  --muted: #755b65;
+  --cream: #ffffff;
+  --ink: #3b1726;
+  --muted: #745965;
   --white: #ffffff;
   --border: rgba(145, 27, 70, 0.14);
   --shadow-sm: 0 12px 30px rgba(102, 18, 49, 0.09);
@@ -173,7 +173,7 @@ p {
 .button--primary {
   color: var(--white);
   background: var(--rose-700);
-  border-color: rgba(220, 194, 133, 0.7);
+  border-color: var(--rose-700);
   box-shadow: 0 12px 30px rgba(179, 35, 89, 0.25);
 }
 
@@ -197,7 +197,7 @@ p {
   overflow: hidden;
   padding: clamp(68px, 9vw, 105px) 0 clamp(58px, 7vw, 88px);
   background:
-    radial-gradient(circle at 85% 22%, rgba(248, 241, 223, 0.78) 0 6%, transparent 6.2%),
+    radial-gradient(circle at 85% 22%, rgba(255, 255, 255, 0.62) 0 6%, transparent 6.2%),
     radial-gradient(circle at 78% 40%, rgba(255, 255, 255, 0.35) 0 15%, transparent 15.2%),
     linear-gradient(135deg, var(--rose-100), #f9b8ce 54%, var(--rose-400));
 }
@@ -239,7 +239,7 @@ p {
 
 .section--dark {
   color: var(--white);
-  background: var(--rose-950);
+  background: var(--rose-900);
 }
 
 .card {
