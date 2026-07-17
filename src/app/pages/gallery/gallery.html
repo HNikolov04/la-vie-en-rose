@@ -1,11 +1,8 @@
 <section class="page-hero">
   <div class="container fade-up">
-    <span class="eyebrow">Our work</span>
-    <h1 class="display-title">Made to be looked at.</h1>
-    <p>
-      A growing edit of colours, finishes, and tiny details created at La Vie
-      en Rose. Your final photography will drop straight into this layout.
-    </p>
+    <span class="eyebrow">{{ i18n.t('gallery.hero.eyebrow') }}</span>
+    <h1 class="display-title">{{ i18n.t('gallery.hero.title') }}</h1>
+    <p>{{ i18n.t('gallery.hero.copy') }}</p>
   </div>
 </section>
 
@@ -13,25 +10,22 @@
   <div class="container">
     <div class="gallery-toolbar">
       <div>
-        <span class="eyebrow">The nail edit</span>
-        <h2 class="section-title">Recent favourites.</h2>
+        <span class="eyebrow">{{ i18n.t('gallery.toolbar.eyebrow') }}</span>
+        <h2 class="section-title">{{ i18n.t('gallery.toolbar.title') }}</h2>
       </div>
-      <p class="section-copy">
-        Clean lines, soft colour, and a touch of playfulness — always tailored
-        to the person wearing them.
-      </p>
+      <p class="section-copy">{{ i18n.t('gallery.toolbar.copy') }}</p>
     </div>
 
     <div class="gallery-grid">
-      @for (item of galleryItems; track item.label; let index = $index) {
+      @for (item of galleryItems; track item.labelKey; let index = $index) {
         <article class="gallery-item {{ item.className }} item-{{ index + 1 }}">
           <div class="placeholder-content">
             <span class="material-symbols-rounded">add_photo_alternate</span>
-            <small>Replace with photo</small>
+            <small>{{ i18n.t('common.imagePlaceholder') }}</small>
           </div>
           <div class="gallery-caption">
             <span>0{{ index + 1 }}</span>
-            <h3>{{ item.label }}</h3>
+            <h3>{{ i18n.t(item.labelKey) }}</h3>
           </div>
         </article>
       }
@@ -42,8 +36,8 @@
 <section class="section section--dark social-strip">
   <div class="container social-content">
     <div>
-      <span class="eyebrow">Follow along</span>
-      <h2 class="section-title">More pink, in your feed.</h2>
+      <span class="eyebrow">{{ i18n.t('gallery.social.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('gallery.social.title') }}</h2>
     </div>
     <a class="social-handle" href="#">
       <span class="material-symbols-rounded">photo_camera</span>

@@ -9,6 +9,7 @@ accounts, or other salon features later.
 
 - Home — brand introduction, featured services, gallery preview, and reviews
 - Services — grouped service menu and appointment guidance
+- Price List — transparent treatment pricing, durations, and extras
 - Gallery — responsive portfolio layout prepared for final photography
 - About — salon story, values, studio, and team
 - Contact — contact details, booking-request form, opening hours, and FAQs
@@ -23,6 +24,7 @@ buttons, cards, and spacing system.
 - TypeScript in strict mode
 - SCSS with shared design tokens
 - Angular signals for the small amount of UI state
+- Strongly typed runtime translations in English and Bulgarian
 - Material Symbols Rounded for icons
 - Inter and Playfair Display for readable typography
 
@@ -81,6 +83,7 @@ SPA fallback so routed pages continue to work when opened or refreshed directly.
 .prettierrc.json           Shared formatting preferences
 public/assets/            Public brand and image assets
 src/app/core/             Site-wide layout components
+src/app/core/i18n/        EN/BG dictionaries, language state, and page titles
 src/app/pages/            Lazy-loaded route components
 src/app/app.routes.ts     Route definitions and page titles
 src/styles.scss           Design tokens and global reusable styles

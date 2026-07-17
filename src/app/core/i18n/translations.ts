@@ -1,0 +1,580 @@
+export type Language = 'en' | 'bg';
+
+const en = {
+  'meta.site.description':
+    'La Vie en Rose is a modern nail studio for considered manicures, beautiful details, and unhurried self-care.',
+  'meta.home.title': 'La Vie en Rose | Nail Studio',
+  'meta.services.title': 'Services | La Vie en Rose',
+  'meta.prices.title': 'Price List | La Vie en Rose',
+  'meta.gallery.title': 'Gallery | La Vie en Rose',
+  'meta.about.title': 'About | La Vie en Rose',
+  'meta.contact.title': 'Contact | La Vie en Rose',
+
+  'common.brandName': 'La Vie en Rose',
+  'common.nailStudio': 'Nail studio',
+  'common.home': 'Home',
+  'common.services': 'Services',
+  'common.prices': 'Price list',
+  'common.gallery': 'Gallery',
+  'common.about': 'About',
+  'common.contact': 'Contact',
+  'common.bookNow': 'Book now',
+  'common.bookAppointment': 'Book an appointment',
+  'common.menu': 'Menu',
+  'common.language': 'Language',
+  'common.switchToEnglish': 'Switch to English',
+  'common.switchToBulgarian': 'Switch to Bulgarian',
+  'common.imagePlaceholder': 'Replace with photo',
+
+  'footer.eyebrow': 'A little time for you',
+  'footer.title': 'Ready for your next favourite set?',
+  'footer.description':
+    'Thoughtful nail care, beautiful details, and a little everyday luxury.',
+  'footer.explore': 'Explore',
+  'footer.story': 'Our story',
+  'footer.visit': 'Visit',
+  'footer.address': '123 Rose Street',
+  'footer.city': 'City Centre',
+  'footer.hours': 'Hours',
+  'footer.weekdays': 'Mon – Fri: 09:00 – 19:00',
+  'footer.saturday': 'Saturday: 10:00 – 18:00',
+  'footer.sunday': 'Sunday: Closed',
+  'footer.rights': 'La Vie en Rose.',
+  'footer.madeWithCare': 'Made with care.',
+  'footer.socialMedia': 'Social media',
+
+  'home.hero.eyebrow': 'Modern nail care, beautifully done',
+  'home.hero.title': 'Life looks better',
+  'home.hero.titleAccent': 'in pink.',
+  'home.hero.copy':
+    'A warm, modern nail studio for thoughtful care, effortless colour, and the tiny details that make you feel entirely yourself.',
+  'home.hero.book': 'Book your visit',
+  'home.hero.explore': 'Explore services',
+  'home.hero.loved': 'Loved by our regulars',
+  'home.hero.image': 'Your hero image',
+  'home.hero.cardTitle': 'Made for you',
+  'home.hero.cardCopy': 'Every colour. Every detail.',
+  'home.hero.scroll': 'Scroll to discover',
+  'home.intro.eyebrow': 'Welcome to La Vie en Rose',
+  'home.intro.title': 'A softer kind of self-care.',
+  'home.intro.copy':
+    'We believe a nail appointment should be more than a quick stop. It is time to slow down, choose something beautiful, and leave feeling a little lighter.',
+  'home.intro.link': 'Meet the studio',
+  'home.services.eyebrow': 'Our favourites',
+  'home.services.title': 'Polished, from tip to toe.',
+  'home.services.all': 'View all services',
+  'home.services.signature.name': 'Signature Manicure',
+  'home.services.signature.description':
+    'Detailed nail and cuticle care, shaped and finished with your perfect colour.',
+  'home.services.signature.price': 'from €28',
+  'home.services.gel.name': 'Gel Perfection',
+  'home.services.gel.description':
+    'Long-lasting colour with a glossy finish, designed around your everyday style.',
+  'home.services.gel.price': 'from €38',
+  'home.services.art.name': 'Nail Art',
+  'home.services.art.description':
+    'Delicate details, playful accents, and custom art created one nail at a time.',
+  'home.services.art.price': 'from €8',
+  'home.feature.image': 'Studio image',
+  'home.feature.eyebrow': 'The rose standard',
+  'home.feature.title': 'Care in every little detail.',
+  'home.feature.copy':
+    'Beautiful results begin with considered care. We use trusted products, thoughtful techniques, and unhurried appointments to keep your natural nails feeling as good as they look.',
+  'home.feature.sanitised': 'Carefully sanitised tools',
+  'home.feature.products': 'Quality, nail-kind products',
+  'home.feature.consultation': 'Personal colour consultation',
+  'home.feature.link': 'Our approach',
+  'home.gallery.eyebrow': 'Fresh from the studio',
+  'home.gallery.title': 'A little inspiration.',
+  'home.gallery.link': 'Explore the gallery',
+  'home.testimonials.eyebrow': 'Kind words',
+  'home.testimonials.title': 'From our lovely clients.',
+  'home.testimonials.one':
+    'The prettiest studio and the most careful manicure I have ever had.',
+  'home.testimonials.two':
+    'Every appointment feels calm, personal, and genuinely special.',
+  'home.testimonials.three':
+    'Beautiful work that lasts. I already look forward to my next visit.',
+
+  'services.hero.eyebrow': 'Our menu',
+  'services.hero.title': 'Small rituals. Beautiful results.',
+  'services.hero.copy':
+    'From clean, natural manicures to tiny works of art, every service is tailored with care and finished with intention.',
+  'services.intro.eyebrow': 'Choose your moment',
+  'services.intro.title': 'The service edit.',
+  'services.intro.copy':
+    'Not sure what to book? Choose the closest service and add a note about your ideal result. We will make sure there is enough time for you.',
+  'services.natural.title': 'Natural Nail Care',
+  'services.natural.description':
+    'Essential care for beautifully shaped, healthy natural nails.',
+  'services.classic.name': 'Classic Manicure',
+  'services.classic.detail': 'Shape, cuticle care, polish',
+  'services.ritual.name': 'Rose Ritual',
+  'services.ritual.detail': 'Manicure, scrub, mask, massage',
+  'services.refresh.name': 'Polish Refresh',
+  'services.refresh.detail': 'Shape and classic polish',
+  'services.gel.title': 'Gel & BIAB',
+  'services.gel.description':
+    'Glossy, durable colour and strength with a refined finish.',
+  'services.gelManicure.name': 'Gel Manicure',
+  'services.gelManicure.detail': 'Full prep and gel colour',
+  'services.biab.name': 'BIAB Overlay',
+  'services.biab.detail': 'Builder base and gel colour',
+  'services.removal.name': 'Gel Removal',
+  'services.removal.detail': 'Gentle removal and nail care',
+  'services.art.title': 'Art & Extras',
+  'services.art.description':
+    'Personal details to make your manicure feel completely yours.',
+  'services.minimal.name': 'Minimal Art',
+  'services.minimal.detail': 'Fine lines, dots, chrome accents',
+  'services.detailed.name': 'Detailed Art',
+  'services.detailed.detail': 'Custom design consultation',
+  'services.french.name': 'French Finish',
+  'services.french.detail': 'Classic or colourful tips',
+  'services.pedicures.title': 'Pedicures',
+  'services.pedicures.description':
+    'Restorative foot care with a polished final touch.',
+  'services.classicPedi.name': 'Classic Pedicure',
+  'services.classicPedi.detail': 'Full care and classic polish',
+  'services.gelPedi.name': 'Gel Pedicure',
+  'services.gelPedi.detail': 'Full care and gel colour',
+  'services.spaPedi.name': 'Rose Spa Pedicure',
+  'services.spaPedi.detail': 'Extended ritual and gel colour',
+  'services.notes.image': 'Detail image',
+  'services.notes.eyebrow': 'Good to know',
+  'services.notes.title': 'A thoughtful appointment, from start to finish.',
+  'services.notes.time.title': 'Arrive on time',
+  'services.notes.time.copy':
+    'Please arrive with enough time to settle in before your appointment.',
+  'services.notes.idea.title': 'Share your idea',
+  'services.notes.idea.copy':
+    'Bring references or send your inspiration before detailed nail art.',
+  'services.notes.changes.title': 'Changes happen',
+  'services.notes.changes.copy':
+    "Please give us 24 hours' notice if you need to move your booking.",
+  'services.notes.health.title': 'Nail health first',
+  'services.notes.health.copy':
+    'We may adjust a service if your natural nails need a gentler approach.',
+  'services.notes.book': 'Choose your appointment',
+
+  'prices.hero.eyebrow': 'Clear and simple',
+  'prices.hero.title': 'Our price list.',
+  'prices.hero.copy':
+    'Everything you need to plan your visit, with transparent pricing and no surprises.',
+  'prices.intro.eyebrow': 'Treatments and extras',
+  'prices.intro.title': 'Find your perfect appointment.',
+  'prices.intro.copy':
+    'Final pricing may vary for complex art or additional length. We will always confirm it with you before we begin.',
+  'prices.duration': 'Duration',
+  'prices.price': 'Price',
+  'prices.minutes': 'min',
+  'prices.manicures': 'Manicures',
+  'prices.gelBiab': 'Gel & BIAB',
+  'prices.pedicures': 'Pedicures',
+  'prices.extras': 'Nail art & extras',
+  'prices.repair.name': 'Single Nail Repair',
+  'prices.repair.detail': 'Repair or extension of one nail',
+  'prices.consultation.name': 'Colour Consultation',
+  'prices.consultation.detail': 'Included with every full service',
+  'prices.included': 'Included',
+  'prices.note.eyebrow': 'A small note',
+  'prices.note.title': 'Beautiful nails begin with the right amount of time.',
+  'prices.note.copy':
+    'For detailed art, repairs, or removal, mention what you need when booking so we can reserve the perfect appointment length.',
+  'prices.note.button': 'Book from the price list',
+
+  'gallery.hero.eyebrow': 'Our work',
+  'gallery.hero.title': 'Made to be looked at.',
+  'gallery.hero.copy':
+    'A growing edit of colours, finishes, and tiny details created at La Vie en Rose. Your final photography will drop straight into this layout.',
+  'gallery.toolbar.eyebrow': 'The nail edit',
+  'gallery.toolbar.title': 'Recent favourites.',
+  'gallery.toolbar.copy':
+    'Clean lines, soft colour, and a touch of playfulness — always tailored to the person wearing them.',
+  'gallery.item.blush': 'Blush minimal',
+  'gallery.item.chrome': 'Rose chrome',
+  'gallery.item.french': 'Soft french',
+  'gallery.item.details': 'Tiny details',
+  'gallery.item.red': 'Cherry red',
+  'gallery.item.nude': 'Clean nude',
+  'gallery.item.aura': 'Pink aura',
+  'gallery.item.pearl': 'Pearl finish',
+  'gallery.social.eyebrow': 'Follow along',
+  'gallery.social.title': 'More pink, in your feed.',
+
+  'about.hero.eyebrow': 'Our story',
+  'about.hero.title': 'Beauty, with a little more feeling.',
+  'about.hero.copy':
+    'La Vie en Rose was imagined as the kind of nail studio we always wanted to visit: warm, thoughtful, beautiful, and never in a hurry.',
+  'about.story.image': 'Founder or studio image',
+  'about.story.eyebrow': 'How it started',
+  'about.story.title': 'A love letter to the little details.',
+  'about.story.copyOne':
+    'We created La Vie en Rose around a simple idea: beauty appointments can feel elevated without feeling formal. The studio pairs meticulous nail care with a relaxed atmosphere, kind conversation, and design that feels fresh rather than fleeting.',
+  'about.story.copyTwo':
+    'Every decision — from the colour wall to the appointment rhythm — is made to help you slow down and enjoy the process.',
+  'about.values.eyebrow': 'What matters here',
+  'about.values.title': 'Our kind of beautiful.',
+  'about.values.care.title': 'Care first',
+  'about.values.care.copy':
+    'Natural nail health and thoughtful technique guide every appointment.',
+  'about.values.personal.title': 'Made personal',
+  'about.values.personal.copy':
+    'Your shape, lifestyle, colour, and ideas are always part of the process.',
+  'about.values.energy.title': 'Good energy',
+  'about.values.energy.copy':
+    'A bright, welcoming studio where you can settle in and feel at ease.',
+  'about.studio.eyebrow': 'Your space to pause',
+  'about.studio.title': 'Step into the rose room.',
+  'about.studio.copy':
+    'Soft colour, comfortable details, and a warm welcome. Come for the nails; stay for the feeling.',
+  'about.studio.button': 'Plan your visit',
+  'about.studio.image': 'Interior image',
+  'about.team.eyebrow': 'Meet your artists',
+  'about.team.title': 'Good hands. Great taste.',
+  'about.team.copy':
+    'Add your team portraits and short bios here when they are ready. The structure can grow naturally as the studio and team expand.',
+  'about.team.member': 'Team member',
+  'about.team.founder': 'Founder & nail artist',
+  'about.team.senior': 'Senior nail artist',
+  'about.team.artist': 'Nail artist',
+
+  'contact.hero.eyebrow': 'Come say hello',
+  'contact.hero.title': 'Your seat is waiting.',
+  'contact.hero.copy':
+    'Book your appointment, ask us a question, or stop by the studio. We would love to welcome you into our little pink corner.',
+  'contact.booking.eyebrow': 'Book an appointment',
+  'contact.booking.title': 'Tell us what you have in mind.',
+  'contact.booking.copy':
+    'This form is ready for your future booking integration. For now, update the contact details below and connect your preferred booking link.',
+  'contact.call': 'Call us',
+  'contact.email': 'Email us',
+  'contact.visit': 'Visit us',
+  'contact.address': '123 Rose Street, City Centre',
+  'contact.form.name': 'Your name',
+  'contact.form.namePlaceholder': 'Jane Smith',
+  'contact.form.phone': 'Phone number',
+  'contact.form.email': 'Email address',
+  'contact.form.service': 'Service',
+  'contact.form.choose': 'Choose a service',
+  'contact.form.message': 'Anything we should know?',
+  'contact.form.messagePlaceholder':
+    'Tell us about your idea, preferred date, or current nails...',
+  'contact.form.send': 'Send booking request',
+  'contact.form.note':
+    'This currently opens your email app. A booking system can be connected later.',
+  'contact.map.title': 'Map integration',
+  'contact.map.copy': 'Embed your final Google Maps location here',
+  'contact.visit.eyebrow': 'Plan your visit',
+  'contact.visit.title': 'Find your way to the pink door.',
+  'contact.hours.weekdays': 'Monday – Friday',
+  'contact.hours.saturday': 'Saturday',
+  'contact.hours.sunday': 'Sunday',
+  'contact.hours.closed': 'Closed',
+  'contact.visit.copy':
+    'Street parking and public transport are available nearby. Please arrive five minutes before your appointment.',
+  'contact.faq.eyebrow': 'Before you visit',
+  'contact.faq.title': 'A few quick answers.',
+  'contact.faq.prepare.question': 'How should I prepare for my appointment?',
+  'contact.faq.prepare.answer':
+    'Come as you are. If you currently have gel or BIAB, mention it when booking so we reserve removal time.',
+  'contact.faq.art.question': 'Can I bring a nail art reference?',
+  'contact.faq.art.answer':
+    'Absolutely. Send it ahead for detailed designs so your artist can prepare colours and allow enough time.',
+  'contact.faq.cancel.question': 'What is the cancellation policy?',
+  'contact.faq.cancel.answer':
+    "Please give at least 24 hours' notice when moving or cancelling an appointment."
+} as const;
+
+export type TranslationKey = keyof typeof en;
+
+const bg: Record<TranslationKey, string> = {
+  'meta.site.description':
+    'La Vie en Rose е модерно студио за маникюр с внимание към детайла, красотата и спокойната грижа за себе си.',
+  'meta.home.title': 'La Vie en Rose | Студио за маникюр',
+  'meta.services.title': 'Услуги | La Vie en Rose',
+  'meta.prices.title': 'Ценоразпис | La Vie en Rose',
+  'meta.gallery.title': 'Галерия | La Vie en Rose',
+  'meta.about.title': 'За нас | La Vie en Rose',
+  'meta.contact.title': 'Контакти | La Vie en Rose',
+
+  'common.brandName': 'La Vie en Rose',
+  'common.nailStudio': 'Студио за маникюр',
+  'common.home': 'Начало',
+  'common.services': 'Услуги',
+  'common.prices': 'Ценоразпис',
+  'common.gallery': 'Галерия',
+  'common.about': 'За нас',
+  'common.contact': 'Контакти',
+  'common.bookNow': 'Запази час',
+  'common.bookAppointment': 'Запази час',
+  'common.menu': 'Меню',
+  'common.language': 'Език',
+  'common.switchToEnglish': 'Превключи на английски',
+  'common.switchToBulgarian': 'Превключи на български',
+  'common.imagePlaceholder': 'Добавете снимка',
+
+  'footer.eyebrow': 'Малко време за теб',
+  'footer.title': 'Готова ли си за следващия си любим маникюр?',
+  'footer.description':
+    'Внимателна грижа за ноктите, красиви детайли и малко ежедневен лукс.',
+  'footer.explore': 'Разгледай',
+  'footer.story': 'Нашата история',
+  'footer.visit': 'Посети ни',
+  'footer.address': 'ул. „Роза“ 123',
+  'footer.city': 'Център',
+  'footer.hours': 'Работно време',
+  'footer.weekdays': 'Пон – Пет: 09:00 – 19:00',
+  'footer.saturday': 'Събота: 10:00 – 18:00',
+  'footer.sunday': 'Неделя: Почивен ден',
+  'footer.rights': 'La Vie en Rose.',
+  'footer.madeWithCare': 'Създадено с грижа.',
+  'footer.socialMedia': 'Социални мрежи',
+
+  'home.hero.eyebrow': 'Модерна грижа за ноктите, направена красиво',
+  'home.hero.title': 'Животът е по-красив',
+  'home.hero.titleAccent': 'в розово.',
+  'home.hero.copy':
+    'Топло и модерно студио за внимателна грижа, красиви цветове и онези малки детайли, които те карат да се чувстваш напълно себе си.',
+  'home.hero.book': 'Запази посещение',
+  'home.hero.explore': 'Разгледай услугите',
+  'home.hero.loved': 'Любимо място на нашите клиенти',
+  'home.hero.image': 'Основна снимка',
+  'home.hero.cardTitle': 'Създадено за теб',
+  'home.hero.cardCopy': 'Всеки цвят. Всеки детайл.',
+  'home.hero.scroll': 'Разгледай надолу',
+  'home.intro.eyebrow': 'Добре дошла в La Vie en Rose',
+  'home.intro.title': 'По-нежна грижа за себе си.',
+  'home.intro.copy':
+    'Вярваме, че маникюрът трябва да бъде повече от кратка спирка. Това е време да забавиш темпото, да избереш нещо красиво и да си тръгнеш с по-леко настроение.',
+  'home.intro.link': 'Запознай се със студиото',
+  'home.services.eyebrow': 'Нашите фаворити',
+  'home.services.title': 'Съвършенство до върха на пръстите.',
+  'home.services.all': 'Виж всички услуги',
+  'home.services.signature.name': 'Класически маникюр',
+  'home.services.signature.description':
+    'Прецизна грижа за ноктите и кожичките, оформяне и завършек с твоя идеален цвят.',
+  'home.services.signature.price': 'от €28',
+  'home.services.gel.name': 'Гел съвършенство',
+  'home.services.gel.description':
+    'Дълготраен цвят с блестящ завършек, съобразен с твоя ежедневен стил.',
+  'home.services.gel.price': 'от €38',
+  'home.services.art.name': 'Декорации',
+  'home.services.art.description':
+    'Фини детайли, закачливи акценти и индивидуален дизайн, създаден нокът по нокът.',
+  'home.services.art.price': 'от €8',
+  'home.feature.image': 'Снимка на студиото',
+  'home.feature.eyebrow': 'Стандартът Rose',
+  'home.feature.title': 'Грижа във всеки малък детайл.',
+  'home.feature.copy':
+    'Красивият резултат започва с внимателна грижа. Използваме качествени продукти, щадящи техники и достатъчно време, за да изглеждат естествените ти нокти толкова добре, колкото се чувстват.',
+  'home.feature.sanitised': 'Внимателно дезинфекцирани инструменти',
+  'home.feature.products': 'Качествени и щадящи продукти',
+  'home.feature.consultation': 'Лична консултация за цвят',
+  'home.feature.link': 'Нашият подход',
+  'home.gallery.eyebrow': 'Ново от студиото',
+  'home.gallery.title': 'Малко вдъхновение.',
+  'home.gallery.link': 'Разгледай галерията',
+  'home.testimonials.eyebrow': 'Мили думи',
+  'home.testimonials.title': 'От нашите прекрасни клиенти.',
+  'home.testimonials.one':
+    'Най-красивото студио и най-внимателният маникюр, който съм имала.',
+  'home.testimonials.two':
+    'Всяко посещение е спокойно, лично и наистина специално.',
+  'home.testimonials.three':
+    'Красив и дълготраен резултат. Вече очаквам следващото си посещение.',
+
+  'services.hero.eyebrow': 'Нашето меню',
+  'services.hero.title': 'Малки ритуали. Красиви резултати.',
+  'services.hero.copy':
+    'От изчистен естествен маникюр до малки произведения на изкуството — всяка услуга е съобразена с теб и завършена с внимание.',
+  'services.intro.eyebrow': 'Избери своя момент',
+  'services.intro.title': 'Подбрани услуги.',
+  'services.intro.copy':
+    'Не си сигурна какво да запазиш? Избери най-близката услуга и добави бележка за желания резултат. Ще предвидим достатъчно време за теб.',
+  'services.natural.title': 'Грижа за естествени нокти',
+  'services.natural.description':
+    'Основна грижа за красиво оформени и здрави естествени нокти.',
+  'services.classic.name': 'Класически маникюр',
+  'services.classic.detail': 'Оформяне, кожички и лак',
+  'services.ritual.name': 'Rose ритуал',
+  'services.ritual.detail': 'Маникюр, скраб, маска и масаж',
+  'services.refresh.name': 'Освежаване с лак',
+  'services.refresh.detail': 'Оформяне и класически лак',
+  'services.gel.title': 'Гел лак и BIAB',
+  'services.gel.description':
+    'Блясък, устойчив цвят и допълнителна здравина с прецизен завършек.',
+  'services.gelManicure.name': 'Маникюр с гел лак',
+  'services.gelManicure.detail': 'Пълна подготовка и гел цвят',
+  'services.biab.name': 'BIAB укрепване',
+  'services.biab.detail': 'Изграждаща база и гел цвят',
+  'services.removal.name': 'Сваляне на гел лак',
+  'services.removal.detail': 'Щадящо сваляне и грижа',
+  'services.art.title': 'Дизайн и добавки',
+  'services.art.description':
+    'Лични детайли, с които маникюрът да бъде напълно твой.',
+  'services.minimal.name': 'Минималистичен дизайн',
+  'services.minimal.detail': 'Фини линии, точки и хром акценти',
+  'services.detailed.name': 'Детайлен дизайн',
+  'services.detailed.detail': 'Консултация за индивидуална идея',
+  'services.french.name': 'Френски маникюр',
+  'services.french.detail': 'Класически или цветни върхове',
+  'services.pedicures.title': 'Педикюр',
+  'services.pedicures.description':
+    'Възстановяваща грижа за стъпалата с красив финален щрих.',
+  'services.classicPedi.name': 'Класически педикюр',
+  'services.classicPedi.detail': 'Пълна грижа и класически лак',
+  'services.gelPedi.name': 'Педикюр с гел лак',
+  'services.gelPedi.detail': 'Пълна грижа и гел цвят',
+  'services.spaPedi.name': 'Rose спа педикюр',
+  'services.spaPedi.detail': 'Удължен ритуал и гел цвят',
+  'services.notes.image': 'Детайлна снимка',
+  'services.notes.eyebrow': 'Добре е да знаеш',
+  'services.notes.title': 'Внимателно посещение от начало до край.',
+  'services.notes.time.title': 'Ела навреме',
+  'services.notes.time.copy':
+    'Пристигни с достатъчно време, за да се настаниш спокойно преди часа си.',
+  'services.notes.idea.title': 'Сподели идеята си',
+  'services.notes.idea.copy':
+    'Донеси снимки или изпрати вдъхновението си предварително за детайлен дизайн.',
+  'services.notes.changes.title': 'Плановете се променят',
+  'services.notes.changes.copy':
+    'Уведоми ни поне 24 часа по-рано, ако трябва да преместиш часа си.',
+  'services.notes.health.title': 'Здравето е на първо място',
+  'services.notes.health.copy':
+    'Може да адаптираме услугата, ако естествените ти нокти се нуждаят от по-щадящ подход.',
+  'services.notes.book': 'Избери своята услуга',
+
+  'prices.hero.eyebrow': 'Ясно и лесно',
+  'prices.hero.title': 'Нашият ценоразпис.',
+  'prices.hero.copy':
+    'Всичко необходимо, за да планираш посещението си — с ясни цени и без изненади.',
+  'prices.intro.eyebrow': 'Процедури и добавки',
+  'prices.intro.title': 'Открий своя идеален час.',
+  'prices.intro.copy':
+    'Крайната цена може да варира при сложен дизайн или допълнителна дължина. Винаги ще я потвърдим преди да започнем.',
+  'prices.duration': 'Времетраене',
+  'prices.price': 'Цена',
+  'prices.minutes': 'мин',
+  'prices.manicures': 'Маникюр',
+  'prices.gelBiab': 'Гел лак и BIAB',
+  'prices.pedicures': 'Педикюр',
+  'prices.extras': 'Дизайн и добавки',
+  'prices.repair.name': 'Ремонт на един нокът',
+  'prices.repair.detail': 'Поправка или удължаване на един нокът',
+  'prices.consultation.name': 'Консултация за цвят',
+  'prices.consultation.detail': 'Включена към всяка пълна услуга',
+  'prices.included': 'Включена',
+  'prices.note.eyebrow': 'Малка бележка',
+  'prices.note.title': 'Красивите нокти започват с правилното време.',
+  'prices.note.copy':
+    'За детайлен дизайн, поправки или сваляне сподели какво ти е необходимо при записването, за да отделим идеалното време.',
+  'prices.note.button': 'Запази час от ценоразписа',
+
+  'gallery.hero.eyebrow': 'Нашата работа',
+  'gallery.hero.title': 'Създадено, за да бъде забелязано.',
+  'gallery.hero.copy':
+    'Растяща селекция от цветове, завършеци и фини детайли, създадени в La Vie en Rose. Финалните снимки ще се впишат директно в тази галерия.',
+  'gallery.toolbar.eyebrow': 'Селекция маникюри',
+  'gallery.toolbar.title': 'Последни фаворити.',
+  'gallery.toolbar.copy':
+    'Чисти линии, нежни цветове и закачлив акцент — винаги съобразени с човека, който ги носи.',
+  'gallery.item.blush': 'Минимализъм в розово',
+  'gallery.item.chrome': 'Розов хром',
+  'gallery.item.french': 'Нежен френски',
+  'gallery.item.details': 'Фини детайли',
+  'gallery.item.red': 'Черешово червено',
+  'gallery.item.nude': 'Чист нюд',
+  'gallery.item.aura': 'Розова аура',
+  'gallery.item.pearl': 'Перлен завършек',
+  'gallery.social.eyebrow': 'Последвай ни',
+  'gallery.social.title': 'Повече розово в твоята емисия.',
+
+  'about.hero.eyebrow': 'Нашата история',
+  'about.hero.title': 'Красота с малко повече усещане.',
+  'about.hero.copy':
+    'La Vie en Rose е замислено като студиото, което винаги сме искали да посещаваме: топло, внимателно, красиво и никога забързано.',
+  'about.story.image': 'Снимка на основателя или студиото',
+  'about.story.eyebrow': 'Как започна всичко',
+  'about.story.title': 'Любовно писмо към малките детайли.',
+  'about.story.copyOne':
+    'Създадохме La Vie en Rose около една проста идея: разкрасителните процедури могат да бъдат специални, без да са формални. Студиото съчетава прецизна грижа за ноктите със спокойна атмосфера, приятен разговор и свеж дизайн.',
+  'about.story.copyTwo':
+    'Всяко решение — от стената с цветове до ритъма на посещението — е взето, за да ти помогне да забавиш темпото и да се насладиш на процеса.',
+  'about.values.eyebrow': 'Какво е важно за нас',
+  'about.values.title': 'Нашата представа за красота.',
+  'about.values.care.title': 'Първо грижата',
+  'about.values.care.copy':
+    'Здравето на естествените нокти и внимателната техника водят всяко посещение.',
+  'about.values.personal.title': 'Лично за теб',
+  'about.values.personal.copy':
+    'Формата, ежедневието, цветовете и идеите ти винаги са част от процеса.',
+  'about.values.energy.title': 'Добра енергия',
+  'about.values.energy.copy':
+    'Светло и приветливо студио, в което можеш да се отпуснеш и да се чувстваш добре.',
+  'about.studio.eyebrow': 'Твоето място за пауза',
+  'about.studio.title': 'Влез в розовата стая.',
+  'about.studio.copy':
+    'Нежни цветове, удобни детайли и топло посрещане. Ела за маникюра, остани за усещането.',
+  'about.studio.button': 'Планирай посещение',
+  'about.studio.image': 'Снимка на интериора',
+  'about.team.eyebrow': 'Запознай се с артистите',
+  'about.team.title': 'Добри ръце. Отличен вкус.',
+  'about.team.copy':
+    'Добавете портрети и кратки представяния на екипа, когато са готови. Структурата може естествено да расте заедно със студиото.',
+  'about.team.member': 'Член на екипа',
+  'about.team.founder': 'Основател и маникюрист',
+  'about.team.senior': 'Старши маникюрист',
+  'about.team.artist': 'Маникюрист',
+
+  'contact.hero.eyebrow': 'Кажи ни здравей',
+  'contact.hero.title': 'Твоето място те очаква.',
+  'contact.hero.copy':
+    'Запази час, задай ни въпрос или посети студиото. Ще се радваме да те посрещнем в нашето малко розово кътче.',
+  'contact.booking.eyebrow': 'Запази час',
+  'contact.booking.title': 'Разкажи ни какво си представяш.',
+  'contact.booking.copy':
+    'Формата е подготвена за бъдеща система за резервации. Засега актуализирайте данните за контакт и свържете предпочитаната платформа.',
+  'contact.call': 'Обади ни се',
+  'contact.email': 'Пиши ни',
+  'contact.visit': 'Посети ни',
+  'contact.address': 'ул. „Роза“ 123, Център',
+  'contact.form.name': 'Твоето име',
+  'contact.form.namePlaceholder': 'Мария Иванова',
+  'contact.form.phone': 'Телефонен номер',
+  'contact.form.email': 'Имейл адрес',
+  'contact.form.service': 'Услуга',
+  'contact.form.choose': 'Избери услуга',
+  'contact.form.message': 'Има ли нещо, което трябва да знаем?',
+  'contact.form.messagePlaceholder':
+    'Разкажи ни за идеята си, предпочитана дата или текущото състояние на ноктите...',
+  'contact.form.send': 'Изпрати запитване',
+  'contact.form.note':
+    'В момента това отваря имейл приложението. По-късно може да бъде свързана система за резервации.',
+  'contact.map.title': 'Интеграция с карта',
+  'contact.map.copy': 'Добавете финалната Google Maps локация тук',
+  'contact.visit.eyebrow': 'Планирай посещението си',
+  'contact.visit.title': 'Намери пътя към розовата врата.',
+  'contact.hours.weekdays': 'Понеделник – Петък',
+  'contact.hours.saturday': 'Събота',
+  'contact.hours.sunday': 'Неделя',
+  'contact.hours.closed': 'Почивен ден',
+  'contact.visit.copy':
+    'В близост има паркиране и удобен обществен транспорт. Моля, ела пет минути преди часа си.',
+  'contact.faq.eyebrow': 'Преди посещението',
+  'contact.faq.title': 'Няколко бързи отговора.',
+  'contact.faq.prepare.question': 'Как да се подготвя за посещението?',
+  'contact.faq.prepare.answer':
+    'Ела такава, каквато си. Ако в момента имаш гел лак или BIAB, спомени го при записването, за да предвидим време за сваляне.',
+  'contact.faq.art.question': 'Мога ли да донеса снимка за дизайн?',
+  'contact.faq.art.answer':
+    'Разбира се. Изпрати я предварително при детайлен дизайн, за да подготвим цветовете и достатъчно време.',
+  'contact.faq.cancel.question': 'Каква е политиката за отказ?',
+  'contact.faq.cancel.answer':
+    'Моля, уведоми ни поне 24 часа по-рано при преместване или отказ от час.'
+};
+
+export const TRANSLATIONS: Record<Language, Record<TranslationKey, string>> = {
+  en,
+  bg
+};

@@ -1,44 +1,38 @@
 <section class="page-hero">
   <div class="container fade-up">
-    <span class="eyebrow">Come say hello</span>
-    <h1 class="display-title">Your seat is waiting.</h1>
-    <p>
-      Book your appointment, ask us a question, or stop by the studio. We would
-      love to welcome you into our little pink corner.
-    </p>
+    <span class="eyebrow">{{ i18n.t('contact.hero.eyebrow') }}</span>
+    <h1 class="display-title">{{ i18n.t('contact.hero.title') }}</h1>
+    <p>{{ i18n.t('contact.hero.copy') }}</p>
   </div>
 </section>
 
 <section class="section contact-section" id="booking">
   <div class="container contact-grid">
     <div class="contact-copy">
-      <span class="eyebrow">Book an appointment</span>
-      <h2 class="section-title">Tell us what you have in mind.</h2>
-      <p class="section-copy">
-        This form is ready for your future booking integration. For now, update
-        the contact details below and connect your preferred booking link.
-      </p>
+      <span class="eyebrow">{{ i18n.t('contact.booking.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('contact.booking.title') }}</h2>
+      <p class="section-copy">{{ i18n.t('contact.booking.copy') }}</p>
 
       <div class="contact-details">
         <a href="tel:+359000000000">
           <span class="material-symbols-rounded">call</span>
           <div>
-            <small>Call us</small>
+            <small>{{ i18n.t('contact.call') }}</small>
             <strong>+359 00 000 0000</strong>
           </div>
         </a>
         <a href="mailto:hello@lavieenrose.studio">
           <span class="material-symbols-rounded">mail</span>
           <div>
-            <small>Email us</small>
+            <small>{{ i18n.t('contact.email') }}</small>
             <strong>hello&#64;lavieenrose.studio</strong>
           </div>
         </a>
         <div>
           <span class="material-symbols-rounded">location_on</span>
           <div>
-            <small>Visit us</small>
-            <strong>123 Rose Street, City Centre</strong>
+            <small>{{ i18n.t('contact.visit') }}</small>
+            <strong>{{ i18n.t('contact.address') }}</strong>
           </div>
         </div>
       </div>
@@ -47,38 +41,42 @@
     <form class="booking-card" action="mailto:hello@lavieenrose.studio" method="post" enctype="text/plain">
       <div class="field-row">
         <label>
-          <span>Your name</span>
-          <input type="text" name="name" placeholder="Jane Smith" required>
+          <span>{{ i18n.t('contact.form.name') }}</span>
+          <input type="text" name="name" [placeholder]="i18n.t('contact.form.namePlaceholder')" required>
         </label>
         <label>
-          <span>Phone number</span>
+          <span>{{ i18n.t('contact.form.phone') }}</span>
           <input type="tel" name="phone" placeholder="+359 ...">
         </label>
       </div>
       <label>
-        <span>Email address</span>
-        <input type="email" name="email" placeholder="jane@example.com" required>
+        <span>{{ i18n.t('contact.form.email') }}</span>
+        <input type="email" name="email" placeholder="name@example.com" required>
       </label>
       <label>
-        <span>Service</span>
+        <span>{{ i18n.t('contact.form.service') }}</span>
         <select name="service">
-          <option value="">Choose a service</option>
-          <option>Classic Manicure</option>
-          <option>Gel Manicure</option>
-          <option>BIAB Overlay</option>
-          <option>Custom Nail Art</option>
-          <option>Pedicure</option>
+          <option value="">{{ i18n.t('contact.form.choose') }}</option>
+          <option>{{ i18n.t('services.classic.name') }}</option>
+          <option>{{ i18n.t('services.gelManicure.name') }}</option>
+          <option>{{ i18n.t('services.biab.name') }}</option>
+          <option>{{ i18n.t('services.detailed.name') }}</option>
+          <option>{{ i18n.t('services.pedicures.title') }}</option>
         </select>
       </label>
       <label>
-        <span>Anything we should know?</span>
-        <textarea name="message" rows="5" placeholder="Tell us about your idea, preferred date, or current nails..."></textarea>
+        <span>{{ i18n.t('contact.form.message') }}</span>
+        <textarea
+          name="message"
+          rows="5"
+          [placeholder]="i18n.t('contact.form.messagePlaceholder')"
+        ></textarea>
       </label>
       <button class="button button--primary" type="submit">
-        Send booking request
+        {{ i18n.t('contact.form.send') }}
         <span class="material-symbols-rounded">arrow_forward</span>
       </button>
-      <small class="form-note">This currently opens your email app. A booking system can be connected later.</small>
+      <small class="form-note">{{ i18n.t('contact.form.note') }}</small>
     </form>
   </div>
 </section>
@@ -86,42 +84,39 @@
 <section class="visit-section">
   <div class="map-placeholder">
     <span class="material-symbols-rounded">location_on</span>
-    <strong>Map integration</strong>
-    <small>Embed your final Google Maps location here</small>
+    <strong>{{ i18n.t('contact.map.title') }}</strong>
+    <small>{{ i18n.t('contact.map.copy') }}</small>
   </div>
   <div class="visit-copy">
-    <span class="eyebrow">Plan your visit</span>
-    <h2 class="section-title">Find your way to the pink door.</h2>
+    <span class="eyebrow">{{ i18n.t('contact.visit.eyebrow') }}</span>
+    <h2 class="section-title">{{ i18n.t('contact.visit.title') }}</h2>
     <div class="hours">
-      <div><span>Monday – Friday</span><strong>09:00 – 19:00</strong></div>
-      <div><span>Saturday</span><strong>10:00 – 18:00</strong></div>
-      <div><span>Sunday</span><strong>Closed</strong></div>
+      <div><span>{{ i18n.t('contact.hours.weekdays') }}</span><strong>09:00 – 19:00</strong></div>
+      <div><span>{{ i18n.t('contact.hours.saturday') }}</span><strong>10:00 – 18:00</strong></div>
+      <div><span>{{ i18n.t('contact.hours.sunday') }}</span><strong>{{ i18n.t('contact.hours.closed') }}</strong></div>
     </div>
-    <p>
-      Street parking and public transport are available nearby. Please arrive
-      five minutes before your appointment.
-    </p>
+    <p>{{ i18n.t('contact.visit.copy') }}</p>
   </div>
 </section>
 
 <section class="section faq-section">
   <div class="container faq-grid">
     <div>
-      <span class="eyebrow">Before you visit</span>
-      <h2 class="section-title">A few quick answers.</h2>
+      <span class="eyebrow">{{ i18n.t('contact.faq.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('contact.faq.title') }}</h2>
     </div>
     <div class="faq-list">
       <details open>
-        <summary>How should I prepare for my appointment?</summary>
-        <p>Come as you are. If you currently have gel or BIAB, mention it when booking so we reserve removal time.</p>
+        <summary>{{ i18n.t('contact.faq.prepare.question') }}</summary>
+        <p>{{ i18n.t('contact.faq.prepare.answer') }}</p>
       </details>
       <details>
-        <summary>Can I bring a nail art reference?</summary>
-        <p>Absolutely. Send it ahead for detailed designs so your artist can prepare colours and allow enough time.</p>
+        <summary>{{ i18n.t('contact.faq.art.question') }}</summary>
+        <p>{{ i18n.t('contact.faq.art.answer') }}</p>
       </details>
       <details>
-        <summary>What is the cancellation policy?</summary>
-        <p>Please give at least 24 hours' notice when moving or cancelling an appointment.</p>
+        <summary>{{ i18n.t('contact.faq.cancel.question') }}</summary>
+        <p>{{ i18n.t('contact.faq.cancel.answer') }}</p>
       </details>
     </div>
   </div>

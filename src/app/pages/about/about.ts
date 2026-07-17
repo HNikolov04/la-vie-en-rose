@@ -1,5 +1,18 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+
+import { I18nService } from '../../core/i18n/i18n.service';
+import { TranslationKey } from '../../core/i18n/translations';
+
+interface StudioValue {
+  icon: string;
+  titleKey: TranslationKey;
+  copyKey: TranslationKey;
+}
+
+interface TeamMember {
+  roleKey: TranslationKey;
+}
 
 @Component({
   selector: 'app-about',
@@ -9,21 +22,29 @@ import { RouterLink } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class About {
-  protected readonly values = [
+  protected readonly i18n = inject(I18nService);
+
+  protected readonly values: StudioValue[] = [
     {
       icon: 'favorite',
-      title: 'Care first',
-      copy: 'Natural nail health and thoughtful technique guide every appointment.'
+      titleKey: 'about.values.care.title',
+      copyKey: 'about.values.care.copy'
     },
     {
       icon: 'interests',
-      title: 'Made personal',
-      copy: 'Your shape, lifestyle, colour, and ideas are always part of the process.'
+      titleKey: 'about.values.personal.title',
+      copyKey: 'about.values.personal.copy'
     },
     {
       icon: 'wb_sunny',
-      title: 'Good energy',
-      copy: 'A bright, welcoming studio where you can settle in and feel at ease.'
+      titleKey: 'about.values.energy.title',
+      copyKey: 'about.values.energy.copy'
     }
+  ];
+
+  protected readonly team: TeamMember[] = [
+    { roleKey: 'about.team.founder' },
+    { roleKey: 'about.team.senior' },
+    { roleKey: 'about.team.artist' }
   ];
 }

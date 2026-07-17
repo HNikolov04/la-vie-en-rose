@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+
+import { I18nService } from '../i18n/i18n.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,5 +11,6 @@ import { RouterLink } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Footer {
+  protected readonly i18n = inject(I18nService);
   protected readonly currentYear = new Date().getFullYear();
 }

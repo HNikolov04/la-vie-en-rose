@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Angular app to GitHub Pages
 
 on:
   push:
@@ -17,12 +17,13 @@ concurrency:
 
 jobs:
   build:
-    name: Build Angular application
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
@@ -30,13 +31,13 @@ jobs:
           node-version: 22
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci
-
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Build for GitHub Pages
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Angular application
         env:
           BASE_HREF: /${{ github.event.repository.name }}/
         run: npm run build -- --configuration production --base-href "$BASE_HREF"
@@ -52,14 +53,14 @@ jobs:
           path: dist/la-vie-en-rose/browser
 
   deploy:
-    name: Deploy GitHub Pages site
     needs: build
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy artifact
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

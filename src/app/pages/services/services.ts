@@ -1,11 +1,14 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
+import { I18nService } from '../../core/i18n/i18n.service';
+import { TranslationKey } from '../../core/i18n/translations';
+
 interface ServiceGroup {
-  title: string;
+  titleKey: TranslationKey;
   icon: string;
-  description: string;
-  items: Array<{ name: string; detail: string; price: string }>;
+  descriptionKey: TranslationKey;
+  items: Array<{ nameKey: TranslationKey; detailKey: TranslationKey; price: string }>;
 }
 
 @Component({
@@ -16,45 +19,47 @@ interface ServiceGroup {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Services {
+  protected readonly i18n = inject(I18nService);
+
   protected readonly serviceGroups: ServiceGroup[] = [
     {
-      title: 'Natural Nail Care',
+      titleKey: 'services.natural.title',
       icon: 'spa',
-      description: 'Essential care for beautifully shaped, healthy natural nails.',
+      descriptionKey: 'services.natural.description',
       items: [
-        { name: 'Classic Manicure', detail: 'Shape, cuticle care, polish', price: '€28' },
-        { name: 'Rose Ritual', detail: 'Manicure, scrub, mask, massage', price: '€42' },
-        { name: 'Polish Refresh', detail: 'Shape and classic polish', price: '€20' }
+        { nameKey: 'services.classic.name', detailKey: 'services.classic.detail', price: '€28' },
+        { nameKey: 'services.ritual.name', detailKey: 'services.ritual.detail', price: '€42' },
+        { nameKey: 'services.refresh.name', detailKey: 'services.refresh.detail', price: '€20' }
       ]
     },
     {
-      title: 'Gel & BIAB',
+      titleKey: 'services.gel.title',
       icon: 'auto_awesome',
-      description: 'Glossy, durable colour and strength with a refined finish.',
+      descriptionKey: 'services.gel.description',
       items: [
-        { name: 'Gel Manicure', detail: 'Full prep and gel colour', price: '€38' },
-        { name: 'BIAB Overlay', detail: 'Builder base and gel colour', price: '€48' },
-        { name: 'Gel Removal', detail: 'Gentle removal and nail care', price: '€15' }
+        { nameKey: 'services.gelManicure.name', detailKey: 'services.gelManicure.detail', price: '€38' },
+        { nameKey: 'services.biab.name', detailKey: 'services.biab.detail', price: '€48' },
+        { nameKey: 'services.removal.name', detailKey: 'services.removal.detail', price: '€15' }
       ]
     },
     {
-      title: 'Art & Extras',
+      titleKey: 'services.art.title',
       icon: 'palette',
-      description: 'Personal details to make your manicure feel completely yours.',
+      descriptionKey: 'services.art.description',
       items: [
-        { name: 'Minimal Art', detail: 'Fine lines, dots, chrome accents', price: '+ €8' },
-        { name: 'Detailed Art', detail: 'Custom design consultation', price: '+ €15' },
-        { name: 'French Finish', detail: 'Classic or colourful tips', price: '+ €7' }
+        { nameKey: 'services.minimal.name', detailKey: 'services.minimal.detail', price: '+ €8' },
+        { nameKey: 'services.detailed.name', detailKey: 'services.detailed.detail', price: '+ €15' },
+        { nameKey: 'services.french.name', detailKey: 'services.french.detail', price: '+ €7' }
       ]
     },
     {
-      title: 'Pedicures',
+      titleKey: 'services.pedicures.title',
       icon: 'self_care',
-      description: 'Restorative foot care with a polished final touch.',
+      descriptionKey: 'services.pedicures.description',
       items: [
-        { name: 'Classic Pedicure', detail: 'Full care and classic polish', price: '€38' },
-        { name: 'Gel Pedicure', detail: 'Full care and gel colour', price: '€48' },
-        { name: 'Rose Spa Pedicure', detail: 'Extended ritual and gel colour', price: '€62' }
+        { nameKey: 'services.classicPedi.name', detailKey: 'services.classicPedi.detail', price: '€38' },
+        { nameKey: 'services.gelPedi.name', detailKey: 'services.gelPedi.detail', price: '€48' },
+        { nameKey: 'services.spaPedi.name', detailKey: 'services.spaPedi.detail', price: '€62' }
       ]
     }
   ];
