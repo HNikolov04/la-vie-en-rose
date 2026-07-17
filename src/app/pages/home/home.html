@@ -1,52 +1,21 @@
 <section class="hero">
-  <div class="hero-shape hero-shape--one"></div>
-  <div class="hero-shape hero-shape--two"></div>
-
-  <div class="container hero-grid">
-    <div class="hero-copy fade-up">
-      <span class="eyebrow">{{ i18n.t('home.hero.eyebrow') }}</span>
-      <h1>{{ i18n.t('home.hero.title') }} <em>{{ i18n.t('home.hero.titleAccent') }}</em></h1>
-      <p>{{ i18n.t('home.hero.copy') }}</p>
-      <div class="hero-actions">
-        <a class="button button--primary" routerLink="/contact" fragment="booking">
-          {{ i18n.t('home.hero.book') }}
-          <span class="material-symbols-rounded">arrow_forward</span>
-        </a>
-        <a class="button button--secondary" routerLink="/services">
-          {{ i18n.t('home.hero.explore') }}
-        </a>
-      </div>
-      <div class="hero-proof">
-        <div class="avatar-stack" aria-hidden="true">
-          <span>MK</span><span>SA</span><span>ER</span>
-        </div>
-        <div>
-          <div class="stars">★★★★★</div>
-          <small>{{ i18n.t('home.hero.loved') }}</small>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-visual fade-up">
-      <div class="visual-card visual-card--main placeholder-art">
-        <span class="image-note">
-          <span class="material-symbols-rounded">add_photo_alternate</span>
-          {{ i18n.t('home.hero.image') }}
-        </span>
-      </div>
-      <div class="visual-card visual-card--small">
-        <span class="material-symbols-rounded">favorite</span>
-        <strong>{{ i18n.t('home.hero.cardTitle') }}</strong>
-        <small>{{ i18n.t('home.hero.cardCopy') }}</small>
-      </div>
-      <div class="polish-orb"><span>LR</span></div>
-    </div>
+  <img
+    class="hero-background"
+    src="assets/images/studio/salon-interior.png"
+    alt=""
+    width="941"
+    height="1672"
+    fetchpriority="high"
+  >
+  <div class="container hero-content fade-up">
+    <span class="eyebrow">{{ i18n.t('home.hero.eyebrow') }}</span>
+    <h1>{{ i18n.t('home.hero.title') }} <em>{{ i18n.t('home.hero.titleAccent') }}</em></h1>
+    <p>{{ i18n.t('home.hero.copy') }}</p>
+    <a class="button hero-button" href="#welcome">
+      {{ i18n.t('common.learnMore') }}
+      <span class="material-symbols-rounded">south</span>
+    </a>
   </div>
-
-  <a class="scroll-cue" href="#welcome">
-    <span>{{ i18n.t('home.hero.scroll') }}</span>
-    <span class="material-symbols-rounded">south</span>
-  </a>
 </section>
 
 <section class="section intro" id="welcome">
@@ -58,33 +27,31 @@
     <div class="intro-copy">
       <p class="section-copy">{{ i18n.t('home.intro.copy') }}</p>
       <a class="text-link" routerLink="/about">
-        {{ i18n.t('home.intro.link') }}
+        {{ i18n.t('common.learnMore') }}
         <span class="material-symbols-rounded">arrow_outward</span>
       </a>
     </div>
   </div>
 </section>
 
-<section class="section services-preview">
+<section class="section discover-section">
   <div class="container">
     <div class="section-heading">
-      <div>
-        <span class="eyebrow">{{ i18n.t('home.services.eyebrow') }}</span>
-        <h2 class="section-title">{{ i18n.t('home.services.title') }}</h2>
-      </div>
-      <a class="button button--secondary" routerLink="/services">
-        {{ i18n.t('home.services.all') }}
-      </a>
+      <span class="eyebrow">{{ i18n.t('home.discover.eyebrow') }}</span>
+      <h2 class="section-title">{{ i18n.t('home.discover.title') }}</h2>
     </div>
 
-    <div class="service-grid">
-      @for (service of services; track service.nameKey; let index = $index) {
-        <article class="service-card">
-          <span class="service-number">0{{ index + 1 }}</span>
-          <span class="material-symbols-rounded service-icon">{{ service.icon }}</span>
-          <h3>{{ i18n.t(service.nameKey) }}</h3>
-          <p>{{ i18n.t(service.descriptionKey) }}</p>
-          <strong>{{ i18n.t(service.priceKey) }}</strong>
+    <div class="discover-grid">
+      @for (card of discoverCards; track card.route; let index = $index) {
+        <article class="discover-card">
+          <span class="card-number">0{{ index + 1 }}</span>
+          <span class="material-symbols-rounded card-icon">{{ card.icon }}</span>
+          <h3>{{ i18n.t(card.titleKey) }}</h3>
+          <p>{{ i18n.t(card.copyKey) }}</p>
+          <a class="text-link" [routerLink]="card.route">
+            {{ i18n.t('common.learnMore') }}
+            <span class="material-symbols-rounded">arrow_outward</span>
+          </a>
         </article>
       }
     </div>
@@ -92,11 +59,14 @@
 </section>
 
 <section class="split-feature">
-  <div class="feature-art placeholder-art">
-    <span class="image-note">
-      <span class="material-symbols-rounded">add_photo_alternate</span>
-      {{ i18n.t('home.feature.image') }}
-    </span>
+  <div class="feature-art">
+    <img
+      src="assets/images/studio/salon-waiting-area.png"
+      [alt]="i18n.t('home.feature.image')"
+      width="941"
+      height="1672"
+      loading="lazy"
+    >
   </div>
   <div class="feature-copy">
     <span class="eyebrow">{{ i18n.t('home.feature.eyebrow') }}</span>
@@ -107,46 +77,9 @@
       <li><span class="material-symbols-rounded">check_circle</span>{{ i18n.t('home.feature.products') }}</li>
       <li><span class="material-symbols-rounded">check_circle</span>{{ i18n.t('home.feature.consultation') }}</li>
     </ul>
-    <a class="button button--primary" routerLink="/about">{{ i18n.t('home.feature.link') }}</a>
-  </div>
-</section>
-
-<section class="section gallery-preview">
-  <div class="container">
-    <div class="gallery-heading">
-      <div>
-        <span class="eyebrow">{{ i18n.t('home.gallery.eyebrow') }}</span>
-        <h2 class="section-title">{{ i18n.t('home.gallery.title') }}</h2>
-      </div>
-      <a class="text-link" routerLink="/gallery">
-        {{ i18n.t('home.gallery.link') }}
-        <span class="material-symbols-rounded">arrow_outward</span>
-      </a>
-    </div>
-
-    <div class="mini-gallery">
-      @for (item of [1, 2, 3, 4]; track item) {
-        <div class="gallery-tile gallery-tile--{{ item }}">
-          <span>{{ item < 10 ? '0' + item : item }}</span>
-        </div>
-      }
-    </div>
-  </div>
-</section>
-
-<section class="section testimonials">
-  <div class="container">
-    <span class="eyebrow">{{ i18n.t('home.testimonials.eyebrow') }}</span>
-    <h2 class="section-title">{{ i18n.t('home.testimonials.title') }}</h2>
-
-    <div class="testimonial-grid">
-      @for (testimonial of testimonials; track testimonial.name) {
-        <blockquote>
-          <div class="stars">★★★★★</div>
-          <p>“{{ i18n.t(testimonial.quoteKey) }}”</p>
-          <cite>{{ testimonial.name }}</cite>
-        </blockquote>
-      }
-    </div>
+    <a class="button button--primary" routerLink="/about">
+      {{ i18n.t('common.learnMore') }}
+      <span class="material-symbols-rounded">arrow_outward</span>
+    </a>
   </div>
 </section>

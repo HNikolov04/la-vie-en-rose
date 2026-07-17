@@ -4,16 +4,11 @@ import { RouterLink } from '@angular/router';
 import { I18nService } from '../../core/i18n/i18n.service';
 import { TranslationKey } from '../../core/i18n/translations';
 
-interface FeaturedService {
+interface DiscoverCard {
   icon: string;
-  nameKey: TranslationKey;
-  descriptionKey: TranslationKey;
-  priceKey: TranslationKey;
-}
-
-interface Testimonial {
-  quoteKey: TranslationKey;
-  name: string;
+  titleKey: TranslationKey;
+  copyKey: TranslationKey;
+  route: string;
 }
 
 @Component({
@@ -26,39 +21,24 @@ interface Testimonial {
 export class Home {
   protected readonly i18n = inject(I18nService);
 
-  protected readonly services: FeaturedService[] = [
+  protected readonly discoverCards: DiscoverCard[] = [
     {
-      icon: 'spa',
-      nameKey: 'home.services.signature.name',
-      descriptionKey: 'home.services.signature.description',
-      priceKey: 'home.services.signature.price'
+      icon: 'photo_library',
+      titleKey: 'home.discover.gallery.title',
+      copyKey: 'home.discover.gallery.copy',
+      route: '/gallery'
     },
     {
-      icon: 'auto_awesome',
-      nameKey: 'home.services.gel.name',
-      descriptionKey: 'home.services.gel.description',
-      priceKey: 'home.services.gel.price'
+      icon: 'receipt_long',
+      titleKey: 'home.discover.prices.title',
+      copyKey: 'home.discover.prices.copy',
+      route: '/prices'
     },
     {
-      icon: 'palette',
-      nameKey: 'home.services.art.name',
-      descriptionKey: 'home.services.art.description',
-      priceKey: 'home.services.art.price'
-    }
-  ];
-
-  protected readonly testimonials: Testimonial[] = [
-    {
-      quoteKey: 'home.testimonials.one',
-      name: 'Mia K.'
-    },
-    {
-      quoteKey: 'home.testimonials.two',
-      name: 'Sophie A.'
-    },
-    {
-      quoteKey: 'home.testimonials.three',
-      name: 'Elena R.'
+      icon: 'favorite',
+      titleKey: 'home.discover.about.title',
+      copyKey: 'home.discover.about.copy',
+      route: '/about'
     }
   ];
 }

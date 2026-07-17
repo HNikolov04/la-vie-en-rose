@@ -6,6 +6,7 @@ import { TranslationKey } from '../../core/i18n/translations';
 interface GalleryItem {
   labelKey: TranslationKey;
   className: string;
+  src: string;
 }
 
 @Component({
@@ -18,13 +19,35 @@ export class Gallery {
   protected readonly i18n = inject(I18nService);
 
   protected readonly galleryItems: GalleryItem[] = [
-    { labelKey: 'gallery.item.blush', className: 'tall' },
-    { labelKey: 'gallery.item.chrome', className: 'standard' },
-    { labelKey: 'gallery.item.french', className: 'wide' },
-    { labelKey: 'gallery.item.details', className: 'standard' },
-    { labelKey: 'gallery.item.red', className: 'tall' },
-    { labelKey: 'gallery.item.nude', className: 'standard' },
-    { labelKey: 'gallery.item.aura', className: 'wide' },
-    { labelKey: 'gallery.item.pearl', className: 'standard' }
+    {
+      labelKey: 'gallery.item.blackFrench',
+      className: 'tall',
+      src: 'assets/images/services/pink-black-french-manicure.png'
+    },
+    {
+      labelKey: 'gallery.item.autumn',
+      className: 'standard',
+      src: 'assets/images/services/autumn-nail-art.png'
+    },
+    {
+      labelKey: 'gallery.item.bow',
+      className: 'wide',
+      src: 'assets/images/services/pink-bow-nail-art.png'
+    },
+    {
+      labelKey: 'gallery.item.red',
+      className: 'standard',
+      src: 'assets/images/services/red-floral-manicure.png'
+    },
+    {
+      labelKey: 'gallery.item.french',
+      className: 'tall',
+      src: 'assets/images/services/soft-pink-french-manicure.png'
+    },
+    {
+      labelKey: 'gallery.item.threeDimensional',
+      className: 'standard',
+      src: 'assets/images/services/pink-3d-nail-art.png'
+    }
   ];
 }

@@ -10,10 +10,6 @@ interface StudioValue {
   copyKey: TranslationKey;
 }
 
-interface TeamMember {
-  roleKey: TranslationKey;
-}
-
 @Component({
   selector: 'app-about',
   imports: [RouterLink],
@@ -40,11 +36,5 @@ export class About {
       titleKey: 'about.values.energy.title',
       copyKey: 'about.values.energy.copy'
     }
-  ];
-
-  protected readonly team: TeamMember[] = [
-    { roleKey: 'about.team.founder' },
-    { roleKey: 'about.team.senior' },
-    { roleKey: 'about.team.artist' }
   ];
 }

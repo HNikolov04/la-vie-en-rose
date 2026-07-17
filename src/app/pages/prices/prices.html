@@ -5,7 +5,6 @@
     <p>{{ i18n.t('prices.hero.copy') }}</p>
   </div>
 </section>
-
 <section class="section prices-section">
   <div class="container">
     <div class="prices-intro">
@@ -16,8 +15,9 @@
       <p class="section-copy">{{ i18n.t('prices.intro.copy') }}</p>
     </div>
 
-    <div class="price-grid">
-      @for (category of categories; track category.titleKey; let index = $index) {
+    <div class="price-layout">
+      <div class="price-grid">
+        @for (category of categories; track category.titleKey; let index = $index) {
         <article class="price-category">
           <header class="category-header">
             <div class="category-icon">
@@ -31,7 +31,6 @@
 
           <div class="table-header" aria-hidden="true">
             <span></span>
-            <span>{{ i18n.t('prices.duration') }}</span>
             <span>{{ i18n.t('prices.price') }}</span>
           </div>
 
@@ -42,28 +41,22 @@
                   <h4>{{ i18n.t(item.nameKey) }}</h4>
                   <p>{{ i18n.t(item.detailKey) }}</p>
                 </div>
-                <span class="duration">{{ item.duration }} {{ i18n.t('prices.minutes') }}</span>
-                <strong>{{ item.included ? i18n.t('prices.included') : item.price }}</strong>
+                <strong>{{ item.price }}</strong>
               </div>
             }
           </div>
         </article>
-      }
+        }
+      </div>
+      <figure class="official-price-list">
+        <img
+          src="assets/images/prices/official-price-list.png"
+          [alt]="i18n.t('prices.imageAlt')"
+          width="941"
+          height="1672"
+          loading="lazy"
+        >
+      </figure>
     </div>
-  </div>
-</section>
-
-<section class="section section--rose price-note-section">
-  <div class="container price-note">
-    <div class="note-mark"><span class="material-symbols-rounded">favorite</span></div>
-    <div>
-      <span class="eyebrow">{{ i18n.t('prices.note.eyebrow') }}</span>
-      <h2 class="section-title">{{ i18n.t('prices.note.title') }}</h2>
-      <p class="section-copy">{{ i18n.t('prices.note.copy') }}</p>
-    </div>
-    <a class="button button--primary" routerLink="/contact" fragment="booking">
-      {{ i18n.t('prices.note.button') }}
-      <span class="material-symbols-rounded">arrow_forward</span>
-    </a>
   </div>
 </section>
