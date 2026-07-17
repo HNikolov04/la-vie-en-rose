@@ -20,17 +20,8 @@
       </span>
     </a>
 
-    <button
-      class="menu-toggle"
-      type="button"
-      [attr.aria-label]="i18n.t('common.menu')"
-      [attr.aria-expanded]="menuOpen()"
-      (click)="toggleMenu()"
-    >
-      <span class="material-symbols-rounded">{{ menuOpen() ? 'close' : 'menu' }}</span>
-    </button>
-
     <div
+      id="site-navigation"
       class="navigation"
       [class.navigation--open]="menuOpen()"
     >
@@ -51,34 +42,51 @@
           {{ i18n.t('common.contact') }}
         </a>
       </nav>
-
-      <div class="header-actions">
-        <div class="language-switch" role="group" [attr.aria-label]="i18n.t('common.language')">
-          <button
-            type="button"
-            [class.active]="i18n.language() === 'bg'"
-            [attr.aria-pressed]="i18n.language() === 'bg'"
-            [attr.aria-label]="i18n.t('common.switchToBulgarian')"
-            (click)="i18n.setLanguage('bg')"
-          >
-            BG
-          </button>
-          <button
-            type="button"
-            [class.active]="i18n.language() === 'en'"
-            [attr.aria-pressed]="i18n.language() === 'en'"
-            [attr.aria-label]="i18n.t('common.switchToEnglish')"
-            (click)="i18n.setLanguage('en')"
-          >
-            EN
-          </button>
-        </div>
-
-        <a class="book-link" routerLink="/contact" fragment="contact-details" (click)="closeMenu()">
-          {{ i18n.t('common.bookNow') }}
-          <span class="material-symbols-rounded">arrow_outward</span>
-        </a>
-      </div>
     </div>
+
+    <div class="header-actions">
+      <div class="language-switch" role="group" [attr.aria-label]="i18n.t('common.language')">
+        <button
+          type="button"
+          [class.active]="i18n.language() === 'bg'"
+          [attr.aria-pressed]="i18n.language() === 'bg'"
+          [attr.aria-label]="i18n.t('common.switchToBulgarian')"
+          (click)="i18n.setLanguage('bg')"
+        >
+          BG
+        </button>
+        <button
+          type="button"
+          [class.active]="i18n.language() === 'en'"
+          [attr.aria-pressed]="i18n.language() === 'en'"
+          [attr.aria-label]="i18n.t('common.switchToEnglish')"
+          (click)="i18n.setLanguage('en')"
+        >
+          EN
+        </button>
+      </div>
+
+      <a
+        class="book-link"
+        routerLink="/contact"
+        fragment="contact-details"
+        [attr.aria-label]="i18n.t('common.bookNow')"
+        (click)="closeMenu()"
+      >
+        <span class="book-label">{{ i18n.t('common.bookNow') }}</span>
+        <span class="material-symbols-rounded">calendar_month</span>
+      </a>
+    </div>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-controls="site-navigation"
+      [attr.aria-label]="i18n.t('common.menu')"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="toggleMenu()"
+    >
+      <span class="material-symbols-rounded">{{ menuOpen() ? 'close' : 'menu' }}</span>
+    </button>
   </div>
 </header>

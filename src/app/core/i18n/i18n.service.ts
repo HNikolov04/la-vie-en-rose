@@ -7,6 +7,7 @@ import { Language, TRANSLATIONS, TranslationKey } from './translations';
 export class I18nService {
   private readonly document = inject(DOCUMENT);
   private readonly storageKey = 'la-vie-en-rose-language';
+  private readonly defaultLanguage: Language = 'bg';
 
   readonly language = signal<Language>(this.getInitialLanguage());
 
@@ -39,10 +40,10 @@ export class I18nService {
         return storedLanguage;
       }
     } catch {
-      // Fall back to the browser language when storage is unavailable.
+      // Fall back to the project default when storage is unavailable.
     }
 
-    return navigator.language.toLowerCase().startsWith('bg') ? 'bg' : 'en';
+    return this.defaultLanguage;
   }
 
   private updateDescription(language: Language): void {

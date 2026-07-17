@@ -1,15 +1,4 @@
-.prices-hero {
-  background:
-    radial-gradient(circle at 85% 22%, rgba(248, 241, 223, 0.84) 0 6%, transparent 6.2%),
-    radial-gradient(circle at 78% 40%, rgba(255, 255, 255, 0.35) 0 15%, transparent 15.2%),
-    linear-gradient(135deg, var(--rose-100), #f7c8d8 54%, var(--rose-400));
-}
-
 .prices-intro {
-  display: grid;
-  grid-template-columns: 1fr 0.75fr;
-  align-items: end;
-  gap: 50px;
   margin-bottom: 44px;
 }
 
@@ -17,32 +6,10 @@
   margin-bottom: 0;
 }
 
-.price-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.7fr);
-  align-items: start;
-  gap: clamp(24px, 5vw, 64px);
-}
-
 .price-grid {
   display: grid;
-  gap: 20px;
-}
-
-.official-price-list {
-  position: sticky;
-  top: calc(var(--header-height) + 28px);
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid rgba(189, 145, 67, 0.28);
-  border-radius: 24px;
-  background: var(--rose-100);
-  box-shadow: var(--shadow-lg);
-}
-
-.official-price-list img {
   width: 100%;
-  height: auto;
+  gap: 20px;
 }
 
 .price-category {
@@ -54,32 +21,9 @@
 }
 
 .category-header {
-  display: flex;
-  align-items: center;
-  gap: 18px;
   padding: 24px 26px;
   border-bottom: 1px solid var(--border);
-  background: linear-gradient(135deg, var(--rose-50), rgba(248, 241, 223, 0.62));
-}
-
-.category-icon {
-  display: grid;
-  flex: 0 0 54px;
-  width: 54px;
-  height: 54px;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--rose-700);
-  background: var(--white);
-  box-shadow: 0 8px 20px rgba(113, 19, 51, 0.1);
-}
-
-.category-header small {
-  display: block;
-  margin-bottom: 2px;
-  color: var(--gold-700);
-  font-family: var(--font-display);
-  font-size: 0.9rem;
+  background: color-mix(in srgb, var(--rose-300) 24%, var(--white));
 }
 
 .category-header h3 {
@@ -100,7 +44,7 @@
 .table-header {
   padding: 13px 26px;
   color: var(--muted);
-  background: var(--rose-50);
+  background: color-mix(in srgb, var(--rose-300) 18%, var(--white));
   font-size: 0.64rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -139,25 +83,8 @@
 }
 
 .price-row strong {
-  color: var(--rose-700);
+  color: var(--rose-600);
   font-size: 0.95rem;
-}
-
-@media (max-width: 900px) {
-  .prices-intro,
-  .price-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .prices-intro {
-    gap: 15px;
-  }
-
-  .official-price-list {
-    position: static;
-    width: min(100%, 560px);
-    margin-inline: auto;
-  }
 }
 
 @media (max-width: 500px) {
