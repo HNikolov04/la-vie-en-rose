@@ -163,8 +163,10 @@ export class Example {
 
 ## 9. Assets
 
-- Browser-served assets live under `public/assets` and are referenced from the
-  site root, for example `/assets/images/hero/home-manicure.webp`.
+- Browser-served assets live under `public/assets` and use base-relative URLs,
+  for example `assets/images/hero/home-manicure.webp`.
+- Do not add a leading slash to asset URLs. Relative asset paths must continue
+  to work under the `/la-vie-en-rose/` GitHub Pages base path.
 - Use SVG for logos and simple custom icons.
 - Prefer AVIF, then WebP, for photography. Use PNG only when alpha transparency
   is required and SVG is not suitable.

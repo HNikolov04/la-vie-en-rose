@@ -19,11 +19,12 @@ assets/
     `-- team/
 ```
 
-Reference a file in a template from `/assets`, for example:
+Reference a file with a base-relative `assets/` URL. Do not add a leading slash,
+because the production site is hosted below the `/la-vie-en-rose/` path:
 
 ```html
 <img
-  src="/assets/images/hero/home-manicure.webp"
+  src="assets/images/hero/home-manicure.webp"
   alt="Pink manicure created at La Vie en Rose"
   width="1600"
   height="1200"

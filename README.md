@@ -56,6 +56,23 @@ npm run build
 
 The optimized output is written to `dist/la-vie-en-rose`.
 
+## Deploy to GitHub Pages
+
+The workflow in `.github/workflows/deploy.yaml` deploys the optimized Angular
+application whenever `main` is updated. It can also be started manually from
+the repository's **Actions** tab.
+
+Before the first deployment, open **GitHub repository Settings > Pages** and set
+**Build and deployment > Source** to **GitHub Actions**. The deployed project URL
+is expected to be:
+
+```text
+https://hnikolov04.github.io/la-vie-en-rose/
+```
+
+The workflow configures the `/la-vie-en-rose/` base path and adds a `404.html`
+SPA fallback so routed pages continue to work when opened or refreshed directly.
+
 ## Project structure
 
 ```text
