@@ -19,6 +19,12 @@ export const routes: Routes = [
       import('./pages/prices/prices').then((component) => component.Prices)
   },
   {
+    path: 'prices',
+    data: { titleKey: 'meta.prices.title' },
+    loadComponent: () =>
+      import('./pages/prices/prices').then((component) => component.Prices)
+  },
+  {
     path: 'gallery',
     data: { titleKey: 'meta.gallery.title' },
     loadComponent: () =>

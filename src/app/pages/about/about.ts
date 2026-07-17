@@ -37,4 +37,10 @@ export class About {
       copyKey: 'about.values.energy.copy'
     }
   ];
+
+  protected readonly team: TeamMember[] = [
+    { roleKey: 'about.team.founder' },
+    { roleKey: 'about.team.senior' },
+    { roleKey: 'about.team.artist' }
+  ];
 }
