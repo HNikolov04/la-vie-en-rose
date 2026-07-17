@@ -62,7 +62,7 @@ npm run build
 
 The optimized output is written to `dist/la-vie-en-rose`.
 
-## Deploy to GitHub Pages
+## Preview deployment to GitHub Pages
 
 The workflow in `.github/workflows/deploy.yaml` deploys the optimized Angular
 application whenever `main` is updated. It can also be started manually from
@@ -78,6 +78,29 @@ https://hnikolov04.github.io/la-vie-en-rose/
 
 The workflow configures the `/la-vie-en-rose/` base path and adds a `404.html`
 SPA fallback so routed pages continue to work when opened or refreshed directly.
+
+For this public repository, the workflow uses standard GitHub-hosted runners and
+GitHub Pages without repository secrets. GitHub documents standard Actions usage
+as free for public repositories and Pages as available on GitHub Free for public
+repositories. This does not confirm the owner's account-wide billing status;
+verify that separately under **GitHub Settings > Billing and licensing**.
+
+GitHub also states that Pages is not intended as free hosting for running an
+online business or facilitating commercial transactions. Treat this deployment
+as a development/demo preview and choose a production static host whose terms
+support a salon's commercial website before launch.
+
+## Security and external services
+
+- The application has no backend, database, payment flow, analytics, API keys,
+  or repository-secret references.
+- The embedded Google map uses a keyless public iframe URL; it does not use the
+  billable Google Maps JavaScript API.
+- The browser connects to Google Fonts and follows external Instagram links.
+- The site does not collect or submit visitor data. Appointments are arranged
+  outside the site by phone or Instagram.
+- Local environment and common credential-file patterns are ignored by Git.
+  Never place credentials under `public/`, because every file there is deployed.
 
 ## Project structure
 
@@ -119,6 +142,11 @@ outside the application; commit only web-ready exports. See
 Architecture, naming, Angular, TypeScript, template, SCSS, accessibility, asset,
 and quality conventions are documented in
 [`PROJECT_CONVENTIONS.md`](.agents/PROJECT_CONVENTIONS.md).
+
+Unused components, styles, dependencies, and translation keys should be removed
+with the content that used them. The English dictionary remains the typed source
+of truth for the Bulgarian dictionary, so mismatched translation sets fail the
+production build.
 
 ## License
 

@@ -1,8 +1,4 @@
 .prices-intro {
-  display: grid;
-  grid-template-columns: 1fr 0.75fr;
-  align-items: end;
-  gap: 50px;
   margin-bottom: 44px;
 }
 
@@ -12,9 +8,8 @@
 
 .price-grid {
   display: grid;
-  width: min(100%, 900px);
+  width: 100%;
   gap: 20px;
-  margin-inline: auto;
 }
 
 .price-category {
@@ -26,32 +21,9 @@
 }
 
 .category-header {
-  display: flex;
-  align-items: center;
-  gap: 18px;
   padding: 24px 26px;
   border-bottom: 1px solid var(--border);
   background: color-mix(in srgb, var(--rose-300) 24%, var(--white));
-}
-
-.category-icon {
-  display: grid;
-  flex: 0 0 54px;
-  width: 54px;
-  height: 54px;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--rose-600);
-  background: var(--white);
-  box-shadow: 0 8px 20px rgba(206, 50, 109, 0.12);
-}
-
-.category-header small {
-  display: block;
-  margin-bottom: 2px;
-  color: var(--gold-700);
-  font-family: var(--font-display);
-  font-size: 0.9rem;
 }
 
 .category-header h3 {
@@ -113,16 +85,6 @@
 .price-row strong {
   color: var(--rose-600);
   font-size: 0.95rem;
-}
-
-@media (max-width: 900px) {
-  .prices-intro {
-    grid-template-columns: 1fr;
-  }
-
-  .prices-intro {
-    gap: 15px;
-  }
 }
 
 @media (max-width: 500px) {

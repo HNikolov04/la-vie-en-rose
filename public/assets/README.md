@@ -22,7 +22,10 @@ assets/
 
 The `info/` folder contains the temporary source notes supplied for the site.
 It can be removed once the content has been approved and no longer needs to be
-kept with the public assets.
+kept with the public assets. Because it is under `public/`, it is copied into
+every build and can be opened by anyone who knows or discovers its URL. Keep
+only non-secret reference material there and never add credentials or private
+customer information.
 
 Reference a file with a base-relative `assets/` URL. Do not add a leading slash,
 because the production site is hosted below the `/la-vie-en-rose/` path:

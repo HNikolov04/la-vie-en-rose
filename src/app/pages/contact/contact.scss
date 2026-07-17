@@ -19,20 +19,15 @@
   margin-top: 32px;
 }
 
-.contact-details > a {
+.contact-detail {
   display: flex;
   align-items: center;
   gap: 14px;
   padding: 12px;
   border-radius: 16px;
-  transition: background 160ms ease;
 }
 
-.contact-details > a:hover {
-  background: color-mix(in srgb, var(--rose-300) 20%, var(--white));
-}
-
-.contact-details > a > .material-symbols-rounded {
+.contact-detail > .material-symbols-rounded {
   display: grid;
   flex: 0 0 42px;
   width: 42px;

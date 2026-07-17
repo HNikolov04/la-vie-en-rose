@@ -224,25 +224,28 @@
 }
 
 .contact-preview {
-  color: var(--white);
-  background: var(--rose-600);
+  color: var(--ink);
+  background: color-mix(in srgb, var(--rose-300) 34%, var(--white));
 }
 
 .contact-preview .eyebrow {
-  color: var(--gold-300);
+  color: var(--rose-600);
 }
 
 .contact-preview .preview-copy > p {
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--muted);
 }
 
 .contact-preview-button {
-  color: var(--rose-600);
-  background: var(--white);
+  color: var(--white);
+  background: var(--rose-600);
+  box-shadow: 0 12px 30px rgba(206, 50, 109, 0.25);
 }
 
 .contact-preview-button:hover {
-  background: color-mix(in srgb, var(--rose-300) 24%, var(--white));
+  background: var(--rose-600);
+  box-shadow: 0 16px 35px rgba(206, 50, 109, 0.34);
+  filter: brightness(0.94);
 }
 
 .contact-teaser {
@@ -252,23 +255,26 @@
 }
 
 .contact-teaser > div {
-  min-height: 190px;
-  padding: 26px 22px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(10px);
+  display: flex;
+  min-height: 112px;
+  align-items: center;
+  gap: 13px;
+  padding: 20px 18px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: var(--shadow-sm);
 }
 
 .contact-teaser .material-symbols-rounded {
-  margin-bottom: 38px;
-  color: var(--gold-300);
-  font-size: 28px;
+  flex: 0 0 auto;
+  color: var(--rose-600);
+  font-size: 20px;
 }
 
 .contact-teaser p {
   margin-bottom: 5px;
-  color: rgba(255, 255, 255, 0.68);
+  color: var(--muted);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -276,6 +282,7 @@
 }
 
 .contact-teaser strong {
+  color: var(--ink);
   font-size: 0.88rem;
   line-height: 1.5;
 }
@@ -332,5 +339,10 @@
 
   .about-preview-image {
     height: 430px;
+  }
+
+  .contact-teaser {
+    grid-template-columns: 1fr;
+    overflow: visible;
   }
 }

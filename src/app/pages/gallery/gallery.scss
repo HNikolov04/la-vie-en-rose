@@ -1,8 +1,4 @@
 .gallery-toolbar {
-  display: grid;
-  grid-template-columns: 1fr 0.75fr;
-  align-items: end;
-  gap: 50px;
   margin-bottom: 44px;
 }
 
@@ -97,11 +93,6 @@
 }
 
 @media (max-width: 800px) {
-  .gallery-toolbar {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

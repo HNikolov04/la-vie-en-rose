@@ -11,7 +11,6 @@ interface PriceItem {
 
 interface PriceCategory {
   titleKey: TranslationKey;
-  icon: string;
   items: PriceItem[];
 }
 
@@ -27,7 +26,6 @@ export class Prices {
   protected readonly categories: PriceCategory[] = [
     {
       titleKey: 'prices.manicures',
-      icon: 'spa',
       items: [
         {
           nameKey: 'services.gelManicure.name',

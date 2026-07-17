@@ -75,10 +75,6 @@
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: 1fr 0.75fr;
-  align-items: end;
-  gap: 50px;
   margin-bottom: 38px;
 }
 
@@ -161,10 +157,6 @@
 }
 
 .diplomas-heading {
-  display: grid;
-  grid-template-columns: 1fr 0.75fr;
-  align-items: end;
-  gap: 50px;
   margin-bottom: 38px;
 }
 
@@ -204,9 +196,7 @@
 
 @media (max-width: 850px) {
   .story-grid,
-  .studio-section,
-  .team-grid,
-  .diplomas-heading {
+  .studio-section {
     grid-template-columns: 1fr;
   }
 
@@ -220,10 +210,6 @@
 
   .studio-art {
     min-height: 500px;
-  }
-
-  .team-grid {
-    gap: 10px;
   }
 
   .owner-profile {

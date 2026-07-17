@@ -4,7 +4,6 @@ const en = {
   'meta.site.description':
     'La Vie en Rose is a modern nail salon for considered manicures, beautiful details, and unhurried self-care.',
   'meta.home.title': 'La Vie en Rose | Nail Salon',
-  'meta.services.title': 'Services | La Vie en Rose',
   'meta.prices.title': 'Price List | La Vie en Rose',
   'meta.gallery.title': 'Gallery | La Vie en Rose',
   'meta.about.title': 'About | La Vie en Rose',
@@ -14,23 +13,18 @@ const en = {
   'common.logoAlt': 'La Vie en Rose nail salon logo',
   'common.nailStudio': 'Nail salon',
   'common.home': 'Home',
-  'common.services': 'Services',
   'common.prices': 'Price list',
   'common.gallery': 'Gallery',
   'common.about': 'About',
   'common.contact': 'Contact',
   'common.bookNow': 'Book now',
-  'common.bookAppointment': 'Book an appointment',
   'common.learnMore': 'Learn more',
   'common.menu': 'Menu',
   'common.close': 'Close',
   'common.language': 'Language',
   'common.switchToEnglish': 'Switch to English',
   'common.switchToBulgarian': 'Switch to Bulgarian',
-  'common.imagePlaceholder': 'Replace with photo',
 
-  'footer.eyebrow': 'A little time for you',
-  'footer.title': 'Ready for your next favourite set?',
   'footer.description':
     'Thoughtful nail care, beautiful details, and a little everyday luxury.',
   'footer.explore': 'Explore',
@@ -44,20 +38,12 @@ const en = {
   'footer.sunday': 'Sunday: Closed',
   'footer.rights': 'La Vie en Rose.',
   'footer.madeWithCare': 'Made with care.',
-  'footer.socialMedia': 'Social media',
 
   'home.hero.eyebrow': 'Modern nail care, beautifully done',
   'home.hero.title': 'Life looks better',
   'home.hero.titleAccent': 'in pink.',
   'home.hero.copy':
     'A warm, modern nail salon for thoughtful care, effortless colour, and the tiny details that make you feel entirely yourself.',
-  'home.hero.book': 'Book your visit',
-  'home.hero.explore': 'Explore services',
-  'home.hero.loved': 'Loved by our regulars',
-  'home.hero.image': 'Danaya Tasheva, founder and nail artist at La Vie en Rose',
-  'home.hero.cardTitle': 'Made for you',
-  'home.hero.cardCopy': 'Every colour. Every detail.',
-  'home.hero.scroll': 'Scroll to discover',
   'home.preview.gallery.eyebrow': 'A little inspiration',
   'home.preview.gallery.title': 'Find your next favourite set.',
   'home.preview.gallery.copy':
@@ -74,117 +60,16 @@ const en = {
   'home.preview.contact.title': 'Ready when you are.',
   'home.preview.contact.copy':
     'Find the salon, check the opening hours, or get in touch to arrange your next visit.',
-  'home.intro.eyebrow': 'Welcome to La Vie en Rose',
-  'home.intro.title': 'A softer kind of self-care.',
-  'home.intro.copy':
-    'We believe a nail appointment should be more than a quick stop. It is time to slow down, choose something beautiful, and leave feeling a little lighter.',
-  'home.intro.link': 'Meet the salon',
-  'home.discover.eyebrow': 'Explore La Vie en Rose',
-  'home.discover.title': 'Everything you need, in one place.',
-  'home.discover.gallery.title': 'Gallery',
-  'home.discover.gallery.copy':
-    'Browse colours, finishes, and detailed nail art from the salon.',
-  'home.discover.prices.title': 'Price list',
-  'home.discover.prices.copy':
-    'See the current nail services with clear prices in Bulgarian lev and euro.',
-  'home.discover.about.title': 'About the salon',
-  'home.discover.about.copy':
-    'Meet Danaya and take a closer look at the pink La Vie en Rose salon.',
-  'home.services.eyebrow': 'Our favourites',
-  'home.services.title': 'Polished, from tip to toe.',
-  'home.services.all': 'View all services',
-  'home.services.signature.name': 'Gel Manicure',
-  'home.services.signature.description':
-    'Gel polish manicure with rubber base levelling for a smooth, lasting finish.',
-  'home.services.signature.price': '50 BGN / €25.50',
-  'home.services.gel.name': 'French Manicure',
-  'home.services.gel.description':
-    'A clean, precise French finish with the timeless look you love.',
-  'home.services.gel.price': '55 BGN / €28',
-  'home.services.art.name': 'Gel Overlay',
-  'home.services.art.description':
-    'Gel applied over the natural nail for added structure and strength.',
-  'home.services.art.price': '60 BGN / €30.60',
-  'home.feature.image': 'The pink interior of La Vie en Rose nail salon',
-  'home.feature.eyebrow': 'The rose standard',
-  'home.feature.title': 'Care in every little detail.',
-  'home.feature.copy':
-    'Beautiful results begin with considered care. We use trusted products, thoughtful techniques, and unhurried appointments to keep your natural nails feeling as good as they look.',
-  'home.feature.sanitised': 'Carefully sanitised tools',
-  'home.feature.products': 'Quality, nail-kind products',
-  'home.feature.consultation': 'Personal colour consultation',
-  'home.feature.link': 'Our approach',
-  'home.gallery.eyebrow': 'Fresh from the salon',
-  'home.gallery.title': 'A little inspiration.',
-  'home.gallery.link': 'Explore the gallery',
-  'home.testimonials.eyebrow': 'Kind words',
-  'home.testimonials.title': 'From our lovely clients.',
-  'home.testimonials.one':
-    'The prettiest salon and the most careful manicure I have ever had.',
-  'home.testimonials.two':
-    'Every appointment feels calm, personal, and genuinely special.',
-  'home.testimonials.three':
-    'Beautiful work that lasts. I already look forward to my next visit.',
-
-  'services.hero.eyebrow': 'Our menu',
-  'services.hero.title': 'Small rituals. Beautiful results.',
-  'services.hero.copy':
-    'Explore the current nail services at La Vie en Rose, with clear prices in Bulgarian lev and euro.',
-  'services.intro.eyebrow': 'Choose your moment',
-  'services.intro.title': 'The service edit.',
-  'services.intro.copy':
-    'Not sure what to book? Choose the closest service and add a note about your ideal result. We will make sure there is enough time for you.',
-  'services.natural.title': 'Manicure',
-  'services.natural.description':
-    'Polished gel and French finishes for beautifully cared-for nails.',
-  'services.classic.name': 'Classic Manicure',
-  'services.classic.detail': 'Shape, cuticle care, polish',
-  'services.ritual.name': 'Rose Ritual',
-  'services.ritual.detail': 'Manicure, scrub, mask, massage',
-  'services.refresh.name': 'Polish Refresh',
-  'services.refresh.detail': 'Shape and classic polish',
-  'services.gel.title': 'Gel Services',
-  'services.gel.description':
-    'Structure, length, and careful removal for your chosen result.',
   'services.gelManicure.name': 'Gel Manicure',
   'services.gelManicure.detail': 'Includes levelling with a rubber base',
   'services.biab.name': 'Gel Overlay on Natural Nails',
   'services.biab.detail': 'Gel structure applied over the natural nail',
   'services.removal.name': 'Gel Polish Removal',
   'services.removal.detail': 'Removal of existing gel polish',
-  'services.art.title': 'Art & Extras',
-  'services.art.description':
-    'Personal details to make your manicure feel completely yours.',
-  'services.minimal.name': 'Minimal Art',
-  'services.minimal.detail': 'Fine lines, dots, chrome accents',
   'services.detailed.name': 'Gel Extensions',
   'services.detailed.detail': 'Length and structure built with gel',
   'services.french.name': 'French Manicure',
   'services.french.detail': 'A precise classic French finish',
-  'services.pedicures.title': 'Pedicures',
-  'services.pedicures.description':
-    'Restorative foot care with a polished final touch.',
-  'services.classicPedi.name': 'Classic Pedicure',
-  'services.classicPedi.detail': 'Full care and classic polish',
-  'services.gelPedi.name': 'Gel Pedicure',
-  'services.gelPedi.detail': 'Full care and gel colour',
-  'services.spaPedi.name': 'Rose Spa Pedicure',
-  'services.spaPedi.detail': 'Extended ritual and gel colour',
-  'services.notes.image': 'Detailed autumn nail art created by Danaya Tasheva',
-  'services.notes.eyebrow': 'Good to know',
-  'services.notes.title': 'A thoughtful appointment, from start to finish.',
-  'services.notes.time.title': 'Arrive on time',
-  'services.notes.time.copy':
-    'Please arrive with enough time to settle in before your appointment.',
-  'services.notes.idea.title': 'Share your idea',
-  'services.notes.idea.copy':
-    'Bring references or send your inspiration before detailed nail art.',
-  'services.notes.changes.title': 'Changes happen',
-  'services.notes.changes.copy': 'Contact us directly if you need to change your appointment.',
-  'services.notes.health.title': 'Nail health first',
-  'services.notes.health.copy':
-    'We may adjust a service if your natural nails need a gentler approach.',
-  'services.notes.book': 'Choose your appointment',
 
   'prices.hero.eyebrow': 'Clear and simple',
   'prices.hero.title': 'Our price list.',
@@ -192,25 +77,8 @@ const en = {
     'The official La Vie en Rose nail service prices, shown in Bulgarian lev and euro.',
   'prices.intro.eyebrow': 'Current services',
   'prices.intro.title': 'Choose your manicure.',
-  'prices.intro.copy':
-    'These prices follow the official salon price list. Contact us before booking if you have questions about a service.',
-  'prices.duration': 'Duration',
   'prices.price': 'Price',
-  'prices.minutes': 'min',
   'prices.manicures': 'Nail services',
-  'prices.gelBiab': 'Gel & BIAB',
-  'prices.pedicures': 'Pedicures',
-  'prices.extras': 'Nail art & extras',
-  'prices.repair.name': 'Single Nail Repair',
-  'prices.repair.detail': 'Repair or extension of one nail',
-  'prices.consultation.name': 'Colour Consultation',
-  'prices.consultation.detail': 'Included with every full service',
-  'prices.included': 'Included',
-  'prices.note.eyebrow': 'A small note',
-  'prices.note.title': 'Ready to choose your next set?',
-  'prices.note.copy':
-    'Call the salon or send a message on Instagram to discuss your preferred service and arrange an appointment.',
-  'prices.note.button': 'Book from the price list',
 
   'gallery.hero.eyebrow': 'Our work',
   'gallery.hero.title': 'Made to be looked at.',
@@ -218,8 +86,6 @@ const en = {
     'A selection of colours, finishes, and detailed nail art from the salon.',
   'gallery.toolbar.eyebrow': 'The nail edit',
   'gallery.toolbar.title': 'Recent favourites.',
-  'gallery.toolbar.copy':
-    'Clean lines, soft colour, and a touch of playfulness — always tailored to the person wearing them.',
   'gallery.item.french': 'Soft french',
   'gallery.item.red': 'Cherry red',
   'gallery.item.blackFrench': 'Pink and black French manicure',
@@ -246,19 +112,12 @@ const en = {
   'about.studio.image': 'The manicure area inside La Vie en Rose',
   'about.team.eyebrow': 'Meet the artist',
   'about.team.title': 'Danaya Tasheva.',
-  'about.team.copy':
-    'Founder and nail artist behind La Vie en Rose and the work featured throughout the gallery.',
-  'about.team.member': 'Team member',
   'about.team.founder': 'Founder & nail artist',
-  'about.team.senior': 'Senior nail artist',
-  'about.team.artist': 'Nail artist',
   'about.owner.name': 'Danaya Tasheva',
   'about.owner.imageAlt': 'Danaya Tasheva preparing for a nail appointment',
   'about.owner.brandImageAlt': 'Danaya Tasheva Nail Artist wall sign inside the salon',
   'about.diplomas.eyebrow': 'Training and certificates',
   'about.diplomas.title': 'Diplomas and professional development.',
-  'about.diplomas.copy':
-    'A dedicated space for qualifications, specialist training, and certificates.',
   'about.diplomas.placeholder': 'Diploma image will be added here',
 
   'contact.hero.eyebrow': 'Come say hello',
@@ -270,48 +129,16 @@ const en = {
   'contact.booking.copy':
     'Appointments and questions are handled directly by phone or through the salon Instagram account.',
   'contact.call': 'Call us',
-  'contact.email': 'Email us',
   'contact.instagram': 'Instagram',
   'contact.visit': 'Visit us',
   'contact.address': 'Sofia, Mladost 2, 249 St. Kipriyan St.',
-  'contact.booking.cardTitle': 'Choose how to get in touch',
-  'contact.booking.cardCopy': 'Call us directly or send a message on Instagram to arrange your visit.',
-  'contact.booking.phone': 'Call +359 988 381 177',
-  'contact.booking.instagram': 'Message on Instagram',
-  'contact.form.name': 'Your name',
-  'contact.form.namePlaceholder': 'Jane Smith',
-  'contact.form.phone': 'Phone number',
-  'contact.form.email': 'Email address',
-  'contact.form.service': 'Service',
-  'contact.form.choose': 'Choose a service',
-  'contact.form.message': 'Anything we should know?',
-  'contact.form.messagePlaceholder':
-    'Tell us about your idea, preferred date, or current nails...',
-  'contact.form.send': 'Send booking request',
-  'contact.form.note':
-    'This currently opens your email app. A booking system can be connected later.',
   'contact.map.title': 'Salon location',
-  'contact.map.copy': 'Mladost 2, Sofia',
   'contact.map.alt': 'Map showing the location of La Vie en Rose in Mladost 2, Sofia',
-  'contact.visit.eyebrow': 'Plan your visit',
   'contact.visit.title': 'Find your way to the pink door.',
   'contact.hours.weekdays': 'Monday – Friday',
   'contact.hours.saturday': 'Saturday',
   'contact.hours.sunday': 'Sunday',
-  'contact.hours.closed': 'Closed',
-  'contact.visit.copy':
-    'The salon is located at block 249 on St. Kipriyan Street in Mladost 2, Sofia. Open the map for directions.',
-  'contact.faq.eyebrow': 'Before you visit',
-  'contact.faq.title': 'A few quick answers.',
-  'contact.faq.prepare.question': 'How should I prepare for my appointment?',
-  'contact.faq.prepare.answer':
-    'Come as you are. If you currently have gel or BIAB, mention it when booking so we reserve removal time.',
-  'contact.faq.art.question': 'Can I bring a nail art reference?',
-  'contact.faq.art.answer':
-    'Absolutely. Send it ahead for detailed designs so your artist can prepare colours and allow enough time.',
-  'contact.faq.cancel.question': 'What is the cancellation policy?',
-  'contact.faq.cancel.answer':
-    "Please give at least 24 hours' notice when moving or cancelling an appointment."
+  'contact.hours.closed': 'Closed'
 } as const;
 
 export type TranslationKey = keyof typeof en;
@@ -320,7 +147,6 @@ const bg: Record<TranslationKey, string> = {
   'meta.site.description':
     'La Vie en Rose е модерен салон за маникюр с внимание към детайла, красотата и спокойната грижа за себе си.',
   'meta.home.title': 'La Vie en Rose | Салон за маникюр',
-  'meta.services.title': 'Услуги | La Vie en Rose',
   'meta.prices.title': 'Ценоразпис | La Vie en Rose',
   'meta.gallery.title': 'Галерия | La Vie en Rose',
   'meta.about.title': 'За нас | La Vie en Rose',
@@ -330,23 +156,18 @@ const bg: Record<TranslationKey, string> = {
   'common.logoAlt': 'Лого на салон за маникюр La Vie en Rose',
   'common.nailStudio': 'Салон за маникюр',
   'common.home': 'Начало',
-  'common.services': 'Услуги',
   'common.prices': 'Ценоразпис',
   'common.gallery': 'Галерия',
   'common.about': 'За нас',
   'common.contact': 'Контакти',
   'common.bookNow': 'Запази час',
-  'common.bookAppointment': 'Запази час',
   'common.learnMore': 'Научи повече',
   'common.menu': 'Меню',
   'common.close': 'Затвори',
   'common.language': 'Език',
   'common.switchToEnglish': 'Превключи на английски',
   'common.switchToBulgarian': 'Превключи на български',
-  'common.imagePlaceholder': 'Добавете снимка',
 
-  'footer.eyebrow': 'Малко време за теб',
-  'footer.title': 'Готова ли си за следващия си любим маникюр?',
   'footer.description':
     'Внимателна грижа за ноктите, красиви детайли и малко ежедневен лукс.',
   'footer.explore': 'Разгледай',
@@ -360,20 +181,12 @@ const bg: Record<TranslationKey, string> = {
   'footer.sunday': 'Неделя: Почивен ден',
   'footer.rights': 'La Vie en Rose.',
   'footer.madeWithCare': 'Създадено с грижа.',
-  'footer.socialMedia': 'Социални мрежи',
 
   'home.hero.eyebrow': 'Модерна грижа за ноктите, направена красиво',
   'home.hero.title': 'Животът е по-красив',
   'home.hero.titleAccent': 'в розово.',
   'home.hero.copy':
     'Топъл и модерен салон за внимателна грижа, красиви цветове и онези малки детайли, които те карат да се чувстваш напълно себе си.',
-  'home.hero.book': 'Запази посещение',
-  'home.hero.explore': 'Разгледай услугите',
-  'home.hero.loved': 'Любимо място на нашите клиенти',
-  'home.hero.image': 'Даная Ташева, основател и маникюрист в La Vie en Rose',
-  'home.hero.cardTitle': 'Създадено за теб',
-  'home.hero.cardCopy': 'Всеки цвят. Всеки детайл.',
-  'home.hero.scroll': 'Разгледай надолу',
   'home.preview.gallery.eyebrow': 'Малко вдъхновение',
   'home.preview.gallery.title': 'Открий следващия си любим маникюр.',
   'home.preview.gallery.copy':
@@ -390,118 +203,16 @@ const bg: Record<TranslationKey, string> = {
   'home.preview.contact.title': 'Очакваме те.',
   'home.preview.contact.copy':
     'Намери салона, провери работното време или се свържи с нас за следващото си посещение.',
-  'home.intro.eyebrow': 'Добре дошла в La Vie en Rose',
-  'home.intro.title': 'По-нежна грижа за себе си.',
-  'home.intro.copy':
-    'Вярваме, че маникюрът трябва да бъде повече от кратка спирка. Това е време да забавиш темпото, да избереш нещо красиво и да си тръгнеш с по-леко настроение.',
-  'home.intro.link': 'Запознай се със салона',
-  'home.discover.eyebrow': 'Разгледай La Vie en Rose',
-  'home.discover.title': 'Всичко необходимо на едно място.',
-  'home.discover.gallery.title': 'Галерия',
-  'home.discover.gallery.copy':
-    'Разгледай цветове, завършеци и детайлни дизайни от салона.',
-  'home.discover.prices.title': 'Ценоразпис',
-  'home.discover.prices.copy':
-    'Виж актуалните услуги с ясни цени в български лева и евро.',
-  'home.discover.about.title': 'За салона',
-  'home.discover.about.copy':
-    'Запознай се с Даная и разгледай отблизо розовия салон La Vie en Rose.',
-  'home.services.eyebrow': 'Нашите фаворити',
-  'home.services.title': 'Съвършенство до върха на пръстите.',
-  'home.services.all': 'Виж всички услуги',
-  'home.services.signature.name': 'Маникюр с гел лак',
-  'home.services.signature.description':
-    'Маникюр с гел лак и изравняване с каучукова база за гладък и траен завършек.',
-  'home.services.signature.price': '50 лв. / €25.50',
-  'home.services.gel.name': 'Френски маникюр',
-  'home.services.gel.description':
-    'Чист и прецизен френски завършек с класическа визия.',
-  'home.services.gel.price': '55 лв. / €28',
-  'home.services.art.name': 'Гел върху естествен нокът',
-  'home.services.art.description':
-    'Гел върху естествения нокът за допълнителна здравина и структура.',
-  'home.services.art.price': '60 лв. / €30.60',
-  'home.feature.image': 'Розовият интериор на салон La Vie en Rose',
-  'home.feature.eyebrow': 'Стандартът Rose',
-  'home.feature.title': 'Грижа във всеки малък детайл.',
-  'home.feature.copy':
-    'Красивият резултат започва с внимателна грижа. Използваме качествени продукти, щадящи техники и достатъчно време, за да изглеждат естествените ти нокти толкова добре, колкото се чувстват.',
-  'home.feature.sanitised': 'Внимателно дезинфекцирани инструменти',
-  'home.feature.products': 'Качествени и щадящи продукти',
-  'home.feature.consultation': 'Лична консултация за цвят',
-  'home.feature.link': 'Нашият подход',
-  'home.gallery.eyebrow': 'Ново от салона',
-  'home.gallery.title': 'Малко вдъхновение.',
-  'home.gallery.link': 'Разгледай галерията',
-  'home.testimonials.eyebrow': 'Мили думи',
-  'home.testimonials.title': 'От нашите прекрасни клиенти.',
-  'home.testimonials.one':
-    'Най-красивият салон и най-внимателният маникюр, който съм имала.',
-  'home.testimonials.two':
-    'Всяко посещение е спокойно, лично и наистина специално.',
-  'home.testimonials.three':
-    'Красив и дълготраен резултат. Вече очаквам следващото си посещение.',
-
-  'services.hero.eyebrow': 'Нашето меню',
-  'services.hero.title': 'Малки ритуали. Красиви резултати.',
-  'services.hero.copy':
-    'Разгледай актуалните услуги на La Vie en Rose с ясни цени в лева и евро.',
-  'services.intro.eyebrow': 'Избери своя момент',
-  'services.intro.title': 'Подбрани услуги.',
-  'services.intro.copy':
-    'Не си сигурна какво да запазиш? Избери най-близката услуга и добави бележка за желания резултат. Ще предвидим достатъчно време за теб.',
-  'services.natural.title': 'Маникюр',
-  'services.natural.description':
-    'Гел лак и френски завършек за красиво поддържани нокти.',
-  'services.classic.name': 'Класически маникюр',
-  'services.classic.detail': 'Оформяне, кожички и лак',
-  'services.ritual.name': 'Rose ритуал',
-  'services.ritual.detail': 'Маникюр, скраб, маска и масаж',
-  'services.refresh.name': 'Освежаване с лак',
-  'services.refresh.detail': 'Оформяне и класически лак',
-  'services.gel.title': 'Услуги с гел',
-  'services.gel.description':
-    'Здравина, дължина и внимателно сваляне според желания резултат.',
   'services.gelManicure.name': 'Маникюр с гел лак',
   'services.gelManicure.detail': 'Включва изравняване с каучукова база',
   'services.biab.name': 'Гел върху естествен нокът',
   'services.biab.detail': 'Укрепване и структура върху естествения нокът',
   'services.removal.name': 'Сваляне на гел лак',
   'services.removal.detail': 'Сваляне на наличния гел лак',
-  'services.art.title': 'Дизайн и добавки',
-  'services.art.description':
-    'Лични детайли, с които маникюрът да бъде напълно твой.',
-  'services.minimal.name': 'Минималистичен дизайн',
-  'services.minimal.detail': 'Фини линии, точки и хром акценти',
   'services.detailed.name': 'Изграждане с гел',
   'services.detailed.detail': 'Изграждане на дължина и структура с гел',
   'services.french.name': 'Френски маникюр',
   'services.french.detail': 'Прецизен класически френски завършек',
-  'services.pedicures.title': 'Педикюр',
-  'services.pedicures.description':
-    'Възстановяваща грижа за стъпалата с красив финален щрих.',
-  'services.classicPedi.name': 'Класически педикюр',
-  'services.classicPedi.detail': 'Пълна грижа и класически лак',
-  'services.gelPedi.name': 'Педикюр с гел лак',
-  'services.gelPedi.detail': 'Пълна грижа и гел цвят',
-  'services.spaPedi.name': 'Rose спа педикюр',
-  'services.spaPedi.detail': 'Удължен ритуал и гел цвят',
-  'services.notes.image': 'Детайлен есенен дизайн на нокти от Даная Ташева',
-  'services.notes.eyebrow': 'Добре е да знаеш',
-  'services.notes.title': 'Внимателно посещение от начало до край.',
-  'services.notes.time.title': 'Ела навреме',
-  'services.notes.time.copy':
-    'Пристигни с достатъчно време, за да се настаниш спокойно преди часа си.',
-  'services.notes.idea.title': 'Сподели идеята си',
-  'services.notes.idea.copy':
-    'Донеси снимки или изпрати вдъхновението си предварително за детайлен дизайн.',
-  'services.notes.changes.title': 'Плановете се променят',
-  'services.notes.changes.copy':
-    'Свържи се директно с нас, ако трябва да промениш часа си.',
-  'services.notes.health.title': 'Здравето е на първо място',
-  'services.notes.health.copy':
-    'Може да адаптираме услугата, ако естествените ти нокти се нуждаят от по-щадящ подход.',
-  'services.notes.book': 'Избери своята услуга',
 
   'prices.hero.eyebrow': 'Ясно и лесно',
   'prices.hero.title': 'Нашият ценоразпис.',
@@ -509,25 +220,8 @@ const bg: Record<TranslationKey, string> = {
     'Официалните цени на услугите в La Vie en Rose, представени в лева и евро.',
   'prices.intro.eyebrow': 'Актуални услуги',
   'prices.intro.title': 'Избери своя маникюр.',
-  'prices.intro.copy':
-    'Цените следват официалния ценоразпис на салона. Свържи се с нас преди записване, ако имаш въпроси за услуга.',
-  'prices.duration': 'Времетраене',
   'prices.price': 'Цена',
-  'prices.minutes': 'мин',
   'prices.manicures': 'Услуги за нокти',
-  'prices.gelBiab': 'Гел лак и BIAB',
-  'prices.pedicures': 'Педикюр',
-  'prices.extras': 'Дизайн и добавки',
-  'prices.repair.name': 'Ремонт на един нокът',
-  'prices.repair.detail': 'Поправка или удължаване на един нокът',
-  'prices.consultation.name': 'Консултация за цвят',
-  'prices.consultation.detail': 'Включена към всяка пълна услуга',
-  'prices.included': 'Включена',
-  'prices.note.eyebrow': 'Малка бележка',
-  'prices.note.title': 'Готова ли си да избереш следващия си маникюр?',
-  'prices.note.copy':
-    'Обади се в салона или изпрати съобщение в Instagram, за да обсъдим услугата и да уговорим час.',
-  'prices.note.button': 'Запази час от ценоразписа',
 
   'gallery.hero.eyebrow': 'Нашата работа',
   'gallery.hero.title': 'Създадено, за да бъде забелязано.',
@@ -535,8 +229,6 @@ const bg: Record<TranslationKey, string> = {
     'Селекция от цветове, завършеци и детайлни дизайни от салона.',
   'gallery.toolbar.eyebrow': 'Селекция маникюри',
   'gallery.toolbar.title': 'Последни фаворити.',
-  'gallery.toolbar.copy':
-    'Чисти линии, нежни цветове и закачлив акцент — винаги съобразени с човека, който ги носи.',
   'gallery.item.french': 'Нежен френски',
   'gallery.item.red': 'Черешово червено',
   'gallery.item.blackFrench': 'Розов и черен френски маникюр',
@@ -563,19 +255,12 @@ const bg: Record<TranslationKey, string> = {
   'about.studio.image': 'Зоната за маникюр в La Vie en Rose',
   'about.team.eyebrow': 'Запознай се с артиста',
   'about.team.title': 'Даная Ташева.',
-  'about.team.copy':
-    'Основател и маникюрист зад La Vie en Rose и работата, представена в галерията.',
-  'about.team.member': 'Член на екипа',
   'about.team.founder': 'Основател и маникюрист',
-  'about.team.senior': 'Старши маникюрист',
-  'about.team.artist': 'Маникюрист',
   'about.owner.name': 'Даная Ташева',
   'about.owner.imageAlt': 'Даная Ташева се подготвя за маникюр',
   'about.owner.brandImageAlt': 'Надпис Danaya Tasheva Nail Artist в салона',
   'about.diplomas.eyebrow': 'Обучения и сертификати',
   'about.diplomas.title': 'Дипломи и професионално развитие.',
-  'about.diplomas.copy':
-    'Специално място за квалификации, професионални обучения и сертификати.',
   'about.diplomas.placeholder': 'Тук ще бъде добавена снимка на диплома',
 
   'contact.hero.eyebrow': 'Кажи ни здравей',
@@ -587,48 +272,16 @@ const bg: Record<TranslationKey, string> = {
   'contact.booking.copy':
     'Часове и въпроси се уговарят директно по телефона или чрез Instagram профила на салона.',
   'contact.call': 'Обади ни се',
-  'contact.email': 'Пиши ни',
   'contact.instagram': 'Instagram',
   'contact.visit': 'Посети ни',
   'contact.address': 'гр. София, ж.к. Младост 2, ул. „Свети Киприян“, бл. 249',
-  'contact.booking.cardTitle': 'Избери как да се свържеш',
-  'contact.booking.cardCopy': 'Обади се директно или ни изпрати съобщение в Instagram, за да уговорим посещение.',
-  'contact.booking.phone': 'Обади се на 0988 381 177',
-  'contact.booking.instagram': 'Пиши в Instagram',
-  'contact.form.name': 'Твоето име',
-  'contact.form.namePlaceholder': 'Мария Иванова',
-  'contact.form.phone': 'Телефонен номер',
-  'contact.form.email': 'Имейл адрес',
-  'contact.form.service': 'Услуга',
-  'contact.form.choose': 'Избери услуга',
-  'contact.form.message': 'Има ли нещо, което трябва да знаем?',
-  'contact.form.messagePlaceholder':
-    'Разкажи ни за идеята си, предпочитана дата или текущото състояние на ноктите...',
-  'contact.form.send': 'Изпрати запитване',
-  'contact.form.note':
-    'В момента това отваря имейл приложението. По-късно може да бъде свързана система за резервации.',
   'contact.map.title': 'Локация на салона',
-  'contact.map.copy': 'Младост 2, София',
   'contact.map.alt': 'Карта с локацията на La Vie en Rose в Младост 2, София',
-  'contact.visit.eyebrow': 'Планирай посещението си',
   'contact.visit.title': 'Намери пътя към розовата врата.',
   'contact.hours.weekdays': 'Понеделник – Петък',
   'contact.hours.saturday': 'Събота',
   'contact.hours.sunday': 'Неделя',
-  'contact.hours.closed': 'Почивен ден',
-  'contact.visit.copy':
-    'Салонът се намира в блок 249 на ул. „Свети Киприян“ в ж.к. Младост 2, София. Отвори картата за упътване.',
-  'contact.faq.eyebrow': 'Преди посещението',
-  'contact.faq.title': 'Няколко бързи отговора.',
-  'contact.faq.prepare.question': 'Как да се подготвя за посещението?',
-  'contact.faq.prepare.answer':
-    'Ела такава, каквато си. Ако в момента имаш гел лак или BIAB, спомени го при записването, за да предвидим време за сваляне.',
-  'contact.faq.art.question': 'Мога ли да донеса снимка за дизайн?',
-  'contact.faq.art.answer':
-    'Разбира се. Изпрати я предварително при детайлен дизайн, за да подготвим цветовете и достатъчно време.',
-  'contact.faq.cancel.question': 'Каква е политиката за отказ?',
-  'contact.faq.cancel.answer':
-    'Моля, уведоми ни поне 24 часа по-рано при преместване или отказ от час.'
+  'contact.hours.closed': 'Почивен ден'
 };
 
 export const TRANSLATIONS: Record<Language, Record<TranslationKey, string>> = {

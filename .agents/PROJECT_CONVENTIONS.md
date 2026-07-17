@@ -19,6 +19,7 @@ Current principles:
   SCSS.
 - Avoid speculative abstractions. Extract shared code after a pattern is proven.
 - Keep all user-facing content easy to find in page component files.
+- Remove superseded components and copy once no route or live template uses them.
 
 ## 2. Runtime and framework
 
@@ -27,6 +28,7 @@ Current principles:
 - TypeScript strict mode and Angular strict template checking stay enabled.
 - Use the Angular CLI through the npm scripts in `package.json`.
 - Keep production dependencies minimal and justify each new package.
+- Remove direct dependencies when the application no longer imports them.
 - Commit `package-lock.json` and use npm for dependency management.
 
 ## 3. Repository structure
@@ -164,6 +166,10 @@ export class Example {
 - Keep Bulgarian copy natural and concise rather than translating word for word.
 - After adding translations, switch languages on every changed page and check
   that longer Bulgarian labels remain responsive.
+- Remove translation keys when their UI is removed. Do not keep speculative or
+  legacy copy in either dictionary.
+- Before handoff, compare dictionary keys with live `i18n.t(...)` references and
+  data-driven `TranslationKey` values; every retained key must have a consumer.
 
 ## 9. SCSS and design system
 
@@ -241,18 +247,42 @@ Before handing off a change:
 4. Verify keyboard navigation and visible focus states.
 5. Check that internal links and route titles are correct.
 6. Confirm new assets follow the asset rules above.
-7. Update this convention file and the README if structure or setup changes.
+7. Check that removed UI did not leave unused styles, imports, dependencies, or
+   translation keys.
+8. Update this convention file and the README if structure or setup changes.
 
 The production build must remain within the budgets declared in `angular.json`.
 Do not silence warnings by raising budgets without understanding the bundle
 increase.
 
-## 14. Version control
+## 14. Security and deployment
+
+- The current SPA requires no API keys, runtime environment variables,
+  repository secrets, backend, database, analytics, or payment integration.
+- Common local environment and credential formats are ignored in `.gitignore`.
+  A safe placeholder may be committed as `.env.example`, but it must contain no
+  working credentials.
+- Never put secrets or private source material under `public/`; Angular copies
+  that directory into the deployable website unchanged.
+- The Google Maps embed is a keyless iframe. Introducing the Maps JavaScript API
+  or another metered service requires explicit owner approval, documented setup,
+  billing limits, and key restrictions.
+- New external services must document what visitor data they receive and whether
+  consent or a privacy notice is required.
+- The Pages workflow uses only scoped GitHub permissions and no custom secrets.
+  Standard Actions on this public repository are suitable for preview builds.
+- GitHub Pages must remain a development/demo preview because GitHub's published
+  limits do not permit using Pages as free hosting to run an online business.
+  Select a host with appropriate commercial terms before production launch.
+- Repository checks cannot prove the owner's account-wide billing status. Review
+  **GitHub Settings > Billing and licensing** before enabling paid products.
+
+## 15. Version control
 
 - Keep commits focused and describe the user-visible outcome.
 - Never commit `node_modules`, `dist`, `.angular`, editor caches, or local secrets.
 - Do commit `package-lock.json`, shared `.vscode` configuration, and web-ready
   public assets.
 - Do not overwrite unrelated work in a dirty working tree.
-- Never commit API keys or credentials. Future environment configuration should
+- Never commit API keys or credentials. Future environment configuration must
   use ignored local files and documented safe examples.

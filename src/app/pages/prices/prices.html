@@ -12,20 +12,13 @@
         <span class="eyebrow">{{ i18n.t('prices.intro.eyebrow') }}</span>
         <h2 class="section-title">{{ i18n.t('prices.intro.title') }}</h2>
       </div>
-      <p class="section-copy">{{ i18n.t('prices.intro.copy') }}</p>
     </div>
 
     <div class="price-grid">
-      @for (category of categories; track category.titleKey; let index = $index) {
+      @for (category of categories; track category.titleKey) {
         <article class="price-category">
           <header class="category-header">
-            <div class="category-icon">
-              <span class="material-symbols-rounded">{{ category.icon }}</span>
-            </div>
-            <div>
-              <small>0{{ index + 1 }}</small>
-              <h3>{{ i18n.t(category.titleKey) }}</h3>
-            </div>
+            <h3>{{ i18n.t(category.titleKey) }}</h3>
           </header>
 
           <div class="table-header" aria-hidden="true">
