@@ -1,0 +1,161 @@
+<section class="hero">
+  <div class="hero-shape hero-shape--one"></div>
+  <div class="hero-shape hero-shape--two"></div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy fade-up">
+      <span class="eyebrow">Modern nail care, beautifully done</span>
+      <h1>Life looks better <em>in pink.</em></h1>
+      <p>
+        A warm, modern nail studio for thoughtful care, effortless colour, and
+        the tiny details that make you feel entirely yourself.
+      </p>
+      <div class="hero-actions">
+        <a class="button button--primary" routerLink="/contact" fragment="booking">
+          Book your visit
+          <span class="material-symbols-rounded">arrow_forward</span>
+        </a>
+        <a class="button button--secondary" routerLink="/services">Explore services</a>
+      </div>
+      <div class="hero-proof">
+        <div class="avatar-stack" aria-hidden="true">
+          <span>MK</span><span>SA</span><span>ER</span>
+        </div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <small>Loved by our regulars</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual fade-up">
+      <div class="visual-card visual-card--main placeholder-art">
+        <span class="image-note">
+          <span class="material-symbols-rounded">add_photo_alternate</span>
+          Your hero image
+        </span>
+      </div>
+      <div class="visual-card visual-card--small">
+        <span class="material-symbols-rounded">favorite</span>
+        <strong>Made for you</strong>
+        <small>Every colour. Every detail.</small>
+      </div>
+      <div class="polish-orb">
+        <span>LR</span>
+      </div>
+    </div>
+  </div>
+
+  <a class="scroll-cue" href="#welcome">
+    <span>Scroll to discover</span>
+    <span class="material-symbols-rounded">south</span>
+  </a>
+</section>
+
+<section class="section intro" id="welcome">
+  <div class="container intro-grid">
+    <div>
+      <span class="eyebrow">Welcome to La Vie en Rose</span>
+      <h2 class="section-title">A softer kind of self-care.</h2>
+    </div>
+    <div class="intro-copy">
+      <p class="section-copy">
+        We believe a nail appointment should be more than a quick stop. It is
+        time to slow down, choose something beautiful, and leave feeling a
+        little lighter.
+      </p>
+      <a class="text-link" routerLink="/about">
+        Meet the studio
+        <span class="material-symbols-rounded">arrow_outward</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section services-preview">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">Our favourites</span>
+        <h2 class="section-title">Polished, from tip to toe.</h2>
+      </div>
+      <a class="button button--secondary" routerLink="/services">View all services</a>
+    </div>
+
+    <div class="service-grid">
+      @for (service of services; track service.name; let index = $index) {
+        <article class="service-card">
+          <span class="service-number">0{{ index + 1 }}</span>
+          <span class="material-symbols-rounded service-icon">{{ service.icon }}</span>
+          <h3>{{ service.name }}</h3>
+          <p>{{ service.description }}</p>
+          <strong>{{ service.price }}</strong>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="split-feature">
+  <div class="feature-art placeholder-art">
+    <span class="image-note">
+      <span class="material-symbols-rounded">add_photo_alternate</span>
+      Studio image
+    </span>
+  </div>
+  <div class="feature-copy">
+    <span class="eyebrow">The rose standard</span>
+    <h2 class="section-title">Care in every little detail.</h2>
+    <p>
+      Beautiful results begin with considered care. We use trusted products,
+      thoughtful techniques, and unhurried appointments to keep your natural
+      nails feeling as good as they look.
+    </p>
+    <ul>
+      <li><span class="material-symbols-rounded">check_circle</span> Carefully sanitised tools</li>
+      <li><span class="material-symbols-rounded">check_circle</span> Quality, nail-kind products</li>
+      <li><span class="material-symbols-rounded">check_circle</span> Personal colour consultation</li>
+    </ul>
+    <a class="button button--primary" routerLink="/about">Our approach</a>
+  </div>
+</section>
+
+<section class="section gallery-preview">
+  <div class="container">
+    <div class="gallery-heading">
+      <div>
+        <span class="eyebrow">Fresh from the studio</span>
+        <h2 class="section-title">A little inspiration.</h2>
+      </div>
+      <a class="text-link" routerLink="/gallery">
+        Explore the gallery
+        <span class="material-symbols-rounded">arrow_outward</span>
+      </a>
+    </div>
+
+    <div class="mini-gallery">
+      @for (item of [1, 2, 3, 4]; track item) {
+        <div class="gallery-tile gallery-tile--{{ item }}">
+          <span>{{ item < 10 ? '0' + item : item }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section testimonials">
+  <div class="container">
+    <span class="eyebrow">Kind words</span>
+    <h2 class="section-title">From our lovely clients.</h2>
+
+    <div class="testimonial-grid">
+      @for (testimonial of testimonials; track testimonial.name) {
+        <blockquote>
+          <div class="stars">★★★★★</div>
+          <p>“{{ testimonial.quote }}”</p>
+          <cite>{{ testimonial.name }}</cite>
+        </blockquote>
+      }
+    </div>
+  </div>
+</section>

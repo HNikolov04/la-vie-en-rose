@@ -1,0 +1,17 @@
+# Dependencies
+/node_modules
+
+# Angular build output
+/dist
+/.angular
+
+# Editors
+/.idea
+/.vscode/*
+!/.vscode/extensions.json
+!/.vscode/settings.json
+
+# Logs and local files
+*.log
+.DS_Store
+Thumbs.db

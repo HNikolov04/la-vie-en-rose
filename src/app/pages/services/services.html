@@ -1,0 +1,93 @@
+<section class="page-hero">
+  <div class="container fade-up">
+    <span class="eyebrow">Our menu</span>
+    <h1 class="display-title">Small rituals. Beautiful results.</h1>
+    <p>
+      From clean, natural manicures to tiny works of art, every service is
+      tailored with care and finished with intention.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="services-intro">
+      <div>
+        <span class="eyebrow">Choose your moment</span>
+        <h2 class="section-title">The service edit.</h2>
+      </div>
+      <p class="section-copy">
+        Not sure what to book? Choose the closest service and add a note about
+        your ideal result. We will make sure there is enough time for you.
+      </p>
+    </div>
+
+    <div class="service-groups">
+      @for (group of serviceGroups; track group.title; let index = $index) {
+        <article class="service-group">
+          <div class="group-heading">
+            <span class="group-icon material-symbols-rounded">{{ group.icon }}</span>
+            <div>
+              <small>0{{ index + 1 }}</small>
+              <h3>{{ group.title }}</h3>
+              <p>{{ group.description }}</p>
+            </div>
+          </div>
+
+          <div class="service-list">
+            @for (item of group.items; track item.name) {
+              <div class="service-row">
+                <div>
+                  <h4>{{ item.name }}</h4>
+                  <p>{{ item.detail }}</p>
+                </div>
+                <span class="dotted-line"></span>
+                <strong>{{ item.price }}</strong>
+              </div>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section section--rose">
+  <div class="container add-ons">
+    <div class="placeholder-art">
+      <span class="image-note">
+        <span class="material-symbols-rounded">add_photo_alternate</span>
+        Detail image
+      </span>
+    </div>
+    <div>
+      <span class="eyebrow">Good to know</span>
+      <h2 class="section-title">A thoughtful appointment, from start to finish.</h2>
+      <div class="notes-grid">
+        <div>
+          <span class="material-symbols-rounded">schedule</span>
+          <h3>Arrive on time</h3>
+          <p>Please arrive with enough time to settle in before your appointment.</p>
+        </div>
+        <div>
+          <span class="material-symbols-rounded">edit_note</span>
+          <h3>Share your idea</h3>
+          <p>Bring references or send your inspiration before detailed nail art.</p>
+        </div>
+        <div>
+          <span class="material-symbols-rounded">event_busy</span>
+          <h3>Changes happen</h3>
+          <p>Please give us 24 hours' notice if you need to move your booking.</p>
+        </div>
+        <div>
+          <span class="material-symbols-rounded">health_and_safety</span>
+          <h3>Nail health first</h3>
+          <p>We may adjust a service if your natural nails need a gentler approach.</p>
+        </div>
+      </div>
+      <a class="button button--primary" routerLink="/contact" fragment="booking">
+        Choose your appointment
+      </a>
+    </div>
+  </div>
+</section>
