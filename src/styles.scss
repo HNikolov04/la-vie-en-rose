@@ -192,7 +192,7 @@ p {
   background:
     radial-gradient(circle at 85% 22%, rgba(255, 255, 255, 0.62) 0 6%, transparent 6.2%),
     radial-gradient(circle at 78% 40%, rgba(255, 255, 255, 0.35) 0 15%, transparent 15.2%),
-    linear-gradient(135deg, var(--rose-300), var(--rose-500));
+    linear-gradient(135deg, var(--rose-500), var(--rose-600));
 }
 
 .page-hero::after {
@@ -212,7 +212,7 @@ p {
 .page-hero p {
   max-width: 590px;
   margin-bottom: 0;
-  color: var(--ink);
+  color: rgba(255, 255, 255, 0.86);
   font-size: clamp(0.98rem, 1.6vw, 1.1rem);
   line-height: 1.7;
 }
@@ -220,6 +220,15 @@ p {
 .page-hero .display-title {
   max-width: 900px;
   margin-bottom: 20px;
+  color: var(--white);
+}
+
+.page-hero .eyebrow {
+  color: var(--white);
+}
+
+.page-hero .eyebrow::before {
+  background: var(--gold-300);
 }
 
 .section {

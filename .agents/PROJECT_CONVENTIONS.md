@@ -147,6 +147,8 @@ export class Example {
 - Translation dictionaries live in `src/app/core/i18n/translations.ts`.
 - English is the source dictionary. The Bulgarian dictionary is typed against
   every English key so a missing translation fails compilation.
+- Bulgarian is the visitor default. `I18nService` owns that default centrally;
+  a valid language previously selected and stored by the visitor takes priority.
 - Components inject `I18nService` and render copy with `i18n.t(key)`.
 - Do not add visitor-facing prose directly to page TypeScript or templates.
   Proper names, phone numbers, email addresses, prices, and icon identifiers are

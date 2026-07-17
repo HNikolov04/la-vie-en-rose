@@ -27,7 +27,8 @@ restrained gold details complete the theme.
 - TypeScript in strict mode
 - SCSS with shared design tokens
 - Angular signals for the small amount of UI state
-- Strongly typed runtime translations in English and Bulgarian
+- Strongly typed runtime translations in English and Bulgarian, with Bulgarian
+  as the first-visit default
 - Material Symbols Rounded for icons
 - Inter and Manrope for readable typography
 

@@ -63,7 +63,7 @@
 }
 
 .navigation {
-  display: contents;
+  display: block;
 }
 
 .nav-links {
@@ -148,8 +148,8 @@
 
 .language-switch button {
   display: grid;
-  min-width: 34px;
-  height: 32px;
+  min-width: 38px;
+  height: 36px;
   place-items: center;
   padding: 0 7px;
   border: 0;
@@ -188,6 +188,7 @@
   .header-inner {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
   }
 
   .menu-toggle {
@@ -214,8 +215,8 @@
   }
 
   .navigation--open {
-    max-height: 560px;
-    padding-block: 16px 24px;
+    max-height: 430px;
+    padding-block: 14px 22px;
     border-color: var(--border);
     box-shadow: var(--shadow-sm);
     opacity: 1;
@@ -223,11 +224,22 @@
 
   .nav-links {
     display: grid;
+    gap: 5px;
   }
 
   .nav-links > a {
-    padding: 13px 5px;
-    font-size: 0.9rem;
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 0.95rem;
+  }
+
+  .nav-links > a:hover,
+  .nav-links > a.active {
+    background: color-mix(in srgb, var(--rose-300) 24%, var(--white));
   }
 
   .nav-links > a::after {
@@ -235,13 +247,11 @@
   }
 
   .header-actions {
-    display: flex;
-    align-items: center;
-    margin-top: 12px;
+    margin-left: auto;
   }
 
   .book-link {
-    flex: 1;
+    flex: 0 0 auto;
     justify-content: center;
   }
 
@@ -250,17 +260,71 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
+  .header-inner {
+    gap: 8px;
+  }
+
   .brand-mark {
     width: 46px;
     height: 46px;
   }
 
-  .brand strong {
-    font-size: 1rem;
+  .brand > span:last-child {
+    display: none;
   }
 
-  .brand small {
+  .language-switch {
+    padding: 2px;
+  }
+
+  .language-switch button {
+    min-width: 40px;
+    height: 40px;
+    padding: 0 5px;
+    font-size: 0.7rem;
+  }
+
+  .book-link {
+    width: 44px;
+    min-height: 44px;
+    padding: 0;
+  }
+
+  .book-label {
     display: none;
+  }
+
+  .menu-toggle {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .navigation {
+    padding-inline: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-inner {
+    gap: 5px;
+  }
+
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .language-switch button {
+    min-width: 36px;
+    height: 38px;
+  }
+
+  .book-link,
+  .menu-toggle {
+    width: 42px;
+    min-height: 42px;
+    height: 42px;
   }
 }
