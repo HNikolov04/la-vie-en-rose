@@ -7,17 +7,18 @@ accounts, or other salon features later.
 
 ## Current pages
 
-- Home — salon introduction and links to the main content
+- Home — opening hero followed by dedicated Gallery, Price List, About, and Contact previews
 - Price List — a clean, text-based treatment price list
 - Gallery — a responsive image grid with an accessible image modal
-- About — salon story, interior, and owner profile
+- About — salon story, interior, owner profile, and diploma-ready section
 - Contact — contact details, opening hours, and embedded location map
 
 Every page uses the same responsive header, footer, typography, colour tokens,
 buttons, cards, and spacing system.
 
-The visual palette intentionally uses only rose-300 and rose-600 for pink,
-supported by white, readable neutral text, and restrained gold accents.
+The visual palette uses rose-300 for soft surfaces, rose-500 for stronger page
+heroes, and rose-600 for primary accents. White, readable neutral text, and
+restrained gold details complete the theme.
 
 ## Technology
 
@@ -100,6 +101,7 @@ public/assets/
 ├── brand/                Logos, logo marks, and favicons
 ├── icons/                Custom SVG icons only
 └── images/
+    ├── diplomas/          Diploma and professional certificate images
     ├── gallery/           Finished nail sets and portfolio photography
     ├── hero/              Large page and campaign images
     ├── studio/            Interior and atmosphere photography

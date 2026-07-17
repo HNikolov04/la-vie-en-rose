@@ -58,6 +58,22 @@ const en = {
   'home.hero.cardTitle': 'Made for you',
   'home.hero.cardCopy': 'Every colour. Every detail.',
   'home.hero.scroll': 'Scroll to discover',
+  'home.preview.gallery.eyebrow': 'A little inspiration',
+  'home.preview.gallery.title': 'Find your next favourite set.',
+  'home.preview.gallery.copy':
+    'Explore colour, clean finishes, and detailed nail art from recent salon appointments.',
+  'home.preview.prices.eyebrow': 'Clear and simple',
+  'home.preview.prices.title': 'Know the price before you visit.',
+  'home.preview.prices.copy':
+    'Browse the current nail services with straightforward prices in Bulgarian lev and euro.',
+  'home.preview.about.eyebrow': 'Inside La Vie en Rose',
+  'home.preview.about.title': 'Step into our pink world.',
+  'home.preview.about.copy':
+    'Discover the story, atmosphere, and thoughtful details behind the salon.',
+  'home.preview.contact.eyebrow': 'Come say hello',
+  'home.preview.contact.title': 'Ready when you are.',
+  'home.preview.contact.copy':
+    'Find the salon, check the opening hours, or get in touch to arrange your next visit.',
   'home.intro.eyebrow': 'Welcome to La Vie en Rose',
   'home.intro.title': 'A softer kind of self-care.',
   'home.intro.copy':
@@ -214,7 +230,7 @@ const en = {
   'about.hero.eyebrow': 'Our story',
   'about.hero.title': 'Beauty, with a little more feeling.',
   'about.hero.copy':
-    'Meet La Vie en Rose, the pink nail salon created by nail artist Danaya Tasheva in Sofia.',
+    'Meet La Vie en Rose, the pink nail salon in Sofia.',
   'about.story.image': 'The pink waiting area at La Vie en Rose',
   'about.story.eyebrow': 'The salon',
   'about.story.title': 'Life in pink, down to every detail.',
@@ -239,6 +255,11 @@ const en = {
   'about.owner.name': 'Danaya Tasheva',
   'about.owner.imageAlt': 'Danaya Tasheva preparing for a nail appointment',
   'about.owner.brandImageAlt': 'Danaya Tasheva Nail Artist wall sign inside the salon',
+  'about.diplomas.eyebrow': 'Training and certificates',
+  'about.diplomas.title': 'Diplomas and professional development.',
+  'about.diplomas.copy':
+    'A dedicated space for qualifications, specialist training, and certificates.',
+  'about.diplomas.placeholder': 'Diploma image will be added here',
 
   'contact.hero.eyebrow': 'Come say hello',
   'contact.hero.title': 'Your seat is waiting.',
@@ -353,6 +374,22 @@ const bg: Record<TranslationKey, string> = {
   'home.hero.cardTitle': 'Създадено за теб',
   'home.hero.cardCopy': 'Всеки цвят. Всеки детайл.',
   'home.hero.scroll': 'Разгледай надолу',
+  'home.preview.gallery.eyebrow': 'Малко вдъхновение',
+  'home.preview.gallery.title': 'Открий следващия си любим маникюр.',
+  'home.preview.gallery.copy':
+    'Разгледай цветове, чисти завършеци и детайлни дизайни от последните посещения в салона.',
+  'home.preview.prices.eyebrow': 'Ясно и лесно',
+  'home.preview.prices.title': 'Знай цената преди посещението си.',
+  'home.preview.prices.copy':
+    'Разгледай актуалните услуги с ясни цени в български лева и евро.',
+  'home.preview.about.eyebrow': 'В La Vie en Rose',
+  'home.preview.about.title': 'Влез в нашия розов свят.',
+  'home.preview.about.copy':
+    'Открий историята, атмосферата и внимателно подбраните детайли зад салона.',
+  'home.preview.contact.eyebrow': 'Кажи ни здравей',
+  'home.preview.contact.title': 'Очакваме те.',
+  'home.preview.contact.copy':
+    'Намери салона, провери работното време или се свържи с нас за следващото си посещение.',
   'home.intro.eyebrow': 'Добре дошла в La Vie en Rose',
   'home.intro.title': 'По-нежна грижа за себе си.',
   'home.intro.copy':
@@ -510,7 +547,7 @@ const bg: Record<TranslationKey, string> = {
   'about.hero.eyebrow': 'Нашата история',
   'about.hero.title': 'Красота с малко повече усещане.',
   'about.hero.copy':
-    'Запознай се с La Vie en Rose — розовия салон за маникюр на Даная Ташева в София.',
+    'Запознай се с La Vie en Rose — розовия салон за маникюр в София.',
   'about.story.image': 'Розовата зона за изчакване в La Vie en Rose',
   'about.story.eyebrow': 'Салонът',
   'about.story.title': 'Живот в розово до последния детайл.',
@@ -535,6 +572,11 @@ const bg: Record<TranslationKey, string> = {
   'about.owner.name': 'Даная Ташева',
   'about.owner.imageAlt': 'Даная Ташева се подготвя за маникюр',
   'about.owner.brandImageAlt': 'Надпис Danaya Tasheva Nail Artist в салона',
+  'about.diplomas.eyebrow': 'Обучения и сертификати',
+  'about.diplomas.title': 'Дипломи и професионално развитие.',
+  'about.diplomas.copy':
+    'Специално място за квалификации, професионални обучения и сертификати.',
+  'about.diplomas.placeholder': 'Тук ще бъде добавена снимка на диплома',
 
   'contact.hero.eyebrow': 'Кажи ни здравей',
   'contact.hero.title': 'Твоето място те очаква.',

@@ -10,6 +10,7 @@ assets/
 |-- brand/
 |   `-- logo-primary.png
 |-- images/
+|   |-- diplomas/
 |   |-- prices/
 |   |-- services/
 |   |-- studio/

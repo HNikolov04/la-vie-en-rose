@@ -12,4 +12,5 @@ import { I18nService } from '../../core/i18n/i18n.service';
 })
 export class About {
   protected readonly i18n = inject(I18nService);
+  protected readonly diplomaSlots = [1, 2, 3] as const;
 }

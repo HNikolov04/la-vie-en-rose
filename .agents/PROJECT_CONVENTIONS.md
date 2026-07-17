@@ -51,6 +51,7 @@ public/assets/
 |-- brand/                 Logos, marks, favicons, brand graphics
 |-- icons/                 Custom SVG icons not covered by Material Symbols
 `-- images/
+    |-- diplomas/          Diploma and professional certificate images
     |-- gallery/           Nail work and portfolio photography
     |-- hero/              Hero and campaign photography
     |-- studio/            Interior, product, and atmosphere photography
@@ -168,10 +169,10 @@ export class Example {
   properties in `src/styles.scss`.
 - Consume tokens such as `var(--rose-600)`; do not scatter near-duplicate colour
   literals through component styles.
-- The pink system is deliberately limited to `--rose-300` for soft surfaces and
-  `--rose-600` for strong accents. White is the main background. Do not add more
-  rose shades; use transparency or `color-mix()` with white when a softer
-  surface is needed.
+- The pink system uses `--rose-300` for soft surfaces, `--rose-500` for stronger
+  routed-page heroes, and `--rose-600` for primary accents and dark pink
+  sections. White is the main background. Do not add more rose shades; use
+  transparency or `color-mix()` with white when a softer surface is needed.
 - Gold is a restrained accent for small lines, borders, and selected details,
   not large backgrounds or body text.
 - Inter is the body and interface font. Manrope is the readable display font for

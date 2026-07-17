@@ -55,6 +55,17 @@
   line-height: 1.8;
 }
 
+.studio-copy .button--primary {
+  color: var(--rose-600);
+  background: var(--white);
+  border-color: var(--white);
+  box-shadow: 0 14px 34px rgba(59, 23, 38, 0.18);
+}
+
+.studio-copy .button--primary:hover {
+  background: color-mix(in srgb, var(--rose-300) 24%, var(--white));
+}
+
 .studio-art {
   min-height: 500px;
   overflow: hidden;
@@ -145,10 +156,57 @@
   font-size: 20px;
 }
 
+.diplomas-section {
+  background: color-mix(in srgb, var(--rose-300) 20%, var(--white));
+}
+
+.diplomas-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  align-items: end;
+  gap: 50px;
+  margin-bottom: 38px;
+}
+
+.diplomas-heading .section-title {
+  margin-bottom: 0;
+}
+
+.diploma-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.diploma-slot {
+  display: grid;
+  min-height: 360px;
+  place-items: center;
+  align-content: center;
+  gap: 18px;
+  padding: 28px;
+  border: 1px dashed rgba(206, 50, 109, 0.42);
+  border-radius: 26px;
+  color: var(--rose-600);
+  background: rgba(255, 255, 255, 0.72);
+  text-align: center;
+}
+
+.diploma-slot .material-symbols-rounded {
+  font-size: 48px;
+}
+
+.diploma-slot p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
 @media (max-width: 850px) {
   .story-grid,
   .studio-section,
-  .team-grid {
+  .team-grid,
+  .diplomas-heading {
     grid-template-columns: 1fr;
   }
 
@@ -171,6 +229,10 @@
   .owner-profile {
     grid-template-columns: 1fr;
   }
+
+  .diploma-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 650px) {
@@ -185,5 +247,13 @@
   .owner-photo,
   .owner-brand-photo {
     min-height: 430px;
+  }
+
+  .diploma-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diploma-slot {
+    min-height: 280px;
   }
 }

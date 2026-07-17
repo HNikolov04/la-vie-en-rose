@@ -1,5 +1,6 @@
 :root {
   --rose-600: #ce326d;
+  --rose-500: #e44f88;
   --rose-300: #f5a4c1;
   --gold-700: #8c6320;
   --gold-600: #a87828;
@@ -191,7 +192,7 @@ p {
   background:
     radial-gradient(circle at 85% 22%, rgba(255, 255, 255, 0.62) 0 6%, transparent 6.2%),
     radial-gradient(circle at 78% 40%, rgba(255, 255, 255, 0.35) 0 15%, transparent 15.2%),
-    linear-gradient(135deg, var(--white), var(--rose-300));
+    linear-gradient(135deg, var(--rose-300), var(--rose-500));
 }
 
 .page-hero::after {

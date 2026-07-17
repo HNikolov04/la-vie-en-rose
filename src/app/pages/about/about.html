@@ -87,3 +87,24 @@
     >
   </div>
 </section>
+
+<section class="section diplomas-section">
+  <div class="container">
+    <div class="diplomas-heading">
+      <div>
+        <span class="eyebrow">{{ i18n.t('about.diplomas.eyebrow') }}</span>
+        <h2 class="section-title">{{ i18n.t('about.diplomas.title') }}</h2>
+      </div>
+      <p class="section-copy">{{ i18n.t('about.diplomas.copy') }}</p>
+    </div>
+
+    <div class="diploma-grid">
+      @for (slot of diplomaSlots; track slot) {
+        <article class="diploma-slot">
+          <span class="material-symbols-rounded" aria-hidden="true">workspace_premium</span>
+          <p>{{ i18n.t('about.diplomas.placeholder') }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
