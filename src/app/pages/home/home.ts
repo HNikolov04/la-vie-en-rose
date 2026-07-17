@@ -11,11 +11,6 @@ interface FeaturedService {
   priceKey: TranslationKey;
 }
 
-interface GalleryPreviewItem {
-  src: string;
-  altKey: TranslationKey;
-}
-
 @Component({
   selector: 'app-home',
   imports: [RouterLink],
@@ -44,25 +39,6 @@ export class Home {
       nameKey: 'home.services.art.name',
       descriptionKey: 'home.services.art.description',
       priceKey: 'home.services.art.price'
-    }
-  ];
-
-  protected readonly galleryItems: GalleryPreviewItem[] = [
-    {
-      src: 'assets/images/services/pink-black-french-manicure.png',
-      altKey: 'gallery.item.blackFrench'
-    },
-    {
-      src: 'assets/images/services/red-floral-manicure.png',
-      altKey: 'gallery.item.red'
-    },
-    {
-      src: 'assets/images/services/soft-pink-french-manicure.png',
-      altKey: 'gallery.item.french'
-    },
-    {
-      src: 'assets/images/services/pink-bow-nail-art.png',
-      altKey: 'gallery.item.bow'
     }
   ];
 }

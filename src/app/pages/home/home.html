@@ -43,7 +43,6 @@
     <span class="material-symbols-rounded">south</span>
   </a>
 </section>
-
 <section class="section intro" id="welcome">
   <div class="container intro-grid">
     <div>
@@ -106,29 +105,5 @@
       <li><span class="material-symbols-rounded">check_circle</span>{{ i18n.t('home.feature.consultation') }}</li>
     </ul>
     <a class="button button--primary" routerLink="/about">{{ i18n.t('home.feature.link') }}</a>
-  </div>
-</section>
-
-<section class="section gallery-preview">
-  <div class="container">
-    <div class="gallery-heading">
-      <div>
-        <span class="eyebrow">{{ i18n.t('home.gallery.eyebrow') }}</span>
-        <h2 class="section-title">{{ i18n.t('home.gallery.title') }}</h2>
-      </div>
-      <a class="text-link" routerLink="/gallery">
-        {{ i18n.t('home.gallery.link') }}
-        <span class="material-symbols-rounded">arrow_outward</span>
-      </a>
-    </div>
-
-    <div class="mini-gallery">
-      @for (item of galleryItems; track item.src; let index = $index) {
-        <div class="gallery-tile gallery-tile--{{ index + 1 }}">
-          <img [src]="item.src" [alt]="i18n.t(item.altKey)" loading="lazy">
-          <span>0{{ index + 1 }}</span>
-        </div>
-      }
-    </div>
   </div>
 </section>

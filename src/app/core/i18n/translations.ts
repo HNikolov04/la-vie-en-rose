@@ -2,8 +2,8 @@ export type Language = 'en' | 'bg';
 
 const en = {
   'meta.site.description':
-    'La Vie en Rose is a modern nail studio for considered manicures, beautiful details, and unhurried self-care.',
-  'meta.home.title': 'La Vie en Rose | Nail Studio',
+    'La Vie en Rose is a modern nail salon for considered manicures, beautiful details, and unhurried self-care.',
+  'meta.home.title': 'La Vie en Rose | Nail Salon',
   'meta.services.title': 'Services | La Vie en Rose',
   'meta.prices.title': 'Price List | La Vie en Rose',
   'meta.gallery.title': 'Gallery | La Vie en Rose',
@@ -12,7 +12,7 @@ const en = {
 
   'common.brandName': 'La Vie en Rose',
   'common.logoAlt': 'La Vie en Rose nail salon logo',
-  'common.nailStudio': 'Nail studio',
+  'common.nailStudio': 'Nail salon',
   'common.home': 'Home',
   'common.services': 'Services',
   'common.prices': 'Price list',
@@ -48,7 +48,7 @@ const en = {
   'home.hero.title': 'Life looks better',
   'home.hero.titleAccent': 'in pink.',
   'home.hero.copy':
-    'A warm, modern nail studio for thoughtful care, effortless colour, and the tiny details that make you feel entirely yourself.',
+    'A warm, modern nail salon for thoughtful care, effortless colour, and the tiny details that make you feel entirely yourself.',
   'home.hero.book': 'Book your visit',
   'home.hero.explore': 'Explore services',
   'home.hero.loved': 'Loved by our regulars',
@@ -60,7 +60,7 @@ const en = {
   'home.intro.title': 'A softer kind of self-care.',
   'home.intro.copy':
     'We believe a nail appointment should be more than a quick stop. It is time to slow down, choose something beautiful, and leave feeling a little lighter.',
-  'home.intro.link': 'Meet the studio',
+  'home.intro.link': 'Meet the salon',
   'home.services.eyebrow': 'Our favourites',
   'home.services.title': 'Polished, from tip to toe.',
   'home.services.all': 'View all services',
@@ -85,13 +85,13 @@ const en = {
   'home.feature.products': 'Quality, nail-kind products',
   'home.feature.consultation': 'Personal colour consultation',
   'home.feature.link': 'Our approach',
-  'home.gallery.eyebrow': 'Fresh from the studio',
+  'home.gallery.eyebrow': 'Fresh from the salon',
   'home.gallery.title': 'A little inspiration.',
   'home.gallery.link': 'Explore the gallery',
   'home.testimonials.eyebrow': 'Kind words',
   'home.testimonials.title': 'From our lovely clients.',
   'home.testimonials.one':
-    'The prettiest studio and the most careful manicure I have ever had.',
+    'The prettiest salon and the most careful manicure I have ever had.',
   'home.testimonials.two':
     'Every appointment feels calm, personal, and genuinely special.',
   'home.testimonials.three':
@@ -164,7 +164,7 @@ const en = {
   'prices.intro.eyebrow': 'Current services',
   'prices.intro.title': 'Choose your manicure.',
   'prices.intro.copy':
-    'These prices follow the official studio price list. Contact us before booking if you have questions about a service.',
+    'These prices follow the official salon price list. Contact us before booking if you have questions about a service.',
   'prices.duration': 'Duration',
   'prices.price': 'Price',
   'prices.minutes': 'min',
@@ -228,7 +228,7 @@ const en = {
     'Your shape, lifestyle, colour, and ideas are always part of the process.',
   'about.values.energy.title': 'Good energy',
   'about.values.energy.copy':
-    'A bright, welcoming studio where you can settle in and feel at ease.',
+    'A bright, welcoming salon where you can settle in and feel at ease.',
   'about.studio.eyebrow': 'Your space to pause',
   'about.studio.title': 'Step into the rose room.',
   'about.studio.copy':
@@ -250,7 +250,7 @@ const en = {
   'contact.hero.eyebrow': 'Come say hello',
   'contact.hero.title': 'Your seat is waiting.',
   'contact.hero.copy':
-    'Book your appointment, ask us a question, or stop by the studio. We would love to welcome you into our little pink corner.',
+    'Book your appointment, ask us a question, or stop by the salon. We would love to welcome you into our little pink corner.',
   'contact.booking.eyebrow': 'Book an appointment',
   'contact.booking.title': 'Tell us what you have in mind.',
   'contact.booking.copy':
@@ -305,8 +305,8 @@ export type TranslationKey = keyof typeof en;
 
 const bg: Record<TranslationKey, string> = {
   'meta.site.description':
-    'La Vie en Rose е модерно студио за маникюр с внимание към детайла, красотата и спокойната грижа за себе си.',
-  'meta.home.title': 'La Vie en Rose | Студио за маникюр',
+    'La Vie en Rose е модерен салон за маникюр с внимание към детайла, красотата и спокойната грижа за себе си.',
+  'meta.home.title': 'La Vie en Rose | Салон за маникюр',
   'meta.services.title': 'Услуги | La Vie en Rose',
   'meta.prices.title': 'Ценоразпис | La Vie en Rose',
   'meta.gallery.title': 'Галерия | La Vie en Rose',
@@ -315,7 +315,7 @@ const bg: Record<TranslationKey, string> = {
 
   'common.brandName': 'La Vie en Rose',
   'common.logoAlt': 'Лого на салон за маникюр La Vie en Rose',
-  'common.nailStudio': 'Студио за маникюр',
+  'common.nailStudio': 'Салон за маникюр',
   'common.home': 'Начало',
   'common.services': 'Услуги',
   'common.prices': 'Ценоразпис',
@@ -351,7 +351,7 @@ const bg: Record<TranslationKey, string> = {
   'home.hero.title': 'Животът е по-красив',
   'home.hero.titleAccent': 'в розово.',
   'home.hero.copy':
-    'Топло и модерно студио за внимателна грижа, красиви цветове и онези малки детайли, които те карат да се чувстваш напълно себе си.',
+    'Топъл и модерен салон за внимателна грижа, красиви цветове и онези малки детайли, които те карат да се чувстваш напълно себе си.',
   'home.hero.book': 'Запази посещение',
   'home.hero.explore': 'Разгледай услугите',
   'home.hero.loved': 'Любимо място на нашите клиенти',
@@ -363,7 +363,7 @@ const bg: Record<TranslationKey, string> = {
   'home.intro.title': 'По-нежна грижа за себе си.',
   'home.intro.copy':
     'Вярваме, че маникюрът трябва да бъде повече от кратка спирка. Това е време да забавиш темпото, да избереш нещо красиво и да си тръгнеш с по-леко настроение.',
-  'home.intro.link': 'Запознай се със студиото',
+  'home.intro.link': 'Запознай се със салона',
   'home.services.eyebrow': 'Нашите фаворити',
   'home.services.title': 'Съвършенство до върха на пръстите.',
   'home.services.all': 'Виж всички услуги',
@@ -388,13 +388,13 @@ const bg: Record<TranslationKey, string> = {
   'home.feature.products': 'Качествени и щадящи продукти',
   'home.feature.consultation': 'Лична консултация за цвят',
   'home.feature.link': 'Нашият подход',
-  'home.gallery.eyebrow': 'Ново от студиото',
+  'home.gallery.eyebrow': 'Ново от салона',
   'home.gallery.title': 'Малко вдъхновение.',
   'home.gallery.link': 'Разгледай галерията',
   'home.testimonials.eyebrow': 'Мили думи',
   'home.testimonials.title': 'От нашите прекрасни клиенти.',
   'home.testimonials.one':
-    'Най-красивото студио и най-внимателният маникюр, който съм имала.',
+    'Най-красивият салон и най-внимателният маникюр, който съм имала.',
   'home.testimonials.two':
     'Всяко посещение е спокойно, лично и наистина специално.',
   'home.testimonials.three':
@@ -532,7 +532,7 @@ const bg: Record<TranslationKey, string> = {
     'Формата, ежедневието, цветовете и идеите ти винаги са част от процеса.',
   'about.values.energy.title': 'Добра енергия',
   'about.values.energy.copy':
-    'Светло и приветливо студио, в което можеш да се отпуснеш и да се чувстваш добре.',
+    'Светъл и приветлив салон, в който можеш да се отпуснеш и да се чувстваш добре.',
   'about.studio.eyebrow': 'Твоето място за пауза',
   'about.studio.title': 'Влез в розовата стая.',
   'about.studio.copy':
@@ -554,7 +554,7 @@ const bg: Record<TranslationKey, string> = {
   'contact.hero.eyebrow': 'Кажи ни здравей',
   'contact.hero.title': 'Твоето място те очаква.',
   'contact.hero.copy':
-    'Запази час, задай ни въпрос или посети студиото. Ще се радваме да те посрещнем в нашето малко розово кътче.',
+    'Запази час, задай ни въпрос или посети салона. Ще се радваме да те посрещнем в нашето малко розово кътче.',
   'contact.booking.eyebrow': 'Запази час',
   'contact.booking.title': 'Разкажи ни какво си представяш.',
   'contact.booking.copy':

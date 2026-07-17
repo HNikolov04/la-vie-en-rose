@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 0.82fr 1fr;
   align-items: start;
-  gap: clamp(50px, 9vw, 110px);
+  gap: clamp(40px, 7vw, 78px);
 }
 
 .contact-copy {
@@ -57,9 +57,9 @@
 .booking-card {
   display: grid;
   gap: 22px;
-  padding: clamp(28px, 5vw, 52px);
+  padding: clamp(26px, 4vw, 42px);
   border: 1px solid var(--border);
-  border-radius: 32px;
+  border-radius: 26px;
   background: var(--white);
   box-shadow: var(--shadow-lg);
 }
@@ -158,13 +158,13 @@
 .visit-section {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  min-height: 640px;
+  min-height: 520px;
 }
 
 .location-map {
   position: relative;
   display: block;
-  min-height: 500px;
+  min-height: 420px;
   overflow: hidden;
   background: var(--rose-200);
 }
@@ -172,7 +172,7 @@
 .location-map > img {
   width: 100%;
   height: 100%;
-  min-height: 500px;
+  min-height: 420px;
   object-fit: cover;
   transition: transform 350ms ease;
 }
@@ -203,7 +203,7 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding: clamp(55px, 8vw, 110px);
+  padding: clamp(44px, 6vw, 78px);
   color: var(--white);
   background: var(--rose-950);
 }
@@ -298,7 +298,7 @@ details p {
 
   .location-map,
   .location-map > img {
-    min-height: 450px;
+    min-height: 360px;
   }
 
   .faq-grid {

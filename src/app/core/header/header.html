@@ -30,55 +30,58 @@
       <span class="material-symbols-rounded">{{ menuOpen() ? 'close' : 'menu' }}</span>
     </button>
 
-    <nav
+    <div
       class="navigation"
       [class.navigation--open]="menuOpen()"
-      [attr.aria-label]="i18n.t('common.brandName')"
     >
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
-        {{ i18n.t('common.home') }}
-      </a>
-      <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">
-        {{ i18n.t('common.services') }}
-      </a>
-      <a routerLink="/prices" routerLinkActive="active" (click)="closeMenu()">
-        {{ i18n.t('common.prices') }}
-      </a>
-      <a routerLink="/gallery" routerLinkActive="active" (click)="closeMenu()">
-        {{ i18n.t('common.gallery') }}
-      </a>
-      <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">
-        {{ i18n.t('common.about') }}
-      </a>
-      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">
-        {{ i18n.t('common.contact') }}
-      </a>
+      <nav class="nav-links" [attr.aria-label]="i18n.t('common.brandName')">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
+          {{ i18n.t('common.home') }}
+        </a>
+        <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">
+          {{ i18n.t('common.services') }}
+        </a>
+        <a routerLink="/prices" routerLinkActive="active" (click)="closeMenu()">
+          {{ i18n.t('common.prices') }}
+        </a>
+        <a routerLink="/gallery" routerLinkActive="active" (click)="closeMenu()">
+          {{ i18n.t('common.gallery') }}
+        </a>
+        <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">
+          {{ i18n.t('common.about') }}
+        </a>
+        <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">
+          {{ i18n.t('common.contact') }}
+        </a>
+      </nav>
 
-      <div class="language-switch" role="group" [attr.aria-label]="i18n.t('common.language')">
-        <button
-          type="button"
-          [class.active]="i18n.language() === 'bg'"
-          [attr.aria-pressed]="i18n.language() === 'bg'"
-          [attr.aria-label]="i18n.t('common.switchToBulgarian')"
-          (click)="i18n.setLanguage('bg')"
-        >
-          BG
-        </button>
-        <button
-          type="button"
-          [class.active]="i18n.language() === 'en'"
-          [attr.aria-pressed]="i18n.language() === 'en'"
-          [attr.aria-label]="i18n.t('common.switchToEnglish')"
-          (click)="i18n.setLanguage('en')"
-        >
-          EN
-        </button>
+      <div class="header-actions">
+        <div class="language-switch" role="group" [attr.aria-label]="i18n.t('common.language')">
+          <button
+            type="button"
+            [class.active]="i18n.language() === 'bg'"
+            [attr.aria-pressed]="i18n.language() === 'bg'"
+            [attr.aria-label]="i18n.t('common.switchToBulgarian')"
+            (click)="i18n.setLanguage('bg')"
+          >
+            BG
+          </button>
+          <button
+            type="button"
+            [class.active]="i18n.language() === 'en'"
+            [attr.aria-pressed]="i18n.language() === 'en'"
+            [attr.aria-label]="i18n.t('common.switchToEnglish')"
+            (click)="i18n.setLanguage('en')"
+          >
+            EN
+          </button>
+        </div>
+
+        <a class="book-link" routerLink="/contact" fragment="booking" (click)="closeMenu()">
+          {{ i18n.t('common.bookNow') }}
+          <span class="material-symbols-rounded">arrow_outward</span>
+        </a>
       </div>
-
-      <a class="book-link" routerLink="/contact" fragment="booking" (click)="closeMenu()">
-        {{ i18n.t('common.bookNow') }}
-        <span class="material-symbols-rounded">arrow_outward</span>
-      </a>
-    </nav>
+    </div>
   </div>
 </header>

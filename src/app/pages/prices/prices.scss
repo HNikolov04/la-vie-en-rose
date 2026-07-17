@@ -9,8 +9,8 @@
   display: grid;
   grid-template-columns: 1fr 0.75fr;
   align-items: end;
-  gap: 70px;
-  margin-bottom: 60px;
+  gap: 50px;
+  margin-bottom: 44px;
 }
 
 .prices-intro .section-title {
@@ -35,7 +35,7 @@
   margin: 0;
   overflow: hidden;
   border: 1px solid rgba(189, 145, 67, 0.28);
-  border-radius: 30px;
+  border-radius: 24px;
   background: var(--rose-100);
   box-shadow: var(--shadow-lg);
 }
@@ -57,7 +57,7 @@
   display: flex;
   align-items: center;
   gap: 18px;
-  padding: 30px 32px;
+  padding: 24px 26px;
   border-bottom: 1px solid var(--border);
   background: linear-gradient(135deg, var(--rose-50), rgba(248, 241, 223, 0.62));
 }
@@ -85,7 +85,7 @@
 .category-header h3 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 500;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .table-header {
-  padding: 15px 32px;
+  padding: 13px 26px;
   color: var(--muted);
   background: var(--rose-50);
   font-size: 0.64rem;
@@ -113,11 +113,11 @@
 }
 
 .price-items {
-  padding: 0 32px;
+  padding: 0 26px;
 }
 
 .price-row {
-  min-height: 96px;
+  min-height: 82px;
   padding: 18px 0;
   border-bottom: 1px solid var(--border);
 }
