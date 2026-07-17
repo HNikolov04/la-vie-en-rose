@@ -27,9 +27,21 @@
 }
 
 .group-heading {
+  display: grid;
+  gap: 26px;
+}
+
+.group-photo {
+  width: 100%;
+  height: 230px;
+  border-radius: 22px;
+  object-fit: cover;
+}
+
+.group-title-row {
   display: flex;
   align-items: flex-start;
-  gap: 24px;
+  gap: 20px;
 }
 
 .group-icon {
@@ -104,10 +116,17 @@
   gap: clamp(50px, 8vw, 100px);
 }
 
-.add-ons > .placeholder-art {
+.notes-photo {
   min-height: 650px;
+  overflow: hidden;
   border-radius: 220px 220px 30px 30px;
   background: linear-gradient(155deg, var(--rose-200), var(--rose-600));
+}
+
+.notes-photo img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
 }
 
 .notes-grid {
@@ -155,13 +174,17 @@
     gap: 40px;
   }
 
-  .add-ons > .placeholder-art {
+  .notes-photo {
     min-height: 480px;
+  }
+
+  .notes-photo img {
+    height: 480px;
   }
 }
 
 @media (max-width: 550px) {
-  .group-heading {
+  .group-title-row {
     display: grid;
   }
 

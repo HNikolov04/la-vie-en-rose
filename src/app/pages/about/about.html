@@ -8,11 +8,14 @@
 
 <section class="section">
   <div class="container story-grid">
-    <div class="story-art placeholder-art">
-      <span class="image-note">
-        <span class="material-symbols-rounded">add_photo_alternate</span>
-        {{ i18n.t('about.story.image') }}
-      </span>
+    <div class="story-art">
+      <img
+        src="assets/images/studio/salon-waiting-area.png"
+        [alt]="i18n.t('about.story.image')"
+        width="941"
+        height="1672"
+        loading="lazy"
+      >
     </div>
     <div class="story-copy">
       <span class="eyebrow">{{ i18n.t('about.story.eyebrow') }}</span>
@@ -51,11 +54,14 @@
       {{ i18n.t('about.studio.button') }}
     </a>
   </div>
-  <div class="studio-art placeholder-art">
-    <span class="image-note">
-      <span class="material-symbols-rounded">add_photo_alternate</span>
-      {{ i18n.t('about.studio.image') }}
-    </span>
+  <div class="studio-art">
+    <img
+      src="assets/images/studio/salon-interior.png"
+      [alt]="i18n.t('about.studio.image')"
+      width="941"
+      height="1672"
+      loading="lazy"
+    >
   </div>
 </section>
 
@@ -67,15 +73,36 @@
     </div>
     <p class="section-copy">{{ i18n.t('about.team.copy') }}</p>
   </div>
-  <div class="container team-placeholders">
-    @for (member of team; track member.roleKey; let index = $index) {
-      <article>
-        <div class="team-photo team-photo--{{ index + 1 }}">
-          <span class="material-symbols-rounded">person</span>
-        </div>
-        <h3>{{ i18n.t('about.team.member') }}</h3>
-        <p>{{ i18n.t(member.roleKey) }}</p>
-      </article>
-    }
+  <div class="container owner-profile">
+    <article class="owner-card">
+      <img
+        class="owner-photo"
+        src="assets/images/team/danaya-tasheva.png"
+        [alt]="i18n.t('about.owner.imageAlt')"
+        width="941"
+        height="1672"
+        loading="lazy"
+      >
+      <div class="owner-copy">
+        <h3>{{ i18n.t('about.owner.name') }}</h3>
+        <p>{{ i18n.t('about.team.founder') }}</p>
+        <a
+          href="https://www.instagram.com/danaq._.tasheva/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="material-symbols-rounded">photo_camera</span>
+          &#64;danaq._.tasheva
+        </a>
+      </div>
+    </article>
+    <img
+      class="owner-brand-photo"
+      src="assets/images/studio/danaya-tasheva-wall-logo.png"
+      [alt]="i18n.t('about.owner.brandImageAlt')"
+      width="941"
+      height="1672"
+      loading="lazy"
+    >
   </div>
 </section>

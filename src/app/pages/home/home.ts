@@ -11,9 +11,9 @@ interface FeaturedService {
   priceKey: TranslationKey;
 }
 
-interface Testimonial {
-  quoteKey: TranslationKey;
-  name: string;
+interface GalleryPreviewItem {
+  src: string;
+  altKey: TranslationKey;
 }
 
 @Component({
@@ -28,37 +28,41 @@ export class Home {
 
   protected readonly services: FeaturedService[] = [
     {
-      icon: 'spa',
+      icon: 'auto_awesome',
       nameKey: 'home.services.signature.name',
       descriptionKey: 'home.services.signature.description',
       priceKey: 'home.services.signature.price'
     },
     {
-      icon: 'auto_awesome',
+      icon: 'draw',
       nameKey: 'home.services.gel.name',
       descriptionKey: 'home.services.gel.description',
       priceKey: 'home.services.gel.price'
     },
     {
-      icon: 'palette',
+      icon: 'architecture',
       nameKey: 'home.services.art.name',
       descriptionKey: 'home.services.art.description',
       priceKey: 'home.services.art.price'
     }
   ];
 
-  protected readonly testimonials: Testimonial[] = [
+  protected readonly galleryItems: GalleryPreviewItem[] = [
     {
-      quoteKey: 'home.testimonials.one',
-      name: 'Mia K.'
+      src: 'assets/images/services/pink-black-french-manicure.png',
+      altKey: 'gallery.item.blackFrench'
     },
     {
-      quoteKey: 'home.testimonials.two',
-      name: 'Sophie A.'
+      src: 'assets/images/services/red-floral-manicure.png',
+      altKey: 'gallery.item.red'
     },
     {
-      quoteKey: 'home.testimonials.three',
-      name: 'Elena R.'
+      src: 'assets/images/services/soft-pink-french-manicure.png',
+      altKey: 'gallery.item.french'
+    },
+    {
+      src: 'assets/images/services/pink-bow-nail-art.png',
+      altKey: 'gallery.item.bow'
     }
   ];
 }

@@ -16,30 +16,25 @@
           {{ i18n.t('home.hero.explore') }}
         </a>
       </div>
-      <div class="hero-proof">
-        <div class="avatar-stack" aria-hidden="true">
-          <span>MK</span><span>SA</span><span>ER</span>
-        </div>
-        <div>
-          <div class="stars">★★★★★</div>
-          <small>{{ i18n.t('home.hero.loved') }}</small>
-        </div>
-      </div>
     </div>
 
     <div class="hero-visual fade-up">
-      <div class="visual-card visual-card--main placeholder-art">
-        <span class="image-note">
-          <span class="material-symbols-rounded">add_photo_alternate</span>
-          {{ i18n.t('home.hero.image') }}
-        </span>
+      <div class="visual-card visual-card--main">
+        <img
+          src="assets/images/team/danaya-tasheva.png"
+          [alt]="i18n.t('home.hero.image')"
+          width="941"
+          height="1672"
+        >
       </div>
       <div class="visual-card visual-card--small">
         <span class="material-symbols-rounded">favorite</span>
         <strong>{{ i18n.t('home.hero.cardTitle') }}</strong>
         <small>{{ i18n.t('home.hero.cardCopy') }}</small>
       </div>
-      <div class="polish-orb"><span>LR</span></div>
+      <div class="polish-orb">
+        <img src="assets/brand/logo-primary.png" alt="" width="1024" height="1024">
+      </div>
     </div>
   </div>
 
@@ -92,11 +87,14 @@
 </section>
 
 <section class="split-feature">
-  <div class="feature-art placeholder-art">
-    <span class="image-note">
-      <span class="material-symbols-rounded">add_photo_alternate</span>
-      {{ i18n.t('home.feature.image') }}
-    </span>
+  <div class="feature-art">
+    <img
+      src="assets/images/studio/salon-interior.png"
+      [alt]="i18n.t('home.feature.image')"
+      width="941"
+      height="1672"
+      loading="lazy"
+    >
   </div>
   <div class="feature-copy">
     <span class="eyebrow">{{ i18n.t('home.feature.eyebrow') }}</span>
@@ -125,27 +123,11 @@
     </div>
 
     <div class="mini-gallery">
-      @for (item of [1, 2, 3, 4]; track item) {
-        <div class="gallery-tile gallery-tile--{{ item }}">
-          <span>{{ item < 10 ? '0' + item : item }}</span>
+      @for (item of galleryItems; track item.src; let index = $index) {
+        <div class="gallery-tile gallery-tile--{{ index + 1 }}">
+          <img [src]="item.src" [alt]="i18n.t(item.altKey)" loading="lazy">
+          <span>0{{ index + 1 }}</span>
         </div>
-      }
-    </div>
-  </div>
-</section>
-
-<section class="section testimonials">
-  <div class="container">
-    <span class="eyebrow">{{ i18n.t('home.testimonials.eyebrow') }}</span>
-    <h2 class="section-title">{{ i18n.t('home.testimonials.title') }}</h2>
-
-    <div class="testimonial-grid">
-      @for (testimonial of testimonials; track testimonial.name) {
-        <blockquote>
-          <div class="stars">★★★★★</div>
-          <p>“{{ i18n.t(testimonial.quoteKey) }}”</p>
-          <cite>{{ testimonial.name }}</cite>
-        </blockquote>
       }
     </div>
   </div>

@@ -144,3 +144,16 @@
     padding-block: 50px;
   }
 }
+.footer-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-logo {
+  width: 58px;
+  height: 58px;
+  border: 2px solid var(--gold-300);
+  border-radius: 50%;
+  object-fit: cover;
+}

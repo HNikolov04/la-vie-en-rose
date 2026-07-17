@@ -20,11 +20,19 @@
       @for (group of serviceGroups; track group.titleKey; let index = $index) {
         <article class="service-group">
           <div class="group-heading">
-            <span class="group-icon material-symbols-rounded">{{ group.icon }}</span>
-            <div>
-              <small>0{{ index + 1 }}</small>
-              <h3>{{ i18n.t(group.titleKey) }}</h3>
-              <p>{{ i18n.t(group.descriptionKey) }}</p>
+            <img
+              class="group-photo"
+              [src]="group.image"
+              [alt]="i18n.t(group.imageAltKey)"
+              loading="lazy"
+            >
+            <div class="group-title-row">
+              <span class="group-icon material-symbols-rounded">{{ group.icon }}</span>
+              <div>
+                <small>0{{ index + 1 }}</small>
+                <h3>{{ i18n.t(group.titleKey) }}</h3>
+                <p>{{ i18n.t(group.descriptionKey) }}</p>
+              </div>
             </div>
           </div>
 
@@ -48,11 +56,14 @@
 
 <section class="section section--rose">
   <div class="container add-ons">
-    <div class="placeholder-art">
-      <span class="image-note">
-        <span class="material-symbols-rounded">add_photo_alternate</span>
-        {{ i18n.t('services.notes.image') }}
-      </span>
+    <div class="notes-photo">
+      <img
+        src="assets/images/services/autumn-nail-art.png"
+        [alt]="i18n.t('services.notes.image')"
+        width="635"
+        height="802"
+        loading="lazy"
+      >
     </div>
     <div>
       <span class="eyebrow">{{ i18n.t('services.notes.eyebrow') }}</span>
@@ -67,11 +78,6 @@
           <span class="material-symbols-rounded">edit_note</span>
           <h3>{{ i18n.t('services.notes.idea.title') }}</h3>
           <p>{{ i18n.t('services.notes.idea.copy') }}</p>
-        </div>
-        <div>
-          <span class="material-symbols-rounded">event_busy</span>
-          <h3>{{ i18n.t('services.notes.changes.title') }}</h3>
-          <p>{{ i18n.t('services.notes.changes.copy') }}</p>
         </div>
         <div>
           <span class="material-symbols-rounded">health_and_safety</span>

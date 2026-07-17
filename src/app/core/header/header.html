@@ -6,7 +6,14 @@
       (click)="closeMenu()"
       [attr.aria-label]="i18n.t('common.brandName') + ' ' + i18n.t('common.home')"
     >
-      <span class="brand-mark">LR</span>
+      <span class="brand-mark">
+        <img
+          src="assets/brand/logo-primary.png"
+          [alt]="i18n.t('common.logoAlt')"
+          width="1024"
+          height="1024"
+        >
+      </span>
       <span>
         <strong>{{ i18n.t('common.brandName') }}</strong>
         <small>{{ i18n.t('common.nailStudio') }}</small>
